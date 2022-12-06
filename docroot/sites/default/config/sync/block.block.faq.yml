@@ -1,0 +1,43 @@
+uuid: 6cd1b663-c361-40bd-b1f3-5d32958553b8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bdbb2a1e-8791-45b3-b9fe-5c399f76c15d'
+  module:
+    - block_class
+    - block_content
+    - ctools
+    - system
+  theme:
+    - athora
+third_party_settings:
+  block_class:
+    classes: 'container bs-1col'
+id: faq
+theme: athora
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:bdbb2a1e-8791-45b3-b9fe-5c399f76c15d'
+settings:
+  id: 'block_content:bdbb2a1e-8791-45b3-b9fe-5c399f76c15d'
+  label: 'Frequently Asked Questions'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "*/faq\r\n*/faq/*"
+    negate: false
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      faq: faq
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

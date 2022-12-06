@@ -1,0 +1,18 @@
+uuid: 6c2c78d3-785b-4d04-8f05-81844156c4a7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.usp
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.usp
+target_entity_type_id: node
+target_bundle: usp
+default_langcode: site_default
+language_alterable: true

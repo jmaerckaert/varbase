@@ -1,0 +1,13 @@
+soap_client:
+  namespaces:
+    'http://www.generali.be/ExternalWebservice01': 'Drupal\generali_webservice\WebsalesCommon\Php\ExternalWebservice01'
+    'http://www.generali.be/FrontNameTypes': 'Drupal\generali_webservice\WebsalesCommon\Php\FrontNameTypes'
+
+  destinations_php:
+    'Drupal\generali_webservice\WebsalesCommon': modules/custom/generali_webservice/src/WebsalesCommon
+
+  destinations_jms:
+    'Drupal\generali_webservice\WebsalesCommon': modules/custom/generali_webservice/src/WebsalesCommon/Metadata
+
+  metadata:
+    'modules/custom/generali_webservice/config/WebsalesCommon/CommonExternalWS01.wsdl': ~

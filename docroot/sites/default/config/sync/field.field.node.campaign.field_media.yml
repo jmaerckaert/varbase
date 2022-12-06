@@ -1,0 +1,28 @@
+uuid: 8cd1db6c-d85b-4d9f-bdb8-b950223b053e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - node.type.campaign
+id: node.campaign.field_media
+field_name: field_media
+entity_type: node
+bundle: campaign
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: file
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 59ca2b27-b8c2-4d55-abb2-a93904329192
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_classes
+    - paragraphs.paragraphs_type.bp_webform
+_core:
+  default_config_hash: vu5-RY0Fe0Vxj4zO11ORWaEkUHBAfIrz6OmzNHJkNYM
+id: paragraph.bp_webform.bp_classes
+field_name: bp_classes
+entity_type: paragraph
+bundle: bp_webform
+label: 'CSS class(es)'
+description: 'Customize the styling by adding CSS classes. Separate multiple classes by spaces.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,32 @@
+uuid: 5b69ee30-273b-4bce-b2cd-31ea1ebdcd6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_media_mobile
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - paragraphs.paragraphs_type.slide_media
+id: paragraph.slide_media.field_slide_media_mobile
+field_name: field_slide_media_mobile
+entity_type: paragraph
+bundle: slide_media
+label: Mobile
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

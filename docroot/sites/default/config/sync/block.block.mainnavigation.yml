@@ -1,0 +1,29 @@
+uuid: 2b3b6506-40f0-4a77-8492-fce459f201aa
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - athora
+id: mainnavigation
+theme: athora
+region: footer_middle
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

@@ -1,0 +1,20 @@
+label: 'Media Browser'
+display_configuration:
+  link_text: 'Select media'
+widgets:
+  901e1292-75e8-4ecf-a08a-904e75b135bb:
+    settings:
+      submit_text: 'Select media'
+    label: Library
+  91fd896e-e8c5-415c-9d14-5bc59c60e630:
+    label: Embed
+  0a2903ed-f5ef-42bb-9041-fb3081f7f64e:
+    settings:
+      dropzone_description: 'Drop image files here to upload them'
+      submit_text: 'Select image(s)'
+    label: 'Upload image'
+  c4c8ea33-b84d-49fe-9fb7-0992287b3c9e:
+    settings:
+      dropzone_description: 'Drop video files here to upload them'
+      submit_text: 'Select video(s)'
+    label: 'Upload video'

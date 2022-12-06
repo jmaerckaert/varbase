@@ -1,0 +1,12 @@
+uuid: ca0800fd-93f3-4675-ab51-272c9423a6c2
+langcode: nl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: A0m-WoGIpCg_vd6U-Kwe3e3qmX4H2JSTLwQ4xxyHLh8
+id: media.s08
+label: 'Size 08 auto'
+targetEntityType: media
+cache: true

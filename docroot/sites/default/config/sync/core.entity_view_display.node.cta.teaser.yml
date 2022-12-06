@@ -1,0 +1,23 @@
+uuid: c50f3780-c82a-4f10-89e1-27047cddf8ea
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cta.field_link
+    - node.type.cta
+  module:
+    - user
+id: node.cta.teaser
+targetEntityType: node
+bundle: cta
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  langcode: true

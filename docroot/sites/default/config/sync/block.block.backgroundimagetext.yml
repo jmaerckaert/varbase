@@ -1,0 +1,26 @@
+uuid: cc5f912a-710a-49d0-9b33-54c17300c0d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - background_image
+    - system
+  theme:
+    - athora
+id: backgroundimagetext
+theme: athora
+region: background_image
+weight: 0
+provider: null
+plugin: background_image_text
+settings:
+  id: background_image_text
+  label: 'Background Image - Text'
+  provider: background_image
+  label_display: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,51 @@
+uuid: 680ee2be-50c1-4f28-85c4-91662b66382a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.cta.field_link
+    - node.type.cta
+  module:
+    - ds
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.cta.content_browser
+targetEntityType: node
+bundle: cta
+mode: content_browser
+content: {  }
+hidden:
+  field_link: true
+  langcode: true
+  links: true

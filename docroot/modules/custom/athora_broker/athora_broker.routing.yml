@@ -1,0 +1,7 @@
+athora_broker.broker_search_form:
+  path: '/find-your-broker'
+  defaults:
+    _form: 'Drupal\athora_broker\Form\BrokerSearchForm'
+    _title: 'Find your broker'
+  requirements:
+    _permission: 'access content'

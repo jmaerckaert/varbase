@@ -1,0 +1,20 @@
+uuid: 08e0ddbb-f431-4041-9f7a-0a271b7c0130
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+  module:
+    - path
+id: node.cta.path
+field_name: path
+entity_type: node
+bundle: cta
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

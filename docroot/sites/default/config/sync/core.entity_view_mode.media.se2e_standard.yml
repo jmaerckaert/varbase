@@ -1,0 +1,12 @@
+uuid: 745aa615-083b-4efa-a39a-59feb02a0e93
+langcode: nl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: lrK0Q553iVqfXJFRqrVbRVmuQqHHGvZuRIb4Aa_WFJk
+id: media.se2e_standard
+label: 'Size Edge-to-Edge standard 16:9'
+targetEntityType: media
+cache: true

@@ -1,0 +1,4 @@
+services:
+  generali_webservice.web_sales_common_soap_client_factory:
+    class: Drupal\generali_webservice\WebsalesCommon\WebSalesCommonSoapClientFactory
+    arguments: ['@extension.list.module']

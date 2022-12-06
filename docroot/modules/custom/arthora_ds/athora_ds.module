@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Contains all hook implementations for this module.
+ */
+
+use Drupal\Component\Utility\UrlHelper;
+
+/**
+ * Implements hook_ds_pre_render_alter().
+ */
+function athora_ds_ds_pre_render_alter(array &$layout_render_array, array $context, array &$vars) {
+  if (!empty($vars['attributes']['onclick'])) {
+    $entity_type_id = $vars['content']['#entity_type'] ?? FALSE;
+    $url = rawurldecode($vars['attributes']['onclick']);
+    $vars['attributes']['onclick'] = \Drupal::service('token')->replace($url, [$entity_type_id => $vars['content']['#' . $entity_type_id]], ['clear' => TRUE]);
+  }
+}

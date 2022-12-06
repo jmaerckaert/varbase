@@ -1,0 +1,9 @@
+name: 'TBN Mail Editor'
+description: 'Provides extra e-mail templates functionality.'
+core_version_requirement: ^8 || ^9 || ^10
+version: 8.x-1.0
+type: module
+package: TBNLabs
+project: 'tbn_mail_edit'
+dependencies:
+  - mail_edit:mail_edit

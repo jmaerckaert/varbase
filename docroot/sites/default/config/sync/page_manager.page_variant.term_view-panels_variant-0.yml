@@ -1,0 +1,80 @@
+uuid: dd7f4a72-7803-4866-a4b2-f5475393da96
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - ctools
+    - entity_block
+    - panels
+    - system
+id: term_view-panels_variant-0
+label: Family
+variant: panels_variant
+variant_settings:
+  blocks:
+    e28e5567-84bc-4dd1-b8b8-5b46fb8663ef:
+      id: 'entity_block:node'
+      label: Content
+      provider: entity_block
+      label_display: ''
+      region: main
+      weight: 0
+      uuid: e28e5567-84bc-4dd1-b8b8-5b46fb8663ef
+      entity: '6'
+      view_mode: default
+      context_mapping: {  }
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+  id: panels_variant
+  uuid: 9b665d38-c8e4-445a-becf-f98a2796c0bb
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-0
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: family
+  -
+    id: request_path
+    pages: /taxonomy/term/5
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  family:
+    label: Family
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 5207c16b-528e-4100-bfa8-5256513c1b9a

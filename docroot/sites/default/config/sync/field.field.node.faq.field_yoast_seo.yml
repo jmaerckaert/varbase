@@ -1,0 +1,27 @@
+uuid: e111e134-341c-4f31-8731-b6fc373541d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.faq
+  module:
+    - yoast_seo
+id: node.faq.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: faq
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: ''
+    status: ''
+    focus_keyword: ''
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

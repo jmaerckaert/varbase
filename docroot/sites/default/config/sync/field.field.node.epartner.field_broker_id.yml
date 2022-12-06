@@ -1,0 +1,23 @@
+uuid: 8479f57b-55a3-4e09-89ed-129a6a49d3aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_broker_id
+    - node.type.epartner
+id: node.epartner.field_broker_id
+field_name: field_broker_id
+entity_type: node
+bundle: epartner
+label: 'Broker id'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

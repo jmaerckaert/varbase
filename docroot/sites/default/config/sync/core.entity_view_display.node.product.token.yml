@@ -1,0 +1,141 @@
+uuid: ce5eafd0-6e1f-40fb-9961-c88c148212cb
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.product.body
+    - field.field.node.product.field_compare_tool
+    - field.field.node.product.field_documents
+    - field.field.node.product.field_documents_description
+    - field.field.node.product.field_documents_title
+    - field.field.node.product.field_features
+    - field.field.node.product.field_product_category
+    - field.field.node.product.field_usp
+    - node.type.product
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - field_usp
+        - field_documents_title
+        - field_documents_description
+        - field_documents
+        - field_compare_tool
+        - field_product_category
+id: node.product.token
+targetEntityType: node
+bundle: product
+mode: token
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_compare_tool:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_documents:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+  field_documents_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_documents_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_product_category:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_usp:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+hidden:
+  field_additional_information: true
+  field_cta: true
+  field_features: true
+  field_features_title: true
+  field_what_is_title: true
+  field_why_take_title: true
+  langcode: true
+  links: true

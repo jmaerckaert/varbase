@@ -1,0 +1,14 @@
+uuid: c1f0cec7-c6ee-4904-8c26-12f49f350e15
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+id: translations
+label: Translations
+category: Taal
+likert: false
+options: ''

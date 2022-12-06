@@ -1,0 +1,12 @@
+label: 'Varbase Dashboard Masonry'
+variant_settings:
+  blocks:
+    1593f911-e917-4c7f-ae7f-5854d1f3ea69:
+      label: 'Varbase Dashboard User'
+    154337bb-0371-4b4c-899d-1471ea79b70a:
+      label: 'Create New Content'
+    52846922-b2cf-4ef9-82a8-a8d1ad8c67d4:
+      label: 'Quick Links'
+    0884b8a0-d0a2-4604-9b7a-a12899b6492c:
+      label: 'My Site Overview'
+  page_title: Dashboard

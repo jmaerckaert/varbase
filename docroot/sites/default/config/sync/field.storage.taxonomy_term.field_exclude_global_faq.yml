@@ -1,0 +1,18 @@
+uuid: 1be19dad-5f91-4f36-b2c7-a6702017b11d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_exclude_global_faq
+field_name: field_exclude_global_faq
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

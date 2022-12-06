@@ -1,0 +1,11 @@
+uuid: fc1bd130-2a10-4be5-ad55-a850adac2d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.quote_tool
+id: entity_subqueue.quote_tool
+target_entity_type_id: entity_subqueue
+target_bundle: quote_tool
+default_langcode: site_default
+language_alterable: false

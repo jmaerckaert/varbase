@@ -1,0 +1,15 @@
+uuid: 820da050-cdf8-4f88-911c-188c2dff6dd9
+langcode: nl
+status: true
+dependencies: {  }
+name: feature_image
+label: 'Feature image'
+effects:
+  5168ede6-1a64-4526-aa62-673a9d4b0a9b:
+    uuid: 5168ede6-1a64-4526-aa62-673a9d4b0a9b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1110
+      height: 450
+      anchor: center-center

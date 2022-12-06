@@ -1,0 +1,4 @@
+tags:
+  title: '[node:title] | [site:name]'
+  schema_article_type: Article
+  schema_article_description: '[node:summary]'

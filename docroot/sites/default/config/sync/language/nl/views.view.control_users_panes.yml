@@ -1,0 +1,22 @@
+display:
+  default:
+    display_title: Hoofd
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      fields:
+        name:
+          separator: ', '
+        created:
+          label: Aangemaakt
+          separator: ', '
+        edit_user:
+          text: bewerken
+  pane_tc_new_users:
+    display_options:
+      block_category: Dashboard

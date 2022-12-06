@@ -1,0 +1,8 @@
+services:
+  tbn_search.search_page_alter_form:
+    class: Drupal\tbn_search\Form\SearchPageAlterForm
+  tbn_search.route_subscriber:
+    class: Drupal\tbn_search\Routing\SearchPageRoutes
+    arguments: ['@search.search_page_repository']
+    tags:
+      - { name: event_subscriber }

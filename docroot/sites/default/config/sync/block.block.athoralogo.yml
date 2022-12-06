@@ -1,0 +1,25 @@
+uuid: 97631677-7772-4661-a704-6c7573ff88d9
+langcode: nl
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:464afde3-36d1-4898-8cbd-f9b230881634'
+  module:
+    - block_content
+  theme:
+    - athora
+id: athoralogo
+theme: athora
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:464afde3-36d1-4898-8cbd-f9b230881634'
+settings:
+  id: 'block_content:464afde3-36d1-4898-8cbd-f9b230881634'
+  label: 'Athora logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

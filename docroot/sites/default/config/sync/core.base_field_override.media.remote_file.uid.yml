@@ -1,0 +1,20 @@
+uuid: e324678c-e6b7-4aa8-98b3-9250a62b33ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_file
+id: media.remote_file.uid
+field_name: uid
+entity_type: media
+bundle: remote_file
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

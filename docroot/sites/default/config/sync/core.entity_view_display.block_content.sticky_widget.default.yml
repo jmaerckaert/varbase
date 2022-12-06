@@ -1,0 +1,137 @@
+uuid: 76099da1-3824-4e0a-b06e-1f9ebcd6b400
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sticky_widget
+    - field.field.block_content.sticky_widget.body
+    - field.field.block_content.sticky_widget.field_icon
+    - field.field.block_content.sticky_widget.field_link
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_widget_content:
+      children:
+        - body
+        - field_link
+      parent_name: group_sticky_widget
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: widget-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'widget content'
+      region: content
+    group_sticky_widget:
+      children:
+        - group_widget_icon
+        - group_widget_content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Sticky widget'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'sticky-widget-wrapper collapsed'
+      label: 'Sticky widget'
+      region: content
+    group_widget_icon:
+      children:
+        - field_icon
+      parent_name: group_sticky_widget
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: 'widget icon'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: widget-icon
+      label: 'widget icon'
+      region: content
+  layout_builder:
+    sections: {  }
+id: block_content.sticky_widget.default
+targetEntityType: block_content
+bundle: sticky_widget
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 21
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: widget-icon
+            ow-at: 'onclick="stickyWidgetCollapse(this)"'
+            fis: true
+            fis-el: ''
+            fis-cl: widget-icon
+            fis-at: 'onclick="stickyWidgetCollapse(this)"'
+            fi: true
+            fi-el: ''
+            fi-cl: widget-icon
+            fi-at: 'onclick="stickyWidgetCollapse(this)"'
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

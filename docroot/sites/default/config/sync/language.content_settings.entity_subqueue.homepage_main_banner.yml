@@ -1,0 +1,11 @@
+uuid: 74fd238e-42de-40bf-a0c6-c74ea65f8498
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.homepage_main_banner
+id: entity_subqueue.homepage_main_banner
+target_entity_type_id: entity_subqueue
+target_bundle: homepage_main_banner
+default_langcode: site_default
+language_alterable: false

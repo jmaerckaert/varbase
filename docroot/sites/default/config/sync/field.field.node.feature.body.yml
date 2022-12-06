@@ -1,0 +1,23 @@
+uuid: b5c75e2a-6342-4db7-b8ca-db2a8c94aec0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.feature
+  module:
+    - text
+id: node.feature.body
+field_name: body
+entity_type: node
+bundle: feature
+label: 'Feature short description'
+description: 'Here you can add the description you want to be displayed on a product page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

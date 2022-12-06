@@ -1,0 +1,194 @@
+display:
+  default:
+    display_title: Hoofd
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+          views_infinite_scroll:
+            button_text: 'Meer laden'
+      filters:
+        name:
+          expose:
+            label: Medianaam
+      sorts:
+        created:
+          expose:
+            label: Aangemaakt
+        name:
+          expose:
+            label: Naam
+  editor_media_browser:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+      filters:
+        name:
+          expose:
+            label: Zoektermen
+        bundle:
+          expose:
+            label: Type
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+          text_input_required: 'Selecteer een van de filters en klik op ''Toepassen'' om het resultaat te zien'
+          bef:
+            general:
+              secondary_label: 'Uitgebreide opties'
+            sort:
+              advanced:
+                collapsible_label: Sorteeropties
+  general_media_browser:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Zoektermen
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+          text_input_required: 'Selecteer een van de filters en klik op ''Toepassen'' om het resultaat te zien'
+          bef:
+            general:
+              secondary_label: 'Uitgebreide opties'
+            sort:
+              advanced:
+                collapsible_label: Sorteeropties
+  image_browser:
+    display_title: 'Image Browser'
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Zoektermen
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+          text_input_required: 'Selecteer een van de filters en klik op ''Toepassen'' om het resultaat te zien'
+          bef:
+            general:
+              secondary_label: 'Uitgebreide opties'
+            sort:
+              advanced:
+                collapsible_label: Sorteeropties
+  media_browser:
+    display_title: 'Media Browser'
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Zoektermen
+        bundle_1:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+          text_input_required: 'Selecteer een van de filters en klik op ''Toepassen'' om het resultaat te zien'
+          bef:
+            general:
+              secondary_label: 'Uitgebreide opties'
+            sort:
+              advanced:
+                collapsible_label: Sorteeropties
+  video_browser:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Zoektermen
+        bundle:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Zoeken
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+          text_input_required: 'Selecteer een van de filters en klik op ''Toepassen'' om het resultaat te zien'
+          bef:
+            general:
+              secondary_label: 'Uitgebreide opties'
+            sort:
+              advanced:
+                collapsible_label: Sorteeropties

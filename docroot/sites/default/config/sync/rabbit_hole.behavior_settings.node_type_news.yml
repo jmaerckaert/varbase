@@ -1,0 +1,11 @@
+uuid: 02aca36c-27df-4f15-a9e6-678b1c0cee13
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node_type_news
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

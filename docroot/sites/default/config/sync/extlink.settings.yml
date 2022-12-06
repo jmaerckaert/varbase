@@ -1,0 +1,17 @@
+extlink_include: ''
+extlink_exclude: ''
+extlink_alert_text: 'This link will take you to an external web site. We are not responsible for their content.'
+extlink_alert: false
+extlink_target: false
+extlink_subdomains: true
+extlink_mailto_class: '0'
+extlink_img_class: false
+extlink_class: '0'
+extlink_css_exclude: ''
+extlink_css_explicit: ''
+langcode: nl
+extlink_label: '(link is external)'
+extlink_mailto_label: '(link sends email)'
+extlink_nofollow: false
+extlink_target_no_override: false
+extlink_follow_no_override: false

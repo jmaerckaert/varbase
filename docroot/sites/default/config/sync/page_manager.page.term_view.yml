@@ -1,0 +1,16 @@
+uuid: 6280dfbf-3f64-4e70-b6a1-bdba752ddbbc
+langcode: nl
+status: false
+dependencies: {  }
+id: term_view
+label: 'Term View'
+description: ''
+use_admin_theme: false
+path: '/taxonomy/term/{taxonomy_term}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  taxonomy_term:
+    machine_name: taxonomy_term
+    type: 'entity:taxonomy_term'
+    label: Taxonomy_term

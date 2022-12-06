@@ -1,0 +1,16 @@
+uuid: 8a65bd30-4c8a-437c-9bb9-641795464921
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Inhoud
+tags:
+  canonical_url: '[node:url]'
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'
+  og_image: '[node:field_social_image:entity:field_media_image:entity:url]'
+  og_title: '[node:title] | [site:name]'
+  og_url: '[node:url]'
+  og_description: '[node:summary]'

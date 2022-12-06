@@ -1,0 +1,37 @@
+uuid: 6b4515b4-c4e4-40c1-b939-cbd5e8f790bc
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: snStYMRrDXocH43hoZyKs9deZlnyB6ZzFOt5HkvNJQ8
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access sitemap'
+  - 'access tour'
+  - 'access user profiles'
+  - 'bypass honeypot protection'
+  - 'cancel account'
+  - 'change own username'
+  - 'display eu cookie compliance popup'
+  - 'download media'
+  - 'dropzone upload files'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - 'view background image'
+  - 'view media'
+  - 'view terms in broker_types'
+  - 'view terms in document_category'
+  - 'view terms in employee_functions'
+  - 'view terms in faq_category'
+  - 'view terms in localities'
+  - 'view terms in product_category'
+  - 'view terms in tags'
+  - 'view the administration theme'

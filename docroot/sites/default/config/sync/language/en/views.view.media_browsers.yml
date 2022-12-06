@@ -1,0 +1,246 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Load More'
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Browser Teaser'
+      filters:
+        name:
+          expose:
+            label: 'Media name'
+      sorts:
+        created:
+          expose:
+            label: Created
+        name:
+          expose:
+            label: Name
+      empty:
+        area_text_custom:
+          content: 'There are no media items to display. Add new media content'
+    display_title: Master
+  editor_media_browser:
+    display_title: 'Editor Media Browser'
+    display_options:
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Entity Browser Preview'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: 'Skip first'
+      filters:
+        name:
+          expose:
+            label: 'Search keywords'
+        bundle:
+          expose:
+            label: Type
+      empty:
+        area_text_custom:
+          content: 'There are no media items to display. Add new media content.'
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              secondary_label: 'Advanced options'
+            sort:
+              advanced:
+                collapsible_label: 'Sort options'
+          text_input_required_format: full_html
+  general_media_browser:
+    display_title: 'General Media Browser'
+    display_options:
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Entity Browser Preview'
+      filters:
+        name:
+          expose:
+            label: 'Search keywords'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: 'Skip first'
+      empty:
+        area_text_custom:
+          content: 'There are no media items to display. Add new media content'
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              secondary_label: 'Advanced options'
+            sort:
+              advanced:
+                collapsible_label: 'Sort options'
+          text_input_required_format: full_html
+  image_browser:
+    display_title: 'Image Browser'
+    display_options:
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Entity Browser Preview'
+      filters:
+        name:
+          expose:
+            label: 'Search keywords'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: 'Skip first'
+      empty:
+        area_text_custom:
+          content: 'There are no images to display. Upload images from your computer.'
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              secondary_label: 'Advanced options'
+            sort:
+              advanced:
+                collapsible_label: 'Sort options'
+          text_input_required_format: full_html
+  media_browser:
+    display_options:
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Entity Browser Preview'
+      filters:
+        name:
+          expose:
+            label: 'Search keywords'
+        bundle_1:
+          expose:
+            label: Type
+      empty:
+        area_text_custom:
+          content: 'There are no media items to display. Add new media content'
+      display_description: 'Shows a list of filtered media types (images and videos) only.'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: 'Skip first'
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              secondary_label: 'Advanced options'
+            sort:
+              advanced:
+                collapsible_label: 'Sort options'
+          text_input_required_format: full_html
+    display_title: 'Media Browser'
+  video_browser:
+    display_title: 'Video Browser'
+    display_options:
+      fields:
+        rendered_entity:
+          admin_label: 'Media: Entity Browser Preview'
+      filters:
+        name:
+          expose:
+            label: 'Search keywords'
+        bundle:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- All -'
+            offset_label: 'Skip first'
+      empty:
+        area_text_custom:
+          content: 'There are no videos to display. Upload videos from your computer.'
+      exposed_form:
+        options:
+          submit_button: Search
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              secondary_label: 'Advanced options'
+            sort:
+              advanced:
+                collapsible_label: 'Sort options'
+          text_input_required_format: full_html
+label: 'Media Entity Browsers'
+description: 'Browser view to select media content form the library of images, media, files in the site'

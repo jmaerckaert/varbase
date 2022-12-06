@@ -1,0 +1,16 @@
+disabled: false
+field_template: true
+ft-default: default
+ft-show-colon: false
+classes:
+  region:
+    - container-wrapper
+    - container
+    - col-md-4
+    - col-md-8
+    - container-wrapper-additional-information
+    - container-documents
+    - bg-white
+  field: {  }
+use_field_names: true
+langcode: nl

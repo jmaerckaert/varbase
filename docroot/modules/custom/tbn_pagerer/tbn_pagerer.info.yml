@@ -1,0 +1,10 @@
+name: TBN pagerer
+description: Configurable pager styles.
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - pagerer
+type: module
+package: Custom
+version: '8.x-1.0'
+'interface translation project': tbn_pagerer
+'interface translation server pattern': modules/custom/tbn_pagerer/translations/%project-%version.%language.po

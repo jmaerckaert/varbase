@@ -1,0 +1,12 @@
+uuid: 3c041b3b-23d3-4ad6-81d1-0fd733d8bea6
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MvQPTbQx0Vxwy0ordSHyixdZmLCMpvMdLD69dlwkrKc
+id: user
+label: Gebruiker
+tags:
+  canonical_url: '[user:url]'
+  description: '[site:name]'
+  title: '[user:display-name] | [site:name]'

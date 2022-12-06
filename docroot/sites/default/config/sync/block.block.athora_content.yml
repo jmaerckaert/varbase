@@ -1,0 +1,22 @@
+uuid: 29b1449c-f396-468d-82bf-1203a0ee0b14
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - athora
+_core:
+  default_config_hash: c5UrI7j9_9T8PTX7mc3T-yBp5ETpA5chZaCn8SrqtIQ
+id: athora_content
+theme: athora
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

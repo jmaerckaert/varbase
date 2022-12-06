@@ -1,0 +1,13 @@
+uuid: 9c7339ec-6521-4825-aa08-7d183ca1b4bb
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - athora_broker
+id: epartner
+label: 'ePartner Imports'
+description: 'ePartner-related imports.'
+source_type: Excel
+module: null
+shared_configuration: null

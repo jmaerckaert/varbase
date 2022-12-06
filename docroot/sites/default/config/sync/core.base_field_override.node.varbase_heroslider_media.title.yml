@@ -1,0 +1,20 @@
+uuid: 6208be5a-fd5e-4332-b2e9-f8129a8a2b14
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: eIBhSCP_mRIpDQXST80Lh6bJw12SFHmb7tUJqqtoLLo
+id: node.varbase_heroslider_media.title
+field_name: title
+entity_type: node
+bundle: varbase_heroslider_media
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

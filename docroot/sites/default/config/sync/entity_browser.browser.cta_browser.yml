@@ -1,0 +1,47 @@
+uuid: 89126702-0e11-4154-8c38-90854775ade8
+langcode: und
+status: true
+dependencies:
+  config:
+    - views.view.content_browser
+  enforced:
+    module:
+      - content_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: iC-sfq_NO-1zMEFcPceGdLn4Mgwt68AcuVn2Ez-IV8w
+name: cta_browser
+label: 'cta browser'
+display: iframe
+display_configuration:
+  width: '1100'
+  height: '650'
+  link_text: 'Select content'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  57387ece-c090-4d22-9c00-eaaad74d642b:
+    settings:
+      view: content_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 57387ece-c090-4d22-9c00-eaaad74d642b
+    weight: 0
+    label: 'Cta listing'
+    id: view
+  836ff3e9-b73d-416f-ad68-2665c28ef612:
+    settings:
+      entity_type: node
+      bundle: cta
+      form_mode: default
+      submit_text: 'Save entity'
+    uuid: 836ff3e9-b73d-416f-ad68-2665c28ef612
+    weight: 2
+    label: 'Add cta'
+    id: entity_form

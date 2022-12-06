@@ -1,0 +1,58 @@
+uuid: 7e7211c0-fd5b-4c4a-a23a-0331b73f93f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employee.body
+    - field.field.node.employee.field_employee_function
+    - field.field.node.employee.field_media
+    - node.type.employee
+  module:
+    - ds
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections: {  }
+id: node.employee.teaser
+targetEntityType: node
+bundle: employee
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_employee_function:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: s02_square
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  langcode: true
+  links: true

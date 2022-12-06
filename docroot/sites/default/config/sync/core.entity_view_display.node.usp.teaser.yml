@@ -1,0 +1,29 @@
+uuid: 3988f19d-b1ca-449d-9a6f-d56739fc0a34
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.usp.body
+    - field.field.node.usp.field_media
+    - node.type.usp
+  module:
+    - text
+    - user
+id: node.usp.teaser
+targetEntityType: node
+bundle: usp
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_media: true
+  langcode: true
+  links: true

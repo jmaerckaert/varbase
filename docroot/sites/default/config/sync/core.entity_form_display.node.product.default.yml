@@ -1,0 +1,312 @@
+uuid: c92db1c3-2492-447d-b5d9-7b47586e4358
+langcode: nl
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.node.product.body
+    - field.field.node.product.field_additional_information
+    - field.field.node.product.field_compare_tool
+    - field.field.node.product.field_cta
+    - field.field.node.product.field_documents
+    - field.field.node.product.field_documents_description
+    - field.field.node.product.field_documents_title
+    - field.field.node.product.field_features
+    - field.field.node.product.field_features_title
+    - field.field.node.product.field_meta_tags
+    - field.field.node.product.field_product_category
+    - field.field.node.product.field_social_image
+    - field.field.node.product.field_usp
+    - field.field.node.product.field_what_is_title
+    - field.field.node.product.field_why_take_title
+    - field.field.node.product.field_yoast_seo
+    - field.field.node.product.layout_builder__layout
+    - node.type.product
+  module:
+    - entity_browser
+    - entity_browser_entity_form
+    - inline_entity_form
+    - metatag
+    - path
+    - scheduler
+    - text
+    - yoast_seo
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_additional_information:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_compare_tool:
+    weight: 12
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_cta:
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: CTA
+      label_plural: CTA
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: cta_browser
+    type: inline_entity_form_complex
+    region: content
+  field_documents:
+    type: inline_entity_form_complex
+    weight: 11
+    settings:
+      form_mode: media_library
+      override_labels: true
+      label_singular: document
+      label_plural: document
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    region: content
+  field_documents_description:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_documents_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features:
+    weight: 8
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: feature
+      label_plural: feature
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_features_title:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_tags:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_product_category:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_social_image:
+    weight: 13
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_replace: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_usp:
+    weight: 5
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: USP
+      label_plural: USP
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_what_is_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_why_take_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_yoast_seo:
+    weight: 27
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 14
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 23
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 19
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_the_options: true
+  layout_builder__layout: true

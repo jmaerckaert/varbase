@@ -1,0 +1,21 @@
+uuid: 13540809-2ebf-4cdf-8544-258434167415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slogan
+    - node.type.epartner
+  module:
+    - text
+id: node.epartner.field_slogan
+field_name: field_slogan
+entity_type: node
+bundle: epartner
+label: Slogan
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

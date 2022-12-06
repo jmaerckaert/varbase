@@ -1,0 +1,10 @@
+uuid: 39421705-e108-4cf0-8ea4-f4f79ec546bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.faq
+label: FAQ
+targetEntityType: taxonomy_term
+cache: true

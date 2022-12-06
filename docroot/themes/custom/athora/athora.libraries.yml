@@ -1,0 +1,86 @@
+# athora framework as which could be used to extend bootstrap/framework
+#          athora/framework = athora/bootstrap-styles
+#                                      + athora/bootstrap-scripts
+#                                      + athora/vartheme-styles
+#                                      + athora/global-styles
+#                                      + athora/global-scripts
+#                                      + vartheme/bootstrap-print
+framework:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+    - athora/bootstrap-styles
+    - athora/bootstrap-scripts
+    - athora/vartheme-styles
+    - athora/global-styles
+    - athora/global-scripts
+    - vartheme/bootstrap-print
+
+# athora global styles library.
+global-styles:
+  css:
+    base:
+      css/base/athora.base.css: {}
+    theme:
+      css/theme/header.theme.css: {}
+      css/theme/content.theme.css: {}
+      css/theme/footer.theme.css: {}
+      css/print.css: { media: print }
+  dependencies:
+    - core/jquery
+
+# athora global scripts library.
+global-scripts:
+  js:
+    js/script.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+# athora Vartheme styles library.
+vartheme-styles:
+  css:
+    base:
+      css/base/vartheme.base.css: {}
+
+# athora Bootstrap global styles library.
+bootstrap-styles:
+  css:
+    base:
+      css/base/bootstrap.base.css: {}
+
+
+# athora Bootstrap global scripts library.
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/transition.js: {}
+
+# athora Varbase Bootstrap Paragraphs colors theme.
+vbp-colors:
+  css:
+    theme:
+      css/theme/vbp-colors.theme.css: {}
+
+# Accordion javascript to open correct item by url
+accordion-script:
+  js:
+    js/accordion.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+socket.io-client:
+  js:
+    node_modules/socket.io-client/dist/socket.io.js: {}

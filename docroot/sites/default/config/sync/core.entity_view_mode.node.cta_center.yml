@@ -1,0 +1,10 @@
+uuid: a55ef1a2-1adb-4027-8186-b9a918fb625c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.cta_center
+label: 'CTA - center'
+targetEntityType: node
+cache: true

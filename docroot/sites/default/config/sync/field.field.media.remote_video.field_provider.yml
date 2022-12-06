@@ -1,0 +1,19 @@
+uuid: 8565a446-ac66-4078-a919-f7f187a5494e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_provider
+    - media.type.remote_video
+id: media.remote_video.field_provider
+field_name: field_provider
+entity_type: media
+bundle: remote_video
+label: 'Media type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

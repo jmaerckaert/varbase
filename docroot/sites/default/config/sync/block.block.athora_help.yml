@@ -1,0 +1,22 @@
+uuid: 7f270047-2be1-4d96-892e-9780a083cb25
+langcode: nl
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - athora
+_core:
+  default_config_hash: 4aEarkZJ7bcEF6YyZsiXt92aR_H4lvIcACo7FXe4MUg
+id: athora_help
+theme: athora
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

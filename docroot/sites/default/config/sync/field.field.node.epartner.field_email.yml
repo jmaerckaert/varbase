@@ -1,0 +1,19 @@
+uuid: bd6ca08c-4368-4989-a6ac-1f4f5792af7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.epartner
+id: node.epartner.field_email
+field_name: field_email
+entity_type: node
+bundle: epartner
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

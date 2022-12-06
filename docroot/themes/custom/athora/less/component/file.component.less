@@ -1,0 +1,117 @@
+// File (and Image Widget) styles.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // athora variables.
+@import "../mixins.less";                       // athora mixins.
+// -----------------------------------------------------------------------------
+
+.file {
+  display: table;
+  font-size: 75%;
+  font-weight: 700;
+  margin: 5px 0;
+  width: 100%;
+  > span {
+    background: #fff;
+    color: @brand-primary;
+    border-bottom: 1px solid @input-border;
+    border-top: 1px solid @input-border;
+    &:first-child {
+      border-left: 1px solid @input-border;
+    }
+    &:last-child {
+      border-right: 1px solid @input-border;
+    }
+  }
+  > .tabledrag-changed {
+    &, &:last-child {
+      border: 1px solid darken(@alert-warning-border, 5%);
+    }
+    background: @alert-warning-bg;
+    border-radius: 0;
+    color: @alert-warning-text;
+    display: table-cell;
+    padding: 0 1em;
+    top: 0;
+    vertical-align: middle;
+    border-left: 1px solid inherit;
+  }
+}
+.file-icon {
+  display: table-cell;
+  font-size: 150%;
+  padding: .25em .5em;
+  text-align: center;
+  vertical-align: middle;
+}
+.file-link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  a, a:hover, a:focus, a:active {
+    color: inherit;
+  }
+}
+.file-size {
+  display: table-cell;
+  padding: 0 1em;
+  text-align: right;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.image-widget.row {
+  overflow: hidden;
+}
+
+.file {
+  padding-left: 20px; /* LTR */
+  display: inline-block;
+  min-height: 16px;
+  background-repeat: no-repeat;
+  background-position: left center; /* LTR */
+  &--general,
+  &--application-octet-stream {
+    background-image: url(../../images/icons/application-octet-stream.png);
+  }
+  &--package-x-generic {
+    background-image: url(../../images/icons/package-x-generic.png);
+  }
+  &--x-office-spreadsheet {
+    background-image: url(../../images/icons/x-office-spreadsheet.png);
+  }
+  &--x-office-document {
+    background-image: url(../../images/icons/x-office-document.png);
+  }
+  &--x-office-presentation {
+    background-image: url(../../images/icons/x-office-presentation.png);
+  }
+  &--text-x-script {
+    background-image: url(../../images/icons/text-x-script.png);
+  }
+  &--text-html {
+    background-image: url(../../images/icons/text-html.png);
+  }
+  &--text-plain {
+    background-image: url(../../images/icons/text-plain.png);
+  }
+  &--application-pdf {
+    background-image: url(../../images/icons/application-pdf.png);
+  }
+  &--application-x-executable {
+    background-image: url(../../images/icons/application-x-executable.png);
+  }
+  &--audio {
+    background-image: url(../../images/icons/audio-x-generic.png);
+  }
+  &--video {
+    background-image: url(../../images/icons/video-x-generic.png);
+  }
+  &--text {
+    background-image: url(../../images/icons/text-x-generic.png);
+  }
+  &--image {
+    background-image: url(../../images/icons/image-x-generic.png);
+  }
+}

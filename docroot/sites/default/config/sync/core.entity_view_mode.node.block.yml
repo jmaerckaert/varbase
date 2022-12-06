@@ -1,0 +1,10 @@
+uuid: 7184bbe9-44e4-4b5c-a764-001ebda58564
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.block
+label: Block
+targetEntityType: node
+cache: true

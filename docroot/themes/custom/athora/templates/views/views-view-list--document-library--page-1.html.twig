@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if attributes -%}
+<div{{ attributes }}>
+  {% endif %}
+
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+
+  {% set attributes = create_attribute({'id': 'accordion', 'class': 'panel-group ui-accordion', 'role': 'tablist', 'aria-multiselectable': 'true'}) %}
+  {{ _self.accordion(rows, attributes, true) }}
+
+  {% if attributes -%}
+</div>
+{% endif %}
+
+{% macro accordion(rows, attributes) %}
+  <div{{ attributes }}>
+    {% set parent = attributes.id %}
+    {% for id, row in rows %}
+      {% set target = 'collapse-' ~ row.term.id %}
+      {% set controls = 'heading-' ~ row.term.id %}
+      <div class="panel">
+        <div role="tab" id="{{ controls }}">
+          <h3 class="panel-ui-accordion-header">
+            <a class="ui-accordion-header" role="button" data-toggle="collapse" data-parent="#{{ parent }}" href="#{{ target }}"
+               aria-expanded="{{ loop.first ? 'true' : 'false' }}"
+               aria-controls="{{ target }}">
+              <span>{{ row.term.label }}</span>
+            </a>
+          </h3>
+        </div>
+        {% set body_attributes = create_attribute({'role': 'tabpanel'}) %}
+        {% set body_classes = [
+          'panel-collapse',
+          'collapse',
+          row.active ? 'in'
+        ] %}
+        <div{{ body_attributes.addClass(body_classes).setAttribute('id', target).setAttribute('aria-labelledby', controls) }}>
+          <div class="panel-body ui-accordion-content">
+            {% if row.children %}
+              {% for sub in row.children %}
+                <div class="views-row">
+                  {{- sub.content -}}
+                </div>
+              {% endfor %}
+            {% endif %}
+            {% if row.accordion %}
+              {% set attributesSub = create_attribute({'id': 'accordion-' ~ id, 'class': 'panel-group ui-accordion', 'role': 'tablist', 'aria-multiselectable': 'true'}) %}
+              {{ _self.accordion(row.accordion, attributesSub, false) }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

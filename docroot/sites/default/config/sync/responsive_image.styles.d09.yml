@@ -1,0 +1,26 @@
+uuid: 7e21273d-4625-4385-9daf-b4e6982eedd8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.d08
+    - image.style.d09
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: ouL5Efoq9C8KIzufoHAdlFYxhCb1QO1YmZU5PjDOaGM
+id: d09
+label: 'Display 09 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d08
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d09
+breakpoint_group: bootstrap
+fallback_image_style: d08

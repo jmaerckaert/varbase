@@ -1,0 +1,22 @@
+uuid: 1defb9b1-4325-4ac1-9594-6244176bb1fe
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.file
+_core:
+  default_config_hash: aWg0gRQ4WiXvFTiqBTCLWU7Y7uAhOIjzIUbcbeMVsHM
+id: media.file.name
+field_name: name
+entity_type: media
+bundle: file
+label: Naam
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

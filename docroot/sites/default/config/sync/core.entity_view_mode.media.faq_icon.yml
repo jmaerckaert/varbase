@@ -1,0 +1,10 @@
+uuid: 2f05a5f0-591c-447d-9633-40b288e5a57e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.faq_icon
+label: 'FAQ Icon'
+targetEntityType: media
+cache: true

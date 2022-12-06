@@ -1,0 +1,111 @@
+uuid: d09630b9-d3c0-4c56-957b-c1c995423d88
+langcode: nl
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: n8btkE0kwauSvMT3PbnSLDFbpD_j766fMyeCVvMoJcM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: 'Block Formatting'
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteFromWord
+            - '-'
+            - Undo
+            - Redo
+        -
+          name: Media
+          items:
+            - media
+            - Embed
+            - '-'
+            - Blockquote
+            - HorizontalRule
+            - '-'
+            - Table
+        -
+          name: Linking
+          items:
+            - '-'
+            - Iframe
+            - Linkit
+            - '-'
+            - Link
+            - Unlink
+            - '-'
+            - Anchor
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Maximize
+            - Source
+            - content_browser
+            - cta_browser
+      -
+        -
+          name: Style
+          items:
+            - Styles
+            - Format
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - Strike
+            - '-'
+            - Subscript
+            - Superscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Lists
+          items:
+            - NumberedList
+            - BulletedList
+            - '-'
+            - Outdent
+            - Indent
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - '-'
+            - BidiLtr
+            - BidiRtl
+            - '-'
+            - Language
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "div.bs-callout|Callout\r\ndiv.bs-callout.bs-callout-danger|Callout danger\r\ndiv.bs-callout.bs-callout-warning|Callout warning\r\ndiv.bs-callout.bs-callout-info|Callout Info\r\ndiv.well|Well\r\na.cta-primary|Button primary\r\na.cta-secondary|Button secondary\r\nh2.sub-title| Sub title h2\r\nh3.sub-title| Sub title h3\r\nh4.sub-title| Sub title h4\r\nh5.sub-title| Sub title h5\r\ndiv.well.well-lg|Well large\r\ndiv.well.well-sm|Well small\r\ndiv.alert.alert-success|Alert success\r\ndiv.alert.alert-info|Alert info\r\ndiv.alert.alert-warning|Alert warning\r\ndiv.alert.alert-danger|Alert danger\r\ndiv.panel.panel-primary|Panel primary\r\ndiv.panel.panel-success|Panel success\r\ndiv.panel.panel-info|Panel info\r\ndiv.panel.panel-warning|Panel warning\r\ndiv.panel.panel-danger|Panel danger\r\ndiv.panel-heading|Panel heading\r\ndiv.panel-title|Panel title\r\ndiv.panel-body|Panel body\r\ndiv.panel-footer|Panel footer"
+    autoembed:
+      status: embed
+    linkit:
+      linkit_profile: linkit_all_nodes
+    tokenbrowser:
+      token_types: {  }
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

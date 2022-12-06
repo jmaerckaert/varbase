@@ -1,0 +1,8 @@
+name: Google Site Search
+type: module
+description: Provides integration with Google Site Search.
+core_version_requirement: ^8 || ^9 || ^10
+package: Search
+dependencies:
+  - search
+  - key

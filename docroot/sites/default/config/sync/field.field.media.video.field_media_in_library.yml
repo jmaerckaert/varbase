@@ -1,0 +1,25 @@
+uuid: 35b6d884-71b0-4493-b50a-662f123f03f9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.video
+_core:
+  default_config_hash: KjNBr2NMafiSbEYVq5bVcfM0SazNGM1tmmhZmHmYG6o
+id: media.video.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: video
+label: 'Save to Library'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

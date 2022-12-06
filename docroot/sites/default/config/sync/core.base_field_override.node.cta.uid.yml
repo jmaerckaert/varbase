@@ -1,0 +1,20 @@
+uuid: 66237c50-b556-42d1-90a7-6fb2199f81bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.uid
+field_name: uid
+entity_type: node
+bundle: cta
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

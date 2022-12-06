@@ -1,0 +1,29 @@
+uuid: ed7bf160-9c82-428a-81a0-348b5b53c35a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: null
+    fields_display_mode: null
+    publish_enable: false
+    publish_past_date: null
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Error page'
+type: error_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

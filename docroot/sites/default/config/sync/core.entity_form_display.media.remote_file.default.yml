@@ -1,0 +1,72 @@
+uuid: 406c5db5-f49f-4f36-a847-2c229df588df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_file.field_media_description
+    - field.field.media.remote_file.field_media_document_category
+    - field.field.media.remote_file.field_media_file_1
+    - media.type.remote_file
+  module:
+    - remote_stream_wrapper_widget
+    - text
+id: media.remote_file.default
+targetEntityType: media
+bundle: remote_file
+mode: default
+content:
+  field_media_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media_document_category:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_media_file_1:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: remote_stream_wrapper
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  path: true
+  uid: true

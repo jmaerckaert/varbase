@@ -1,0 +1,19 @@
+third_party_settings:
+  field_group:
+    group_advanced:
+      format_settings:
+        label: 'Styling settings'
+      label: 'Styling settings'
+    group_title:
+      format_settings:
+        label: 'Component title'
+      label: 'Component title'
+content:
+  bp_slide_content:
+    settings:
+      title: Component
+      title_plural: Components
+  bp_title:
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'

@@ -1,0 +1,64 @@
+uuid: 1792afec-d157-43c5-8fb1-d69fc65a0ec5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - ctools
+    - panels
+    - system
+id: term_view-panels_variant-7
+label: 'New Car'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: 4d13d79a-b401-472c-98b5-82f99b28db59
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'New Car'
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-7
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: new_car
+  -
+    id: request_path
+    pages: /taxonomy/term/7
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  new_car:
+    label: 'New Car'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 9416c5a1-712f-4222-867c-a1474b1de089

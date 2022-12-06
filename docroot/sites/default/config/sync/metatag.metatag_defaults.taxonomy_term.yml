@@ -1,0 +1,16 @@
+uuid: 025c16c0-5dcf-4462-8e9e-44c107593a26
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+id: taxonomy_term
+label: Taxonomieterm
+tags:
+  canonical_url: '[term:url]'
+  title: '[term:name] | [site:name]'
+  description: '[term:description]'
+  og_image: '[term:field_social_image:entity:field_media_image:entity:url]'
+  og_title: '[term:name] | [site:name]'
+  og_url: '[term:url]'
+  og_description: '[term:description]'

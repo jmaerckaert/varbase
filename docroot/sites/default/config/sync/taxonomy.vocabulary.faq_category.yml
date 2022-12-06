@@ -1,0 +1,8 @@
+uuid: 6d2ba3ff-df39-4f88-8192-00816d17379b
+langcode: nl
+status: true
+dependencies: {  }
+name: 'FAQ category'
+vid: faq_category
+description: ''
+weight: 0

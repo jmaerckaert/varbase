@@ -1,0 +1,14 @@
+uuid: b6df9e1a-ca47-496f-9cbf-eaafc27d5130
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.supplier_information_editor
+  module:
+    - user
+id: user_remove_role_action.supplier_information_editor
+label: 'Remove the Supplier information editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: supplier_information_editor

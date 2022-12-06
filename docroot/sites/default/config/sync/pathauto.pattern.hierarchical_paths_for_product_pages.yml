@@ -1,0 +1,33 @@
+uuid: d92ba567-2aed-478d-814f-6b25a60a1bea
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: hierarchical_paths_for_product_pages
+label: 'Hierarchical paths for product pages'
+type: 'canonical_entities:node'
+pattern: 'producten/[node:field_product_category:entity:parents:join-path]/[node:field_product_category:entity:name]/[node:title]'
+selection_criteria:
+  f3c3c77c-50b9-4d07-8462-f66a0ec9c645:
+    id: node_type
+    bundles:
+      product: product
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f3c3c77c-50b9-4d07-8462-f66a0ec9c645
+  a1630703-a6cc-48a4-839e-9f6642efc894:
+    id: language
+    langcodes:
+      nl: nl
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: a1630703-a6cc-48a4-839e-9f6642efc894
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

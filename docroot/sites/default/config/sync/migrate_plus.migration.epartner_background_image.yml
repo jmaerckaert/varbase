@@ -1,0 +1,115 @@
+uuid: deb949eb-821f-4d2a-8cd0-588dddfd8427
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - athora_broker
+id: epartner_background_image
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: epartner
+label: 'ePartner background image'
+source:
+  plugin: spreadsheet
+  file: 'private://epartner/Brokers.xlsx'
+  worksheet: data
+  origin: A2
+  columns:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    - I
+    - J
+    - K
+    - L
+    - M
+    - 'N'
+    - O
+  row_index_column: 'Row no.'
+  keys:
+    A:
+      type: integer
+      size: big
+    J:
+      type: string
+  constants:
+    image_path: 'private://epartner/images/'
+    image_extension: .jpg
+    background_image_target_entity_type: node
+    background_image_destination: 'public://background_image'
+process:
+  langcode: J
+  broker_id: A
+  type:
+    plugin: default_value
+    default_value: 0
+  target_entity_uuid:
+    -
+      plugin: migration_lookup
+      migration: epartner_excel
+      source_ids:
+        epartner_excel:
+          - A
+          - J
+      no_stub: true
+    -
+      plugin: array_shift
+    -
+      plugin: entity_lookup
+      value_key: nid
+      bundle_key: type
+      bundle: epartner
+      entity_type: node
+    -
+      plugin: skip_on_empty
+      method: process
+      message: 'Could not find ePartner'
+    -
+      plugin: callback
+      callable:
+        - \Drupal\node\Entity\Node
+        - load
+    -
+      plugin: skip_on_empty
+      method: process
+      message: 'Could not load ePartner'
+    -
+      plugin: callback
+      callable: athora_broker_get_uuid
+  target:
+    plugin: concat
+    source:
+      - constants/background_image_target_entity_type
+      - '@target_entity_uuid'
+    delimiter: ':'
+  temp_image_uri:
+    plugin: concat
+    source:
+      - constants/image_path
+      - '@broker_id'
+      - constants/image_extension
+  image:
+    plugin: image_import
+    source: '@temp_image_uri'
+    destination: constants/background_image_destination
+  settings:
+    plugin: default_value
+    default_value:
+      blur:
+        type: 0
+      text:
+        format: full_html
+        value: ''
+destination:
+  plugin: 'entity:background_image'
+migration_dependencies:
+  required:
+    - epartner_excel

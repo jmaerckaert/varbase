@@ -1,0 +1,77 @@
+display:
+  default:
+    display_options:
+      fields:
+        node_bulk_form:
+          action_title: 'Pour cette sélection'
+        title:
+          label: Titre
+        type:
+          label: 'Type de contenu'
+          separator: ', '
+        name:
+          label: Auteur
+        status:
+          label: État
+          settings:
+            format_custom_true: Publié
+            format_custom_false: 'Non publié'
+        created:
+          label: Créé
+        changed:
+          label: 'Mis à jour'
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+      pager:
+        options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
+      filters:
+        status:
+          expose:
+            label: État
+          group_info:
+            label: 'Statut de publication'
+            group_items:
+              1:
+                title: Publié
+              2:
+                title: 'Non publié'
+        type:
+          expose:
+            label: 'Type de contenu'
+        title:
+          expose:
+            label: Titre
+        langcode:
+          expose:
+            label: Langue
+      title: Contenu
+      empty:
+        area_text_custom:
+          content: 'Aucun média disponible.'
+    display_title: Maître
+  page_1:
+    display_options:
+      menu:
+        title: Contenu
+      tab_options:
+        title: Contenu
+        description: 'Trouver et gérer le contenu'
+    display_title: Page
+label: Contenu
+description: 'Trouver et gérer le contenu.'

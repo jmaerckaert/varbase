@@ -1,0 +1,7 @@
+handlers:
+  email_confirmation:
+    label: 'Courriel de confirmation'
+  email_notification:
+    label: 'Notification par courriel'
+    settings:
+      from_name: '[webform_submission:values:name:raw]'

@@ -1,0 +1,26 @@
+uuid: 2c5431a8-e611-45a9-9295-3b167cb3d02a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.d04_standard
+    - image.style.d08_standard
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: hDaZiSDpzvENT3hU_ndSY9ErEyzyOjII-OgsPNUDSCE
+id: d04_standard
+label: 'Display 04 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d08_standard
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d04_standard
+breakpoint_group: bootstrap
+fallback_image_style: d04_standard

@@ -1,0 +1,12 @@
+uuid: edfeca54-282b-4126-9d21-6be1230652c9
+langcode: nl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: m24BntgZzG6EMfgkI06ODnNRvHHenKGW-9g5Qru2NIg
+id: media.se2e
+label: 'Size Edge-to-Edge auto'
+targetEntityType: media
+cache: true

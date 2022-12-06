@@ -1,0 +1,23 @@
+uuid: 123770b3-b85f-464f-b01d-f198c04098a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.cta
+  module:
+    - link
+id: node.cta.field_link
+field_name: field_link
+entity_type: node
+bundle: cta
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

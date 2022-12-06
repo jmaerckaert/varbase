@@ -1,0 +1,18 @@
+uuid: 82753bde-967f-41d9-adce-37ece5ba92ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.created
+field_name: created
+entity_type: node
+bundle: cta
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: 90de1600-4643-4af1-9128-0a50137f6fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.title
+field_name: title
+entity_type: node
+bundle: cta
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

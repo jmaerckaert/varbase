@@ -1,0 +1,14 @@
+label: 'Media Hero Slider Creation'
+tips:
+  creating-a-hero-slide:
+    label: 'Creating a Hero Slide'
+    body: "This tour will take you through the main features of the hero slide creation.\r\n\r\nLets start!"
+  slide-content:
+    label: 'Slide Content'
+    body: 'Add the content of the slide in the Slide title and Slide text.'
+  add-the-slide-to-the-queue:
+    label: 'Add The Slide to The Queue'
+    body: 'Then add the slide the "Media Hero Slider" queue to push it to the queue directly.'
+  preview-and-save:
+    label: 'Preview and Save'
+    body: 'Preview your slide, then publish and save.'

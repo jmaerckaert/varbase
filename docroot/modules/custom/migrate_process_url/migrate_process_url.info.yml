@@ -1,0 +1,5 @@
+name: 'Migrate Process URL'
+type: module
+description: 'Provides field_link_generate process plugins for migrations'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Migration'

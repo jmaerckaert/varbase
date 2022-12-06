@@ -1,0 +1,29 @@
+uuid: 86b35854-c88e-44be-8fe8-1f94a8690149
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - athora
+id: footer
+theme: athora
+region: footer_bottom
+weight: -7
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: Footer
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer:'
+  suggestion: footer
+visibility: {  }

@@ -1,0 +1,64 @@
+uuid: c01f875b-faae-44a1-aff9-71ffe4a21fe2
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - ctools
+    - panels
+    - system
+id: term_view-panels_variant-6
+label: 'Investment funds'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: ec92cf19-a3ad-47d5-945e-21edc47068e6
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'Investment funds'
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-6
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: investment_funds
+  -
+    id: request_path
+    pages: /taxonomy/term/14
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  investment_funds:
+    label: 'Investment funds'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 40f48b05-484a-43c7-b77a-6b6b8e4505d2

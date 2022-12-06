@@ -1,0 +1,4 @@
+label: 'Vastgeplakt bovenaan de lijst'
+settings:
+  on_label: Aan
+  off_label: Uit

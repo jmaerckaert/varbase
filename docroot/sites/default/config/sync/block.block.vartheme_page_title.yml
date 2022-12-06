@@ -1,0 +1,20 @@
+uuid: 7ee4647a-ce45-4269-af91-4c60168ed6b7
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - vartheme
+_core:
+  default_config_hash: q-wQopdWdlXxfXBOwcgMWqX7kNdtql3QoGsZVzKsXhk
+id: vartheme_page_title
+theme: vartheme
+region: header
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

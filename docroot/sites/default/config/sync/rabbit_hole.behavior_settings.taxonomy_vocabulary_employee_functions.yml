@@ -1,0 +1,11 @@
+uuid: a975eb59-3efd-4710-b07a-407a5b18095f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.employee_functions
+id: taxonomy_vocabulary_employee_functions
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

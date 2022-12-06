@@ -1,0 +1,95 @@
+uuid: 330a9f29-a9d3-44de-8802-fc35a610e62c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - system.menu.main
+  module:
+    - content_browser
+    - menu_block
+    - panels
+_core:
+  default_config_hash: AZsESzLljW7yciBTSzNCVMPYQcSsiSt6Fz53vdZKM28
+id: homepage-panels_variant-0
+label: Homepage
+variant: panels_variant
+variant_settings:
+  blocks:
+    f20fd8d5-3b73-4737-9b26-209920be020f:
+      id: content_embed
+      label: 'Who are we?'
+      provider: content_browser
+      label_display: visible
+      description: ''
+      view_mode: block
+      nids:
+        - 6
+        - 7
+        - 5
+      uuids: {  }
+      region: main
+      weight: 2
+      context_mapping: {  }
+      uuid: f20fd8d5-3b73-4737-9b26-209920be020f
+      css_classes:
+        - bg-white
+      html_id: ''
+      css_styles: ''
+    ac203bc0-9da2-4af1-8cf9-c7fc54903f38:
+      id: content_embed
+      label: 'Our tools'
+      provider: content_browser
+      label_display: visible
+      description: ''
+      view_mode: teaser
+      nids:
+        - 16
+        - 10
+      uuids: {  }
+      region: main
+      weight: 3
+      context_mapping: {  }
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: ac203bc0-9da2-4af1-8cf9-c7fc54903f38
+    2a1d58d8-cd22-4253-856b-33252f2a233b:
+      id: 'menu_block:main'
+      label: Hoofdnavigatie
+      provider: menu_block
+      label_display: visible
+      level: 1
+      depth: 0
+      expand: 1
+      parent: 'main:menu_link_content:5a961bb1-ec24-4699-8271-466ca260fa32'
+      suggestion: products
+      region: main
+      weight: 0
+      uuid: 2a1d58d8-cd22-4253-856b-33252f2a233b
+      context_mapping: {  }
+      css_classes:
+        - container
+        - container-wrapper
+      html_id: ''
+      css_styles: ''
+  id: panels_variant
+  uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings: {  }
+  page_title: '[site:name] | [site:slogan]'
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

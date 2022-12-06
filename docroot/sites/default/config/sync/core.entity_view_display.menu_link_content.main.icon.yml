@@ -1,0 +1,54 @@
+uuid: 213349ac-b246-4bfa-897c-db569207ae12
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.icon
+    - field.field.menu_link_content.main.field_description
+    - field.field.menu_link_content.main.field_icon
+    - system.menu.main
+  module:
+    - ds
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_icon
+id: menu_link_content.main.icon
+targetEntityType: menu_link_content
+bundle: main
+mode: icon
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+hidden:
+  children: true
+  field_description: true
+  langcode: true

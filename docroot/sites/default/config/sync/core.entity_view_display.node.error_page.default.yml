@@ -1,0 +1,62 @@
+uuid: 5c467b56-ebf9-401c-8b2b-13d1eea407b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.error_page.body
+    - node.type.error_page
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - body
+      parent_name: group_container_wrapper
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: content
+    group_container_wrapper:
+      children:
+        - group_container
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: container-wrapper
+      region: content
+id: node.error_page.default
+targetEntityType: node
+bundle: error_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  links: true

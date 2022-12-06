@@ -1,0 +1,13 @@
+uuid: 2b716696-cdc6-4b23-978e-095d291b9232
+langcode: en
+status: true
+dependencies:
+  module:
+    - athora_heroslider_media
+id: slide_media
+label: 'Slide media (image/video)'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  media_slide_picture:
+    enabled: true

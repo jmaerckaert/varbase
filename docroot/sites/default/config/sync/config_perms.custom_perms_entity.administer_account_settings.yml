@@ -1,0 +1,9 @@
+uuid: f6a705ff-fa16-4a23-86a5-52a3466c2eda
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: G3RasgGpLT7MiDfwt1phJQ229-nSxEF7TVbk-QrirXU
+id: administer_account_settings
+label: 'Administer account settings'
+route: entity.user.admin_form

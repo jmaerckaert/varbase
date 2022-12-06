@@ -1,0 +1,18 @@
+uuid: 29a5da53-25fb-423c-9f57-bc4a5c21d110
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header
+id: menu_link_content.header.metatag
+field_name: metatag
+entity_type: menu_link_content
+bundle: header
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

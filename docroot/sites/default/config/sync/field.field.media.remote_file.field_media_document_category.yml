@@ -1,0 +1,29 @@
+uuid: 7f28fb31-7347-49a5-b61a-b652ac255f35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_document_category
+    - media.type.remote_file
+    - taxonomy.vocabulary.document_category
+id: media.remote_file.field_media_document_category
+field_name: field_media_document_category
+entity_type: media
+bundle: remote_file
+label: 'Document category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      document_category: document_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

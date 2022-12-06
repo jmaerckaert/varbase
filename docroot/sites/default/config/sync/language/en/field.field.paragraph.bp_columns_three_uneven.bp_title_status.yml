@@ -1,0 +1,4 @@
+label: 'Don''t show title on page'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

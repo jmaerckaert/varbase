@@ -1,0 +1,27 @@
+uuid: 01ce8404-b192-4cf2-adf5-370b86ae2b39
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vartheme
+_core:
+  default_config_hash: Yw_TL42ISxTXBoU-4uFajhXOW-Efy7qm-p4xku-MgZc
+id: vartheme_main_menu
+theme: vartheme
+region: navigation_collapsible
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

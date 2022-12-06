@@ -1,0 +1,18 @@
+uuid: f78ab963-ca4c-48d9-b146-a2bb40f61b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.usp
+id: node.usp.created
+field_name: created
+entity_type: node
+bundle: usp
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

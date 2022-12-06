@@ -1,0 +1,27 @@
+uuid: 3c9b3a28-04b6-4a4e-9335-a25fd4beec4d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: by7zU_-5X1ntQeiNhyCf0qwwkSpSMoIsJTuU48YM0j0
+id: homepage_main_banner
+label: 'Homepage - Main banner'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      varbase_heroslider_media: varbase_heroslider_media
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 6
+  act_as_queue: true
+  reverse: false

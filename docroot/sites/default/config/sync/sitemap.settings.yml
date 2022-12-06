@@ -1,0 +1,46 @@
+langcode: nl
+page_title: Sitemap
+message:
+  value: "<h1>Sitemap</h1>\r\n"
+  format: full_html
+show_front: false
+show_titles: false
+show_books: {  }
+books_expanded: true
+show_menus:
+  main: main
+  account: '0'
+  admin: '0'
+  footer: '0'
+  header: '0'
+  tools: '0'
+show_menus_hidden: false
+show_vocabularies:
+  document_category: '0'
+  faq_category: '0'
+  product_category: '0'
+  tags: '0'
+show_description: true
+show_count: true
+vocabulary_show_links: false
+vocabulary_depth: -1
+term_threshold: 0
+forum_threshold: -1
+rss_front: rss.xml
+show_rss_links: 1
+rss_taxonomy: -1
+css: true
+order:
+  front: -50
+  menus_account: -49
+  menus_admin: -48
+  menus_header: -47
+  menus_main: -46
+  menus_footer: -45
+  menus_tools: -44
+  vocabularies_document_category: -43
+  vocabularies_faq_category: -42
+  vocabularies_product_category: -41
+  vocabularies_tags: -40
+_core:
+  default_config_hash: f4sH8CGbEMFQXKFoGeaHbmIP_f6cOTi02EeFhHSbYyo

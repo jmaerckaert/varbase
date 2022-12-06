@@ -1,0 +1,25 @@
+uuid: 558738be-4c7b-4d6c-90d2-197b40bea771
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.remote_video
+_core:
+  default_config_hash: CI0cARBAJZE3DZvsnw9WGziMCiKAHR8QAK_fZHVtI5s
+id: media.remote_video.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: remote_video
+label: 'Save to Library'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

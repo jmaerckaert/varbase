@@ -1,0 +1,5 @@
+default_config:
+  tags:
+    pages:
+      pageset_empty: 'No pages to display.'
+      more_button_text: 'Load more'

@@ -1,0 +1,11 @@
+uuid: 5a4caf0d-df46-44bd-bb97-9d0e601d5764
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Bj4Qk9cIY4wblSaF0Y4YigbBRy9iGSgyVQVetwfMNlw
+id: bp_simple
+label: 'Rich Text'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

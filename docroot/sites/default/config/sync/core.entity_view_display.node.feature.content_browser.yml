@@ -1,0 +1,34 @@
+uuid: 31b2d852-c471-46e6-8c5d-b757ff4fe15b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.feature.body
+    - field.field.node.feature.field_media
+    - node.type.feature
+  module:
+    - text
+    - user
+id: node.feature.content_browser
+targetEntityType: node
+bundle: feature
+mode: content_browser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_feature_details: true
+  field_media: true
+  langcode: true

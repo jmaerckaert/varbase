@@ -1,0 +1,29 @@
+uuid: e710293a-39a4-4f5f-928e-201a2afe28c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_category
+    - node.type.campaign
+    - taxonomy.vocabulary.product_category
+id: node.campaign.field_product_category
+field_name: field_product_category
+entity_type: node
+bundle: campaign
+label: 'Product category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_category: product_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

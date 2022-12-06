@@ -1,0 +1,90 @@
+uuid: ebc898af-f3a6-4a47-80e3-7b1a395dd31a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_media_description
+    - field.field.media.file.field_media_document_category
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_media_in_library
+    - media.type.file
+  module:
+    - ds
+    - field_group
+    - file
+    - layout_builder
+    - text
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_media_file
+        - field_media_description
+        - field_media_document_category
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: content
+  layout_builder:
+    sections: {  }
+_core:
+  default_config_hash: I3uGrT9gV9krDQA7ehH5-k-aZndWG9L7eMFOFvteRE4
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  field_media_description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_document_category:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_media_file:
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_default
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

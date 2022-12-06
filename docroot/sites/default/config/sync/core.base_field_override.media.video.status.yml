@@ -1,0 +1,24 @@
+uuid: 50272bf8-3670-44a1-8446-2d9a65cee430
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.video
+_core:
+  default_config_hash: LWtDkEOUpIT8TeyOdvM2pgQrX4bYIbjgaNR9ciL1mtg
+id: media.video.status
+field_name: status
+entity_type: media
+bundle: video
+label: Gepubliceerd
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

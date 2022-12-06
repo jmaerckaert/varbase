@@ -1,0 +1,11 @@
+uuid: 686de5f5-648a-48a6-a519-753c9d31ee70
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Qvki9L3A3GaeVDkjodSGeSY_VKoHHjBy6Zhqyck-RTg
+id: bp_carousel
+label: Carousel
+icon_uuid: null
+description: null
+behavior_plugins: {  }

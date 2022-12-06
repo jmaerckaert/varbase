@@ -1,0 +1,27 @@
+uuid: 029fc98b-a2d6-4d27-8ee0-0784680aa86e
+langcode: nl
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: by7zU_-5X1ntQeiNhyCf0qwwkSpSMoIsJTuU48YM0j0
+id: varbase_heroslider_media
+label: 'Media Hero Slider'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      varbase_heroslider_media: varbase_heroslider_media
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 6
+  act_as_queue: true
+  reverse: false

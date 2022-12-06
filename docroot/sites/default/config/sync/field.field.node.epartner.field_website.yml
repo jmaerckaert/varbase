@@ -1,0 +1,23 @@
+uuid: daf364bf-0b11-41f5-821e-c1c0caf3a727
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.epartner
+  module:
+    - link
+id: node.epartner.field_website
+field_name: field_website
+entity_type: node
+bundle: epartner
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

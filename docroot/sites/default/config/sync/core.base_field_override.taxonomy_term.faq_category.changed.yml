@@ -1,0 +1,18 @@
+uuid: de3b629e-c91b-4817-a00f-8c39a3bc19c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+id: taxonomy_term.faq_category.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: faq_category
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

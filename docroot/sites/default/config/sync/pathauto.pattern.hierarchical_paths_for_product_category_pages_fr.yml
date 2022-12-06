@@ -1,0 +1,34 @@
+uuid: 8f62f755-d307-4785-bdd6-54833fbc1cbc
+langcode: nl
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: hierarchical_paths_for_product_category_pages_fr
+label: 'Hierarchical paths for product category pages'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'produits/[term:parents:join-path]/[term:name]'
+selection_criteria:
+  f2899e3f-9957-478e-a07a-15d3487249e7:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: f2899e3f-9957-478e-a07a-15d3487249e7
+  1d897a27-5862-4831-8ba4-193d1b25be26:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 1d897a27-5862-4831-8ba4-193d1b25be26
+selection_logic: and
+weight: -5
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

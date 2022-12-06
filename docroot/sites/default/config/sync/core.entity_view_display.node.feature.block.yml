@@ -1,0 +1,151 @@
+uuid: 883bb911-d0f4-4998-b837-4a01baade5fb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.block
+    - field.field.node.feature.body
+    - field.field.node.feature.field_media
+    - node.type.feature
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_row
+        - field_media
+        - group_column
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 21
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_row:
+      children:
+        - field_media
+        - group_column
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'row center-items'
+      label: row
+      region: hidden
+    group_column:
+      children:
+        - node_title
+        - body
+      parent_name: group_row
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: col-sm-6
+      label: column
+      region: hidden
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+id: node.feature.block
+targetEntityType: node
+bundle: feature
+mode: block
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: s12_standard
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: col-sm-6
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_feature_details: true
+  langcode: true
+  links: true

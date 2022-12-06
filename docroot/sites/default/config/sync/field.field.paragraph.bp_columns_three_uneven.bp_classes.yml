@@ -1,0 +1,21 @@
+uuid: a4d74fa7-a98a-4bb4-8edd-8eb06d4abbfa
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_classes
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+_core:
+  default_config_hash: klKR9Tla40f1h6WVKP0w1l3bjVNhWFNyEWEY41kPi_c
+id: paragraph.bp_columns_three_uneven.bp_classes
+field_name: bp_classes
+entity_type: paragraph
+bundle: bp_columns_three_uneven
+label: 'CSS class(es)'
+description: 'Customize the styling of this component by adding CSS classes. Separate multiple classes by spaces.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

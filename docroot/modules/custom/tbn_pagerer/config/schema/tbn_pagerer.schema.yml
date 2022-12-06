@@ -1,0 +1,10 @@
+# Schema for configuration files of the TbnLabs Pagerer module.
+
+# Pagerer styles.
+pagerer.style.tbn_pagerer_load_more:
+  type: config_object
+  label: 'Load more pager style'
+  mapping:
+    default_config:
+      type: pagerer.style_config.tbn_pagerer_load_more
+      label: 'Load more pager style default configuration'

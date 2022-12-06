@@ -1,0 +1,8 @@
+uuid: 883be8f1-1109-4504-a09d-9476a18846ee
+langcode: en
+status: true
+dependencies: {  }
+id: faq_block
+label: 'FAQ block'
+revision: 1
+description: 'A FAQ block to create blocks showing FAQ items per Product Category.'

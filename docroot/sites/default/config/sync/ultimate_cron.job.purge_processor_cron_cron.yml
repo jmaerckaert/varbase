@@ -1,0 +1,29 @@
+uuid: dee6aa33-8463-48d0-b3d8-83563feb3a67
+langcode: en
+status: true
+dependencies:
+  module:
+    - purge_processor_cron
+title: 'Default cron handler'
+id: purge_processor_cron_cron
+weight: 0
+module: purge_processor_cron
+callback: purge_processor_cron_cron
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

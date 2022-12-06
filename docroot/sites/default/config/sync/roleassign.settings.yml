@@ -1,0 +1,7 @@
+roleassign_roles:
+  supplier_information_editor: supplier_information_editor
+  webeditor: webeditor
+  webmaster: webmaster
+  admin: admin
+  administrator: '0'
+langcode: nl

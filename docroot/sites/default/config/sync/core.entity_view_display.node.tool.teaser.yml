@@ -1,0 +1,122 @@
+uuid: 92e074b4-3580-41ad-9d43-565a90febfdd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tool.body
+    - field.field.node.tool.field_link
+    - field.field.node.tool.field_link_to_tool
+    - field.field.node.tool.field_media
+    - field.field.node.tool.field_product_category
+    - field.field.node.tool.field_title_formatted
+    - node.type.tool
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: tokens
+        link_custom: '[node:field_link:uri]'
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media
+        - field_title_formatted
+  field_group:
+    group_card:
+      children: {  }
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: card-tool
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: card
+      region: hidden
+  layout_builder:
+    sections: {  }
+id: node.tool.teaser
+targetEntityType: node
+bundle: tool
+mode: teaser
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: s07_standard
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_title_formatted:
+    type: text_default
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'card-tool-title '
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  body: true
+  field_link: true
+  field_link_to_tool: true
+  field_product_category: true
+  langcode: true
+  links: true

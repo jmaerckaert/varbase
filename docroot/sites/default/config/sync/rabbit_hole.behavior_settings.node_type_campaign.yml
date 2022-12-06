@@ -1,0 +1,11 @@
+uuid: d9479381-fc3c-41cc-b5c8-d6da79c0b23d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+id: node_type_campaign
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

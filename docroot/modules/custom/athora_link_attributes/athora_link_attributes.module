@@ -1,0 +1,42 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function athora_link_attributes_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'entity_base_field_info_alter') {
+    // Move my_module_entity_base_field_info_alter() to the end of the list.
+    // \Drupal::moduleHandler()->getImplementations()
+    // iterates through $implementations with a foreach loop which PHP iterates
+    // in the order that the items were added, so to move an item to the end of
+    // the array, we remove it and then add it.
+    $group = $implementations['athora_link_attributes'];
+    unset($implementations['athora_link_attributes']);
+    $implementations['athora_link_attributes'] = $group;
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function athora_link_attributes_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'menu_link_content') {
+    $fields['link']->setDisplayOptions('form', [
+      'type' => 'link_attributes',
+      'weight' => -2,
+      'settings' => [
+        'enabled_attributes' => [
+          'id' => TRUE,
+          'name' => FALSE,
+          'target' => TRUE,
+          'rel' => TRUE,
+          'class' => TRUE,
+          'accesskey' => FALSE,
+        ],
+      ],
+    ]);
+  }
+}
+

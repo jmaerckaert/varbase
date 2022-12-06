@@ -1,0 +1,28 @@
+uuid: 1989a101-a9ef-4352-8030-415f09a47440
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language_selection_page
+  theme:
+    - athora
+id: languageselectionpageblock
+theme: athora
+region: content
+weight: -9
+provider: null
+plugin: language-selection-page
+settings:
+  id: language-selection-page
+  label: 'Language Selection Page block'
+  provider: language_selection_page
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      epartner: epartner
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

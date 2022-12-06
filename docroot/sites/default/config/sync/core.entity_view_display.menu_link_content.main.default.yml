@@ -1,0 +1,55 @@
+uuid: 039326bd-c2f5-496f-9995-9d231ca41b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_description
+    - field.field.menu_link_content.main.field_icon
+    - system.menu.main
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_description
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  field_description:
+    type: text_default
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  children: true
+  field_icon: true
+  langcode: true

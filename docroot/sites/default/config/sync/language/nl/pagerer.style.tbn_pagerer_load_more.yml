@@ -1,0 +1,5 @@
+default_config:
+  tags:
+    pages:
+      pageset_empty: 'Geen pagina''s om weer te geven.'
+      more_button_text: 'Meer laden'

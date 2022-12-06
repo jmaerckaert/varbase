@@ -1,0 +1,40 @@
+uuid: 1825ebe5-616b-4598-baf8-7050b9b3436c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.localities.field_latitude
+    - field.field.taxonomy_term.localities.field_longitude
+    - taxonomy.vocabulary.localities
+  module:
+    - text
+id: taxonomy_term.localities.default
+targetEntityType: taxonomy_term
+bundle: localities
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_latitude:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_longitude:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: 286a6f2d-c040-4ff4-b911-28c3cdcb3132
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: Oaw9PToe8TxqY5cZIOe-dutJ9oWpHvYflEE3CMe20Q8
+id: node.varbase_heroslider_media.uid
+field_name: uid
+entity_type: node
+bundle: varbase_heroslider_media
+label: 'Geschreven door'
+description: 'De gebruikersnaam van de auteur.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

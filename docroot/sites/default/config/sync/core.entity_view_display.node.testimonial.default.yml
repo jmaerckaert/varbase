@@ -1,0 +1,167 @@
+uuid: c2e74534-6676-4485-a978-c07a98007d60
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_function
+    - field.field.node.testimonial.field_media
+    - field.field.node.testimonial.field_meta_tags
+    - field.field.node.testimonial.field_product_category
+    - field.field.node.testimonial.field_yoast_seo
+    - node.type.testimonial
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - group_column
+        - group_column_content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: hidden
+    group_column:
+      children:
+        - field_media
+      parent_name: group_container
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column
+      region: hidden
+    group_column_content:
+      children:
+        - group_hero_slider_content
+      parent_name: group_container
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column-content
+      region: hidden
+    group_hero_slider_content:
+      children:
+        - node_title
+        - field_function
+        - body
+      parent_name: group_column_content
+      weight: 16
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: hero-slide-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero slider content'
+      region: hidden
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_container
+        - group_hero_slider_content
+        - node_title
+        - field_function
+        - group_column
+        - body
+        - field_media
+        - group_column_content
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 18
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.testimonial.default
+targetEntityType: node
+bundle: testimonial
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 20
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_function:
+    weight: 19
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_media:
+    weight: 21
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_meta_tags: true
+  field_product_category: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

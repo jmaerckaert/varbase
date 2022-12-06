@@ -1,0 +1,11 @@
+uuid: 2225948c-16cd-4e72-adfd-240488b3b044
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lor03KEBX91pCzyLJeqC1hzonx71-oQLT7BCp62SfjQ
+id: node__landing_page
+label: 'Content: Landing page'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'

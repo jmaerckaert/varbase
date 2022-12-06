@@ -1,0 +1,96 @@
+uuid: 03078796-36d8-4cc7-ab50-cd80f8597b97
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.faq
+    - field.field.taxonomy_term.product_category.field_icon
+    - field.field.taxonomy_term.product_category.field_meta_tags
+    - field.field.taxonomy_term.product_category.field_social_image
+    - field.field.taxonomy_term.product_category.field_yoast_seo
+    - field.field.taxonomy_term.product_category.layout_builder__layout
+    - taxonomy.vocabulary.product_category
+  module:
+    - ds
+    - layout_builder
+    - layout_builder_restrictions
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - faq_product_category_icon_field
+        - faq_product_category_name_field
+    fields:
+      faq_product_category_name_field:
+        plugin_id: faq_product_category_name_field
+        weight: 1
+        label: hidden
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+      faq_product_category_icon_field:
+        plugin_id: faq_product_category_icon_field
+        weight: 0
+        label: hidden
+        formatter: default
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks: {  }
+      allowed_layouts: {  }
+id: taxonomy_term.product_category.faq
+targetEntityType: taxonomy_term
+bundle: product_category
+mode: faq
+content: {  }
+hidden:
+  description: true
+  field_icon: true
+  field_meta_tags: true
+  field_social_image: true
+  field_yoast_seo: true
+  langcode: true
+  layout_builder__layout: true

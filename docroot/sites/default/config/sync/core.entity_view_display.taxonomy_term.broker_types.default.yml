@@ -1,0 +1,22 @@
+uuid: 0795e067-a533-4aaf-8e54-78d2e5060632
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.broker_types
+  module:
+    - text
+id: taxonomy_term.broker_types.default
+targetEntityType: taxonomy_term
+bundle: broker_types
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

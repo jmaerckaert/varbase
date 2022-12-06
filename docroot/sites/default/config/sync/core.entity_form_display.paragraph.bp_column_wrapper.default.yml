@@ -1,0 +1,34 @@
+uuid: dd93f15b-0849-43bf-b6ee-4b9172a062e0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_column_wrapper.bp_column_content_w
+    - paragraphs.paragraphs_type.bp_column_wrapper
+  module:
+    - paragraphs
+_core:
+  default_config_hash: sHQ35fW5sF68IHrFh7ZOsgV7MKDrGArTRJ61i9GoN88
+id: paragraph.bp_column_wrapper.default
+targetEntityType: paragraph
+bundle: bp_column_wrapper
+mode: default
+content:
+  bp_column_content_w:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Besturingselement
+      title_plural: Componenten
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

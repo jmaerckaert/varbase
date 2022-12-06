@@ -1,0 +1,22 @@
+uuid: dcd42a5e-8d3c-42b9-9cfd-c5a77883415e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+_core:
+  default_config_hash: HB61nPRNWA63cfXxe8g_bKVtNvXf9DfZ1J8lP3ybtSs
+id: media.remote_video.name
+field_name: name
+entity_type: media
+bundle: remote_video
+label: Naam
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

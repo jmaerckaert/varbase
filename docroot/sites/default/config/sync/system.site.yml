@@ -1,0 +1,14 @@
+uuid: 1c614181-9c54-4c57-8853-a6de7b80c393
+name: 'Athora Belgium'
+mail: drupal.developer@tobania.be
+slogan: ''
+page:
+  403: /node/767
+  404: /node/766
+  front: /node/21
+admin_compact_mode: false
+weight_select_max: 100
+langcode: nl
+default_langcode: nl
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

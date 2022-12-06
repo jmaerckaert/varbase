@@ -1,0 +1,18 @@
+uuid: 62cd912b-417c-4b99-80a9-4a1652d3a7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.cta
+target_entity_type_id: node
+target_bundle: cta
+default_langcode: site_default
+language_alterable: false

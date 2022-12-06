@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * Contains all hook implementations for this module.
+ */
+
+use Drupal\background_image\BackgroundImageInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewEntityInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_build().
+ */
+function athora_faq_views_pre_build(ViewExecutable $view) {
+  if ($view->storage->id() == 'faq') {
+    // If exclude is set to false then we should include NULLs.
+    if (isset($view->filter['field_exclude_global_faq_value']) && $view->filter['field_exclude_global_faq_value']->value == 0) {
+      $view->filter['field_exclude_global_faq_value']->accept_null = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_tbn_background_image_view_background_image_alter().
+ */
+function athora_faq_tbn_background_image_view_background_image_alter(?BackgroundImageInterface &$entity, ViewEntityInterface $view, array $context = []) {
+  if ($entity === NULL) {
+    return;
+  }
+
+  if ($view->id() === 'faq' && $view->getExecutable()->current_display === 'page_1') {
+    $product_category = Drupal::routeMatch()->getParameter('arg_0');
+    if ($product_category === NULL) {
+      return;
+    }
+    $term = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($product_category);
+    if ($term === NULL) {
+      return;
+    }
+    /* @var \Drupal\background_image\BackgroundImageInterface $background_image */
+    if (($background_image = Drupal::service('background_image.manager')->getEntityBackgroundImage($term)) && $background_image->get('image')->isEmpty()) {
+      return;
+    }
+
+    $entity = Drupal::service('entity.repository')->getTranslationFromContext($background_image, $context['langcode'], $context);
+  }
+}
+
+/**
+ * Implements hook_views_post_render().
+ */
+function athora_faq_views_pre_render(ViewExecutable $view) {
+  if ($view->id() !== 'faq') {
+    return;
+  }
+
+  if ($view->current_display !== 'page_1') {
+    return;
+  }
+
+  $params = Drupal::routeMatch()->getParameters();
+  if (!$params->has('arg_0')) {
+    return;
+  }
+  if (empty($params->get('arg_0'))) {
+    return;
+  }
+  /** @var \Drupal\taxonomy\TermInterface $entity */
+  $entity = Term::load((int) $params->get('arg_0'));
+  if ($entity === NULL) {
+    return;
+  }
+
+  $language = Drupal::languageManager()->getCurrentLanguage()->getId();
+  if ($entity->hasTranslation($language)) {
+    $entity = Drupal::service('entity.repository')->getTranslationFromContext($entity, $language);
+  }
+  $view->setTitle($entity->label());
+  Drupal::routeMatch()->getRouteObject()->setDefault('_title', $entity->label());
+}
+
+/**
+ * Implements hook_metatag_route_entity().
+ */
+function athora_faq_metatag_route_entity(RouteMatchInterface $route_match) {
+  if ($route_match->getRouteName() !== 'view.faq.page_1') {
+    return NULL;
+  }
+  $arg_0 = $route_match->getParameter('arg_0');
+  if ($arg_0 === NULL) {
+    return NULL;
+  }
+
+  $taxonomy_term = Term::load($arg_0);
+  if ($taxonomy_term === NULL) {
+    return NULL;
+  }
+
+  return $taxonomy_term;
+}

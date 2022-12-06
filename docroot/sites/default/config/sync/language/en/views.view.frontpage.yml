@@ -1,0 +1,45 @@
+label: Frontpage
+description: 'All content promoted to the front page.'
+display:
+  default:
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'No front page content has been created yet.'
+        title:
+          title: 'Welcome to [site:name]'
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+    display_title: Master
+  feed_1:
+    display_title: Feed
+  frontpage_block:
+    display_title: Block
+    display_options:
+      block_description: 'Frontpage block'
+      block_category: 'Lists (Views)'
+      header:
+        area:
+          content:
+            value: '<h1>Welcome to [site:name]</h1>'
+      empty:
+        area_text_custom:
+          content: "<p>No front page content has been created yet. This page is created through \"Panels\" module.</p>\n<p>You can edit it from \"Manage Content\" at the bottom of the page, or enable \"Page Manager UI\" module to edit it from Administration \\ Structure.</p>"
+  page_1:
+    display_title: Page

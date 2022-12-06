@@ -1,0 +1,23 @@
+uuid: 1d66c721-ce11-4036-abeb-939fe9099b4c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - background_image
+_core:
+  default_config_hash: gpJu1-UVPoR2KVK2rVYYCcTpY6eJe2Idn_Cvo-Kvq5I
+id: background_image
+label: 'Background Image'
+image_style_mappings:
+  -
+    breakpoint_id: background_image.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: '_original image_'
+  -
+    breakpoint_id: background_image.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: '_original image_'
+breakpoint_group: background_image
+fallback_image_style: '_original image_'

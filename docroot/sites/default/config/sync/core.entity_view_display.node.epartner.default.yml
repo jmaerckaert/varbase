@@ -1,0 +1,605 @@
+uuid: d3480776-5a0c-42be-b30f-afbe87ce7a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.epartner.body
+    - field.field.node.epartner.field_address
+    - field.field.node.epartner.field_broker_id
+    - field.field.node.epartner.field_email
+    - field.field.node.epartner.field_entreprise_number
+    - field.field.node.epartner.field_facebook
+    - field.field.node.epartner.field_linkedin
+    - field.field.node.epartner.field_meta_tags
+    - field.field.node.epartner.field_slogan
+    - field.field.node.epartner.field_telephone
+    - field.field.node.epartner.field_website
+    - field.field.node.epartner.field_yoast_seo
+    - node.type.epartner
+  content:
+    - 'block_content:basic:270a4875-0492-4b15-8885-ef2e98a54d87'
+    - 'block_content:basic:55492ec9-2b19-4ca5-9d7c-258553fedeaf'
+  module:
+    - address
+    - block_content
+    - bootstrap_layouts
+    - content_browser
+    - entity_block
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              container-wrapper: container-wrapper
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                container: container
+              add_region_classes: 1
+              attributes: ''
+          label: ''
+        components:
+          45c4048d-c6f5-47d0-bfa4-c035a44ba4d4:
+            uuid: 45c4048d-c6f5-47d0-bfa4-c035a44ba4d4
+            region: main
+            configuration:
+              id: 'field_block:node:epartner:field_slogan'
+              label: Slogan
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          8cc4b611-711f-47aa-9ea7-e3f39f8657ae:
+            uuid: 8cc4b611-711f-47aa-9ea7-e3f39f8657ae
+            region: main
+            configuration:
+              id: 'field_block:node:epartner:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          d57c6c1c-4e13-42a7-8195-1c1c890829ac:
+            uuid: d57c6c1c-4e13-42a7-8195-1c1c890829ac
+            region: main
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:epartner:field_yoast_seo'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 2
+          840f56cd-8c7d-49d6-9e31-e3d593dde465:
+            uuid: 840f56cd-8c7d-49d6-9e31-e3d593dde465
+            region: main
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:epartner:field_meta_tags'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: metatag_empty_formatter
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              container: container
+            add_layout_class: 1
+            attributes: id|partner-info
+          regions:
+            left:
+              wrapper: div
+              classes: {  }
+              add_region_classes: 1
+              attributes: class|col-md-8
+            right:
+              wrapper: div
+              classes: {  }
+              add_region_classes: 1
+              attributes: class|col-md-4
+          label: ''
+        components:
+          e6d25b3d-9ea5-46c0-a77b-2746202c9907:
+            uuid: e6d25b3d-9ea5-46c0-a77b-2746202c9907
+            region: left
+            configuration:
+              id: 'field_block:node:epartner:field_address'
+              label: Address
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: address_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          f54c0300-79cc-4f0b-bf7e-39c2d28e885e:
+            uuid: f54c0300-79cc-4f0b-bf7e-39c2d28e885e
+            region: left
+            configuration:
+              id: 'field_block:node:epartner:field_telephone'
+              label: Telephone
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: telephone_link
+                settings:
+                  title: ''
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          ce7bbbfe-8b26-4fc7-b741-eccaac614963:
+            uuid: ce7bbbfe-8b26-4fc7-b741-eccaac614963
+            region: left
+            configuration:
+              id: 'field_block:node:epartner:field_email'
+              label: Email
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: email_mailto
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          dba229bc-5b96-4716-b7c9-f73d6f143c74:
+            uuid: dba229bc-5b96-4716-b7c9-f73d6f143c74
+            region: left
+            configuration:
+              id: 'field_block:node:epartner:field_entreprise_number'
+              label: Entreprise_Number
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          12f923a2-d896-4a53-b06f-1264950a3799:
+            uuid: 12f923a2-d896-4a53-b06f-1264950a3799
+            region: right
+            configuration:
+              id: 'entity_block:block_content'
+              label: 'Custom block'
+              provider: entity_block
+              label_display: ''
+              entity: '93'
+              view_mode: default
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          203f2369-280e-4c78-b523-b3e2c12333d7:
+            uuid: 203f2369-280e-4c78-b523-b3e2c12333d7
+            region: right
+            configuration:
+              id: 'field_block:node:epartner:field_facebook'
+              label: Facebook
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: linkicon
+                settings:
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                  opening: ''
+                  linkicon_prefix: icon-facebook
+                  linkicon_wrapper_class: ''
+                  linkicon_link: true
+                  linkicon_load: false
+                  linkicon_vertical: false
+                  linkicon_style: ''
+                  linkicon_color: ''
+                  linkicon_tooltip: false
+                  linkicon_no_text: false
+                  linkicon_maxlength: 0
+                  linkicon_global_title: ''
+                  linkicon_position: ''
+                  linkicon_size: ''
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          3a9e09ed-d1aa-40b7-a071-76e0daf8a039:
+            uuid: 3a9e09ed-d1aa-40b7-a071-76e0daf8a039
+            region: right
+            configuration:
+              id: 'field_block:node:epartner:field_linkedin'
+              label: LinkedIn
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: linkicon
+                settings:
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                  opening: ''
+                  linkicon_prefix: icon-linkedin
+                  linkicon_wrapper_class: ''
+                  linkicon_link: true
+                  linkicon_load: false
+                  linkicon_vertical: false
+                  linkicon_style: ''
+                  linkicon_color: ''
+                  linkicon_tooltip: false
+                  linkicon_no_text: false
+                  linkicon_maxlength: 0
+                  linkicon_global_title: ''
+                  linkicon_position: ''
+                  linkicon_size: ''
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          79619197-81e0-446e-b2aa-e01726f009cd:
+            uuid: 79619197-81e0-446e-b2aa-e01726f009cd
+            region: right
+            configuration:
+              id: 'field_block:node:epartner:field_website'
+              label: Website
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: linkicon
+                settings:
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                  opening: ''
+                  linkicon_prefix: icon-global
+                  linkicon_wrapper_class: ''
+                  linkicon_link: true
+                  linkicon_load: false
+                  linkicon_vertical: false
+                  linkicon_style: ''
+                  linkicon_color: ''
+                  linkicon_tooltip: false
+                  linkicon_no_text: false
+                  linkicon_maxlength: 0
+                  linkicon_global_title: ''
+                  linkicon_position: ''
+                  linkicon_size: ''
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              row: row
+              container: container
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes: {  }
+              add_region_classes: 1
+              attributes: class|col-md-6
+            right:
+              wrapper: div
+              classes: {  }
+              add_region_classes: 1
+              attributes: class|col-md-6
+          label: ''
+        components:
+          224478dd-0eb5-4899-96e0-2670722d4963:
+            uuid: 224478dd-0eb5-4899-96e0-2670722d4963
+            region: left
+            configuration:
+              id: 'block_content:55492ec9-2b19-4ca5-9d7c-258553fedeaf'
+              label: Autoverzekering
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: default
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          296920c3-26a1-4549-936b-2a957cf859a5:
+            uuid: 296920c3-26a1-4549-936b-2a957cf859a5
+            region: right
+            configuration:
+              id: 'block_content:270a4875-0492-4b15-8885-ef2e98a54d87'
+              label: Brandverzekering
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: default
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              container-wrapper: container-wrapper
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                container: container
+              add_region_classes: 1
+              attributes: ''
+          label: ''
+        components:
+          0aa5f65e-4a81-4644-86b9-dd39c8b7642f:
+            uuid: 0aa5f65e-4a81-4644-86b9-dd39c8b7642f
+            region: main
+            configuration:
+              id: content_embed
+              label: 'Maak een simulatie in 2 minuten'
+              provider: content_browser
+              label_display: '0'
+              description:
+                value: ''
+                format: full_html
+              view_mode: teaser
+              nids:
+                - 25
+                - 16
+              uuids: {  }
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+    allow_custom: false
+    enabled: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks: {  }
+      allowed_layouts: {  }
+id: node.epartner.default
+targetEntityType: node
+bundle: epartner
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: main
+  field_broker_id:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: main
+  field_email:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_entreprise_number:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  field_facebook:
+    weight: 105
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  field_linkedin:
+    weight: 106
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  field_meta_tags:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: main
+  field_slogan:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_telephone:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: main
+  field_website:
+    weight: 110
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  field_yoast_seo:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

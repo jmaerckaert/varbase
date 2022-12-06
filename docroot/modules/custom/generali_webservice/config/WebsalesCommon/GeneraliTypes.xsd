@@ -1,0 +1,2416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (x64) (http://www.altova.com) by win7test3 (GENERALI) -->
+<xs:schema xmlns="http://www.generali.be/FrontNameTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.generali.be/FrontNameTypes" targetNamespace="http://www.generali.be/FrontNameTypes" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="Action_Type">
+		<xs:annotation>
+			<xs:documentation>Represents all the public data of an action</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ActionId" type="ActionId_Type">
+				<xs:annotation>
+					<xs:documentation>Maps to Google Campaign name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidUntil" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>The date and time until when the action is valid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActionType">
+				<xs:annotation>
+					<xs:documentation>Type of reduction/advantage that this action entitles the client to.  Examples: 1YDisc, MultiYDisc, Gift</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DescriptionHTML" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Description in the language requested</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiscountCode">
+				<xs:annotation>
+					<xs:documentation>Discount code to be passed to the back-end upon tarification and/or subscription</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CampaignSource">
+				<xs:annotation>
+					<xs:documentation>Represents a marketing source (google, le soir, folder distribution) - maps to Google  utm_source</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CampaignMedium">
+				<xs:annotation>
+					<xs:documentation>reprensents a campaign medium (cpc, press, banner, …) - maps to Google utm_medium</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CampaignContent">
+				<xs:annotation>
+					<xs:documentation>use to differentiate ads (A/B testing) - maps to Google utm_content</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ActionId_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Address_Type">
+		<xs:sequence>
+			<xs:element name="Address" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ADR2 - street name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="StreetNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NURU (or NO5) - number in the street</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PostBox" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>BPOS - postal box</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Locality" type="Locality_Type">
+				<xs:annotation>
+					<xs:documentation>LOCA - locality name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryCode">
+				<xs:annotation>
+					<xs:documentation>COPA - international licence plate country code	in most cases- e.g. B for Belgium, L for Luxemburg, NL for the Netherlands, etc...</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Country_FR" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country_NL" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Agency_Type">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="Group" type="xs:string"/>
+			<xs:element name="Number" type="xs:string"/>
+			<xs:element name="Name" type="User_Name_Type">
+				<xs:annotation>
+					<xs:documentation>NOM1 - Name of teh broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address">
+				<xs:annotation>
+					<xs:documentation>Address of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Address">
+							<xs:annotation>
+								<xs:documentation>ADR2 - street name</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="StreetNumber">
+							<xs:annotation>
+								<xs:documentation>NO5 - number in the street</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="PostBox" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>BPOS - postal box</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Locality" type="Locality_Type">
+							<xs:annotation>
+								<xs:documentation>LOCA - locality name</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Country">
+							<xs:annotation>
+								<xs:documentation>table TX1COPA - country name in the language of the broker's language</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AddressXY" type="GeographicalCoordinates"/>
+			<xs:element name="CBFA">
+				<xs:annotation>
+					<xs:documentation>CBFA - CBFA number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="6"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FSMA">
+				<xs:annotation>
+					<xs:documentation>FSMA number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="21"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhoneNumber1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL1 - phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhoneNumber2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL2 - second phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Gsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NGSM - gsm number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="13"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Fax" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NFAX - fax number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="13"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Email" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>EMAIl - email of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EmailBranchLead" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>EMAIL-BL - email brancj lead of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WebsiteURL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL - URL of the website of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="167"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type">
+				<xs:annotation>
+					<xs:documentation>CLAN = Language of the broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LanguageCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CDLG - Language code (0=FR, 1=NL, 2=ALL, 3=FR/NL, 4=NL/ALL, 5=FR/ALL, 6=FR/NL/ALL)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BrocomYN" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>BROCOM - specify if the broker belongs to BROCOM or not</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GForceYN" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>GFORCE - specify if the broker is a GFORCE broker or not</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LogoURL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL of the logo</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Inspector" type="UserKey_Type" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Data to retrieve inspector data for this Broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Stars">
+				<xs:annotation>
+					<xs:documentation>broker number of stars</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EntrepriseNumber">
+				<xs:annotation>
+					<xs:documentation>broker entreprise number on 16 maxchars</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="16"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AdditionalInformation" type="KeyValue" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AgencySimple_Type">
+		<xs:sequence>
+			<xs:element name="Number" type="xs:string"/>
+			<xs:element name="Group" type="xs:string"/>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="AgencyType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Master/Lead/..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Agent_CRM_Type">
+		<xs:annotation>
+			<xs:documentation>Agent type for CRM Dynamics</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TitleCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ctit</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastName" type="User_Name_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NOM1 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" type="User_FirstName_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>PNOM</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AdressPrefix">
+							<xs:annotation>
+								<xs:documentation>ADR1 - services, building etc...</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Address">
+							<xs:annotation>
+								<xs:documentation>ADR2 - street name</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="StreetNumber">
+							<xs:annotation>
+								<xs:documentation>NO5 - number in the street</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="PostBox" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>BPOS - postal box</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Locality" type="Locality_Type">
+							<xs:annotation>
+								<xs:documentation>LOCA - locality name</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Country">
+							<xs:annotation>
+								<xs:documentation>country code</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PhoneNumber1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL1 - phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhoneNumber2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL2 - second phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Gsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NGSM - gsm number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="13"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Email" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>EMAIl - email of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FSMANumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NAGR</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="6"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WebsiteURL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL - URL of the website of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="167"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BrokerGroupNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ngra</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="6"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CLAN = Language of the broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AgentID_Type">
+		<xs:annotation>
+			<xs:documentation>The id of an person acting on behalf of a broker (eg an OSS call center employee or a broker employee)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AGT_Type">
+		<xs:annotation>
+			<xs:documentation>Contract Broker (Agent)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NOAG" default="82942">
+				<xs:annotation>
+					<xs:documentation>Broker code</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="5"/>
+						<xs:fractionDigits value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TYUS" default="BRO">
+				<xs:annotation>
+					<xs:documentation>Type user (BRO)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NOM1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Broker Name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AmendmentId_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AuditInfo_Type">
+		<xs:annotation>
+			<xs:documentation>Must be inherited by all request types</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="idpSessionId" type="xs:string" minOccurs="0"/>
+			<xs:element name="applicationSessionId" type="xs:string"/>
+			<xs:element name="userName" type="xs:string" minOccurs="0"/>
+			<xs:element name="userRealm" type="xs:string" minOccurs="0"/>
+			<xs:element name="authenticationLevel" type="xs:string" minOccurs="0"/>
+			<xs:element name="userIPAddress" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AutoContractParametersType">
+		<xs:annotation>
+			<xs:documentation>All parameters of a car insurance contract</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Vehicle" type="VHC_Type"/>
+			<xs:element name="Remorque" type="TR_Type" minOccurs="0" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="BankAccountBE_Type">
+		<xs:restriction base="xs:string">
+			<xs:length value="12"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BankAccountIBAN_Type">
+		<xs:sequence>
+			<xs:element name="AccountNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>if filled then ForeignAccountNumber must  not exist</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="16"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ForeignAccountNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>if filled then AccountNumber must  not exist</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="34"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BICCode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Broker_Data_Type">
+		<xs:annotation>
+			<xs:documentation>Broker's data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Broker" type="UserKey_Type"/>
+			<xs:element name="BrokerName" type="User_Name_Type">
+				<xs:annotation>
+					<xs:documentation>NOM1 - Name of teh broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Brokeraddress">
+				<xs:annotation>
+					<xs:documentation>Address of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Address">
+							<xs:annotation>
+								<xs:documentation>ADR2 - street name</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="StreetNumber">
+							<xs:annotation>
+								<xs:documentation>NO5 - number in the street</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="PostBox" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>BPOS - postal box</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Locality" type="Locality_Type">
+							<xs:annotation>
+								<xs:documentation>LOCA - locality name</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Country">
+							<xs:annotation>
+								<xs:documentation>table TX1COPA - country name in the language of the broker's language</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BrokerAddressXY" type="GeographicalCoordinates"/>
+			<xs:element name="CBFA">
+				<xs:annotation>
+					<xs:documentation>CBFA - CBFA number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="6"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FSMA">
+				<xs:annotation>
+					<xs:documentation>FSMA number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="21"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhoneNumber1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL1 - phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhoneNumber2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL2 - second phone number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Gsm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NGSM - gsm number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="13"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Fax" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NFAX - fax number of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="13"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Email" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>EMAIl - email of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EmailBranchLead" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>EMAIL-BL - email brancj lead of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WebsiteURL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL - URL of the website of the broker</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="167"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type">
+				<xs:annotation>
+					<xs:documentation>CLAN = Language of the broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LanguageCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CDLG - Language code (0=FR, 1=NL, 2=ALL, 3=FR/NL, 4=NL/ALL, 5=FR/ALL, 6=FR/NL/ALL)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BrocomYN" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>BROCOM - specify if the broker belongs to BROCOM or not</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GForceYN" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>GFORCE - specify if the broker is a GFORCE broker or not</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LogoURL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL of the logo</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Inspector" type="UserKey_Type" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Data to retrieve inspector data for this Broker</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BrokerStars">
+				<xs:annotation>
+					<xs:documentation>broker number of stars</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EntrepriseNumber">
+				<xs:annotation>
+					<xs:documentation>broker entreprise number on 16 maxchars</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="16"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Channel_Type">
+		<xs:annotation>
+			<xs:documentation>initial channel name.  Expected values: "MeFirst", "Online", "Verzekeringen", "Gensite"</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="Claim_Type">
+		<xs:sequence>
+			<xs:element name="Number" type="xs:string"/>
+			<xs:element name="OpeningDate" type="xs:date"/>
+			<xs:element name="OccurenceDate" type="xs:date"/>
+			<xs:element name="ClosingDate" type="xs:date"/>
+			<xs:element name="StateCode" type="xs:string"/>
+			<xs:element name="DocumentUrl" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Client_Type">
+		<xs:annotation>
+			<xs:documentation>Data of a Client</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Number">
+				<xs:annotation>
+					<xs:documentation>NONR - Number/ID  of the client</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NOM1 - Last name of the client</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>PNOM - FirstName of the client</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="17"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TitleCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CTIT - Title code of the Client (11 = Mr, 12 = Mme, ...)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Address" type="Address_Type" minOccurs="0"/>
+			<xs:element name="Sexe" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CSEX - sexe of the Client ('H', 'F')</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CLAN - Language of the Client</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Birthday" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DNAI - date of birth of the Client</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaritalStatusCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>TX1 ETCI - Code of the marital status (1 = CELIBATAIRE, 2=MARIE, ...</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="A"/>
+						<xs:enumeration value="0"/>
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="3"/>
+						<xs:enumeration value="4"/>
+						<xs:enumeration value="5"/>
+						<xs:enumeration value="6"/>
+						<xs:enumeration value="7"/>
+						<xs:enumeration value="8"/>
+						<xs:enumeration value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Phone1" type="FixedPhone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL1 - Phone number of the Client</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Phone2" type="FixedPhone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL2 - Second phone number of the Client</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GSM" type="MobilePhone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NGSM - GSM number of the Client </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Email" type="ContactMail_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ClientNumber_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ContactMail_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="70"/>
+			<xs:pattern value="\S*@\S*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ContactPerson_extended_Type">
+		<xs:sequence>
+			<xs:element name="ClientNumber" type="ClientNumber_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						NONR - Number/ID of the client
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Title" type="xs:string" minOccurs="0"/>
+			<xs:element name="Title_FR" type="xs:string" minOccurs="0"/>
+			<xs:element name="Title_NL" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="17"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PrivatePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="GSMPhoneNr" type="MobilePhone_Type" minOccurs="0"/>
+			<xs:element name="OfficePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="Email" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="ContactMail_Type">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EmailOptIn" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the contact accepts to receive marketing messages by email</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TelephoneOptIn" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the contact accepts to receive marketing messages by Telephone</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type" minOccurs="0"/>
+			<xs:element name="Birthdate" type="xs:date" minOccurs="0"/>
+			<xs:element name="Gender" type="Gender_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CSEX - H for male, F for female</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeneraliContactId" type="GeneraliContactId_Type" minOccurs="0"/>
+			<xs:element name="Address" type="Address_Type" minOccurs="0"/>
+			<xs:element name="Nationality" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CNAT - international licence plate country code	in most cases- e.g. B for Belgium, L for Luxemburg, NL for the Netherlands, etc...</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BankAccount" type="BankAccountBE_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NBAN - in belgian format</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IdCard" type="IdCardBE_Type" minOccurs="0"/>
+			<xs:element name="NationalNumber" type="NationalNumber_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NNAT - national register number</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CNAI - place of birth		</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BirthPlaceCountry" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Country code of birthplace for FATCA</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MaritalStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ETCI(TX1_ETCI) - A: legal cohabitant, 0: other,	1: single, 2: maried, 4: divorced, 5: split by	trial, 6, séparé de fait, 7: deceased, 8: widow,	9: partner</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="A"/>
+						<xs:enumeration value="0"/>
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="4"/>
+						<xs:enumeration value="5"/>
+						<xs:enumeration value="6"/>
+						<xs:enumeration value="7"/>
+						<xs:enumeration value="8"/>
+						<xs:enumeration value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Profession" type="Profession_Type" minOccurs="0"/>
+			<xs:element name="FaxNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="CompanyNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NBCE - Company number (old VAT number)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+						<xs:pattern value="/d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PhysicalOrMoralPerson" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>1 moral or 2 physical			</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BankAccount_IBAN" type="BankAccountIBAN_Type" minOccurs="0"/>
+			<xs:element name="IsEnterprise" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>if sperson is a enterprise then true else false</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivitySectorCode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ActivitySector" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Activity sector</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FiscalCountryCode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FiscalIDNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactPerson_Type">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="17"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PrivatePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="GSMPhoneNr" type="MobilePhone_Type" minOccurs="0"/>
+			<xs:element name="OfficePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="Email" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="ContactMail_Type">
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EmailOptIn" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the contact accepts to receive marketing messages by email</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TelephoneOptIn" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the contact accepts to receive marketing messages by Telephone</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type" minOccurs="0"/>
+			<xs:element name="Birthdate" type="xs:date" minOccurs="0"/>
+			<xs:element name="Gender" type="Gender_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CSEX - H for male, F for female</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeneraliContactId" type="GeneraliContactId_Type" minOccurs="0"/>
+			<xs:element name="Address" type="Address_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentReference_Type">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Url" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Absolute path Url
+Eg: /DownloadProxy?control=321654987&amp;ref=32165498,32165321,987654321&amp;package=zip
+Where:
+	- control is the MD5 hashed value of a string made of a concatenation of the current security session id and ref string 
+	- ref is a (set of) IAA references allowing to retrieve the document(s) from Documentum
+	- package is the format to be used for packaging the documents (mandatory when more than 1 document): allowed values: zip, concat
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentReferenceSet_Type">
+		<xs:sequence>
+			<xs:element name="Document" type="DocumentReference_Type" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ZippedDocuments" type="DocumentReference_Type" minOccurs="0"/>
+			<xs:element name="ConcatenatedDocuments" type="DocumentReference_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Email_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="70"/>
+			<xs:pattern value=".+@.+\..+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Employer_Type">
+		<xs:sequence>
+			<xs:element name="EmployerId" type="xs:string"/>
+			<xs:element name="BranchId" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Language" type="Language_Type"/>
+			<xs:element name="AgencyNumber" type="xs:string"/>
+			<xs:element name="GeneraliManager" type="GeneraliManager_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EmployerNumber_Type">
+		<xs:annotation>
+			<xs:documentation>Group Life Employer Number</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FinancialAmount_Type">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FixedPhone_Type">
+		<xs:annotation>
+			<xs:documentation>Phone number, only digits, no international number</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="9"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Formule_Type">
+		<xs:annotation>
+			<xs:documentation>AUTO : Formule type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FormuleName" type="FormuleName_Type"/>
+			<xs:element name="StartDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="FormuleName_Type">
+		<xs:annotation>
+			<xs:documentation>AUTO : Formule name type (WEBECO, WEBCLASSIC, ...)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Gender_Type">
+		<xs:annotation>
+			<xs:documentation>Denotes a gender.  H for male, F for female</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GeneraliContactId_Type">
+		<xs:annotation>
+			<xs:documentation>Generated ID for a Contact. Used for matching criteria when lookup performed on the UCS database</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="GeneraliManager_Type">
+		<xs:sequence>
+			<xs:element name="MemoId" type="UserKey_Type"/>
+			<xs:element name="GeneraliManager" type="ContactPerson_extended_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GeographicalCoordinates">
+		<xs:annotation>
+			<xs:documentation>X longitude Y latitude</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="X" type="xs:decimal"/>
+			<xs:element name="Y" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IdCardBE_Type">
+		<xs:sequence>
+			<xs:element name="IdCardNumber">
+				<xs:annotation>
+					<xs:documentation>NCID - id card number or resident card number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="12"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ValidFrom" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DDID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidTo" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DFID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CityDelivered" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>LOID</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="IndividualLifeProduct_Type">
+		<xs:annotation>
+			<xs:documentation>X1X9 - A 9 chars string that uniquely indentifies a life product</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Inspector_Data_Type">
+		<xs:sequence>
+			<xs:element name="Inspector" type="UserKey_Type"/>
+			<xs:element name="AgentNumber" type="UserKey_Type">
+				<xs:annotation>
+					<xs:documentation>Refer to NOAG </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="User_Name_Type">
+				<xs:annotation>
+					<xs:documentation>refer to NOM1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" type="User_FirstName_Type">
+				<xs:annotation>
+					<xs:documentation>refer to PNOM</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="Address_Type"/>
+			<xs:element name="PhoneNumber1" type="Phone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Refer to NTEL1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PhoneNumber2" type="Phone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Refer to NTEL2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MobilePhone" type="Phone_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Refer to NGSM</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type">
+				<xs:annotation>
+					<xs:documentation>refer to CLAN, must be mapped on international standard, see enumaration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FaxNumber" type="Phone_Type">
+				<xs:annotation>
+					<xs:documentation>Refer to NFAX</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Email" type="ContactMail_Type">
+				<xs:annotation>
+					<xs:documentation>Refer to EMAIL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KeyValue">
+		<xs:sequence>
+			<xs:element name="Key" type="xs:string"/>
+			<xs:element name="Value" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Customer_Type">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="FirstName" type="xs:string"/>
+			<xs:element name="LastName" type="xs:string"/>
+			<xs:element name="BirthDate" type="xs:date"/>
+			<xs:element name="IsBirthdateValid" type="xs:boolean"/>
+			<xs:element name="Email" type="xs:string"/>
+			<xs:element name="ExpiryDate" type="xs:date"/>
+			<xs:element name="IdCardExpiryDate" type="xs:date"/>
+			<xs:element name="IsIdCardExpiryDateValid" type="xs:boolean"/>
+			<xs:element name="Address" type="xs:string"/>
+			<xs:element name="CreationDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Language_Type">
+		<xs:annotation>
+			<xs:documentation>Specifies the a language (2 chars iso values)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+			<xs:enumeration value="fr"/>
+			<xs:enumeration value="nl"/>
+			<xs:enumeration value="de"/>
+			<xs:enumeration value="en"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LeadType_Type">
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Locality_Type">
+		<xs:annotation>
+			<xs:documentation>Full record data of a locality</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ZipCode">
+				<xs:annotation>
+					<xs:documentation>CPOS Zip code of the locality</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Name" type="LocalityName_Type">
+				<xs:annotation>
+					<xs:documentation>LOCA locality name (language depends on the context)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="LocalityName_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MemoId_Type">
+		<xs:annotation>
+			<xs:documentation>MemoId of a user</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MobilePhone_Type">
+		<xs:annotation>
+			<xs:documentation>Phone number, only digits, no international number</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NationalNumber_Type">
+		<xs:annotation>
+			<xs:documentation>Type representing the belgian national register numbers</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="11"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PaymentMethod_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CARD"/>
+			<xs:enumeration value="TRANSFER"/>
+			<xs:enumeration value="CASH"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PaymentVCSRef_Type">
+		<xs:annotation>
+			<xs:documentation>reference requested for payment</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Phone_Type">
+		<xs:annotation>
+			<xs:documentation>Generic phone type max 15 number </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PhysicalPersonFull_Type">
+		<xs:annotation>
+			<xs:documentation>Type representing a physical person with all its data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FamilyName">
+				<xs:annotation>
+					<xs:documentation>NOM1</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstName">
+				<xs:annotation>
+					<xs:documentation>PNOM</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="17"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Title" type="Title_Type">
+				<xs:annotation>
+					<xs:documentation>CTIT - 11: Mr, 12: Mrs, 13: Ms</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ContactAddress" type="Address_Type"/>
+			<xs:element name="Nationality">
+				<xs:annotation>
+					<xs:documentation>CNAT -  international licence plate country code in most cases- e.g. B for Belgium, L for Luxemburg, NL for the Netherlands, etc...</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BankAccount" type="BankAccountBE_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NBAN - in belgian format</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IdCard" type="IdCardBE_Type" minOccurs="0"/>
+			<xs:element name="NationalNumber" type="NationalNumber_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NNAT - national register number</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CNAI - place of birth</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BirthDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DNAI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gender">
+				<xs:annotation>
+					<xs:documentation>CSEX - H for male, F for female</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="H"/>
+						<xs:enumeration value="F"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="language" type="Language_Type">
+				<xs:annotation>
+					<xs:documentation>CLAN (translated) - only fr and nl are supported until now</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaritalStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ETCI(TX1_ETCI) - A: legal cohabitant, 0: other, 1: single, 2: maried, 4: divorced, 5: split by trial, 6, séparé de fait, 7: deceased, 8: widow, 9: partner </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="A"/>
+						<xs:enumeration value="0"/>
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="4"/>
+						<xs:enumeration value="5"/>
+						<xs:enumeration value="6"/>
+						<xs:enumeration value="7"/>
+						<xs:enumeration value="8"/>
+						<xs:enumeration value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Profession" type="Profession_Type" minOccurs="0"/>
+			<xs:element name="Email" type="ContactMail_Type" minOccurs="0"/>
+			<xs:element name="OfficePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="PrivatePhoneNr" type="FixedPhone_Type" minOccurs="0"/>
+			<xs:element name="FaxNr" type="FixedPhone_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PolicyId_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PolicySummary_Type">
+		<xs:sequence>
+			<xs:element name="PolicyId" type="PolicyId_Type"/>
+			<xs:element name="PolicyName" type="xs:string" minOccurs="0"/>
+			<xs:element name="Subscriber1" type="ClientNumber_Type"/>
+			<xs:element name="Subscriber2" type="ClientNumber_Type" minOccurs="0"/>
+			<xs:element name="Insured1" type="ClientNumber_Type" minOccurs="0"/>
+			<xs:element name="Insured2" type="ClientNumber_Type" minOccurs="0"/>
+			<xs:element name="Status" type="xs:string"/>
+			<xs:element name="Broker" type="Broker_Data_Type"/>
+			<xs:element name="Product" type="Product_Type"/>
+			<xs:element name="CreationDate" type="xs:date"/>
+			<xs:element name="EffectDate" type="xs:date"/>
+			<xs:element name="StatusDate" type="xs:date"/>
+			<xs:element name="Language" type="Language_Type"/>
+			<xs:element name="LastAmendment" type="AmendmentId_Type"/>
+			<xs:element name="DocumentUrl" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Product_Type">
+		<xs:annotation>
+			<xs:documentation>The specification of a customer product</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProductBranch">
+				<xs:annotation>
+					<xs:documentation>See code list IAAP_DO5, character number 2 of the code:
+- A: auto
+- B: Home
+- C: family RC
+- D: work accident
+- etc...                             
+For Life 
+see table IVI BRA 
+branch is second char from the key </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCategory" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>See code list IAAP_DO5, characters 3 - 11.  Examples:
+- 1191: auto
+- 2951: 2-wheels
+- etc...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Product_Type_SME">
+		<xs:annotation>
+			<xs:documentation>The specification of a customer product specific to SME </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProductBranch">
+				<xs:annotation>
+					<xs:documentation>
+            See code list IAAP_DO5, character number 2 of
+            the code: - A: auto - B: Home - C: family RC -
+            D: work accident - etc... For Life see table IVI
+            BRA branch is second char from the key
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCategory" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+            See code list IAAP_DO5, characters 3 - 11.
+            Examples: - 1191: auto - 2951: 2-wheels - etc...
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProductCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="ProductLabel" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ProductBranch_Type">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="Profession_Type">
+		<xs:sequence>
+			<xs:element name="Code">
+				<xs:annotation>
+					<xs:documentation>CPRO (TX1_CPRO) Profession code, see table TX1_CPRO</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Detail" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>PROF - free text to further describe the profession</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProfileAgency_Type">
+		<xs:sequence>
+			<xs:element name="Agency" type="Agency_Type"/>
+			<xs:element name="Role" type="Role_Type"/>
+			<xs:element name="AgencyType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Master/Lead/..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReceiptInfo_Type">
+		<xs:sequence>
+			<xs:element name="Quittance_Num" type="xs:unsignedInt"/>
+			<xs:element name="ReceiptType" type="xs:string"/>
+			<xs:element name="PeriodBeginDate" type="xs:date"/>
+			<xs:element name="PeriodEndDate" type="xs:date"/>
+			<xs:element name="TotalPremium" type="FinancialAmount_Type"/>
+			<xs:element name="DunningCharge" type="FinancialAmount_Type"/>
+			<xs:element name="RemainingPremium" type="FinancialAmount_Type"/>
+			<xs:element name="DunningEvolution" type="xs:string"/>
+			<xs:element name="CollectionType" type="xs:string"/>
+			<xs:element name="PaimentState" type="xs:string"/>
+			<xs:element name="Operation" type="xs:string" minOccurs="0"/>
+			<xs:element name="StructuredPaymentRef" type="xs:string" minOccurs="0"/>
+			<xs:element name="Document" type="DocumentReference_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResponseResult_Type">
+		<xs:sequence>
+			<xs:element name="Result">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="OK"/>
+						<xs:enumeration value="NOK"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Error" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Must be present if Resultis NOK</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ErrorReason" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Functional"/>
+								<xs:enumeration value="Technical"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="code" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Role_Type">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="DisplayNameFr" type="xs:string"/>
+			<xs:element name="DisplayNameNl" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ScenarioName_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SelectedFormuleName_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SelectedScenarioName_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SimulationID_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="9"/>
+			<xs:pattern value="\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Title_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="21"/>
+			<xs:enumeration value="22"/>
+			<xs:enumeration value="23"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="25"/>
+			<xs:enumeration value="26"/>
+			<xs:enumeration value="27"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="29"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="31"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="33"/>
+			<xs:enumeration value="34"/>
+			<xs:enumeration value="35"/>
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="37"/>
+			<xs:enumeration value="38"/>
+			<xs:enumeration value="39"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="41"/>
+			<xs:enumeration value="42"/>
+			<xs:enumeration value="43"/>
+			<xs:enumeration value="44"/>
+			<xs:enumeration value="45"/>
+			<xs:enumeration value="46"/>
+			<xs:enumeration value="47"/>
+			<xs:enumeration value="48"/>
+			<xs:enumeration value="49"/>
+			<xs:enumeration value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TR_Type">
+		<xs:annotation>
+			<xs:documentation>Contrat Auto Trailer</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CUSA">
+				<xs:annotation>
+					<xs:documentation>Usage code</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="GENR">
+				<xs:annotation>
+					<xs:documentation>Kind of trailer</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UTIL">
+				<xs:annotation>
+					<xs:documentation>Usage (1=Private, 0=Professionnal)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="0"/>
+						<xs:enumeration value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="POID">
+				<xs:annotation>
+					<xs:documentation>Weight in ton</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="3"/>
+						<xs:fractionDigits value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="User_Extended_Type">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="FirstName" type="xs:string"/>
+			<xs:element name="LastName" type="xs:string"/>
+			<xs:element name="isActive" type="xs:boolean"/>
+			<xs:element name="Mobile" type="xs:string"/>
+			<xs:element name="Email" type="xs:string"/>
+			<xs:element name="Language" type="Language_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="User_FirstName_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="17"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="User_Name_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="User_Type">
+		<xs:sequence>
+			<xs:element name="Email" type="Email_Type">
+				<xs:annotation>
+					<xs:documentation>Email of the user</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OptIn" type="xs:boolean" default="0">
+				<xs:annotation>
+					<xs:documentation>ACK of the user to receive in the future marketing info by email </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserKey_Type">
+		<xs:sequence>
+			<xs:element name="UserNumber">
+				<xs:annotation>
+					<xs:documentation>If UserType= BRO : NOUS - user number (eg broker number); If UserType=INS/INSV = inspector number etc..</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+						<xs:pattern value="\d*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UserType">
+				<xs:annotation>
+					<xs:documentation>TYUS - type of user (BRO: broker, EMP: employer, GES: gestionnaire, INS: inspector non life; INSV: inspector Life)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="3"/>
+						<xs:enumeration value="BRO"/>
+						<xs:enumeration value="EMP"/>
+						<xs:enumeration value="GES"/>
+						<xs:enumeration value="INS"/>
+						<xs:enumeration value="INV"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserLogin_Type">
+		<xs:sequence>
+			<xs:element name="UserType">
+				<xs:annotation>
+					<xs:documentation>TYUS - type of user (BRO: broker, EMP: employer, GES: gestionnaire, INS: inspector non life; INSV: inspector Life)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="3"/>
+						<xs:enumeration value="BRO"/>
+						<xs:enumeration value="EMP"/>
+						<xs:enumeration value="GES"/>
+						<xs:enumeration value="INS"/>
+						<xs:enumeration value="INV"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AgencyId" type="xs:string"/>
+			<xs:element name="AgencyNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="LoginId" type="xs:string"/>
+			<xs:element name="Roles" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserProfile_Type">
+		<xs:sequence>
+			<xs:element name="UserDetails" type="User_Extended_Type"/>
+			<xs:element name="UserKey" type="UserKey_Type"/>
+			<xs:element name="ApplicationsRight" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="CurrentAgency" type="ProfileAgency_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Only for user type BRO
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AllUserAgencies" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Only for user type BRO
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="AgencySimple_Type">
+							<xs:sequence>
+								<xs:element name="RoleNameFr" type="xs:string"/>
+								<xs:element name="RoleNameNl" type="xs:string"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InspectorDetails" type="Inspector_Data_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Only for user type INS and INV
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EmployerDetails" type="Employer_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Only for user type EMP
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CustomerDetails" type="Customer_Type" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="OnBehalfs" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CurrentOnBehalfUser" type="xs:string" minOccurs="0"/>
+						<xs:element name="UserList" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MandatorId" type="xs:string"/>
+									<xs:element name="MandatorDisplayName" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Authentication" type="Authentication_Type"/>
+			<xs:element name="Permission" type="Permission_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VHC_Type">
+		<xs:annotation>
+			<xs:documentation>Used for the POC - Contract Auto Vehicle</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ANCO">
+				<xs:annotation>
+					<xs:documentation>Year of construction</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CARB">
+				<xs:annotation>
+					<xs:documentation>Fuel type code (example: D, G, E, B)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MARQ">
+				<xs:annotation>
+					<xs:documentation>Make of vehicle</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MODETX">
+				<xs:annotation>
+					<xs:documentation>Model code of vehicle</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TYPETX">
+				<xs:annotation>
+					<xs:documentation>Type code of vehicle</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="VALA">
+				<xs:annotation>
+					<xs:documentation>Value to insure VATExcluded</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="9"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="VALAC">
+				<xs:annotation>
+					<xs:documentation>Vallue to insure with options and accesories and TMC </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="9"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="VTOP" default="0">
+				<xs:annotation>
+					<xs:documentation>Total value of options</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="9"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="VACC" default="0">
+				<xs:annotation>
+					<xs:documentation>Total value of accesories</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="9"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="GENR">
+				<xs:annotation>
+					<xs:documentation>Kind of vehicle</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UTIL">
+				<xs:annotation>
+					<xs:documentation>Usage (1=Private, 0=Professionnal)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+						<xs:enumeration value="0"/>
+						<xs:enumeration value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Authentication_Type">
+		<xs:sequence>
+			<xs:element name="Method" type="xs:string"/>
+			<xs:element name="Realms" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Permission_Type">
+		<xs:sequence>
+			<xs:element name="ApplicationsRight" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="CanUpdateTeam" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactPerson_simple_Type">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="17"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language" type="Language_Type" minOccurs="0"/>
+			<xs:element name="Birthdate" type="xs:date" minOccurs="0"/>
+			<xs:element name="Gender" type="Gender_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CSEX - H for male, F for female</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="Address_Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Driver_Type">
+		<xs:sequence>
+			<xs:element name="DriverIsSubscriber" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>CONH - Is the driver the subscriber
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Title" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>CTIT - Title of the driver ('11'=MR.,
+									'12'=MME, '13'=MLLE)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NOM1 - Last name of the driver
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>PNOM - First name of the driver
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TelGSM" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NTEL/NGSM - Phone or GSM number of the
+									subscriber</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Birthday" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>DNAI - Date of birth of the driver
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DrivingLicenseDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>DPEC - Date of driving license of the driver
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeOfDrivingLicenseCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Code of the type of driving license of the
+									driver ('B'=B VOIT, ...)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="Address_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Address of the driver...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Job" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>CPRO - Job code of the driver - Table TX1CPRO
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlreadyInsured" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Already insured ? 1 : already insured | 2 : not insured | 3 : insured company car</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:sequence minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If already insured...</xs:documentation>
+				</xs:annotation>
+				<xs:element name="PreviousCompanyCode" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>COCA - Code of the company where the driver
+										is already insured (table MBRCM1)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PreviousCompanyName" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>CIEP - Name of the company where the driver
+										is already insured (table MBRCM1)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PreviousContractNumber" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>OCON - Number of the contract in the previous
+										company where the driver is already insured</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PreviousContractStatus" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>CETC - Status code of the contract in the
+										previous company where the driver is already insured (table
+										MBRCETC : 01=Garanties du contrat suspendues, 02=Contrat
+										résilié par le preneur, 03=Contrat résilié par la Cie,
+										04=Contrat résilié de commun accord, 05=Le contrat reste en
+										vigueur)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="BonusMalus" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>BonusMalus of the driver in the previous
+										company</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OmniumRevoked" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+			<xs:element name="NumberOfYearWithClaimsAttest" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ASRX - Number of year with claims attest :
+									'0'=less than 1 year, '1'=1 year, '2'=2 years, ...,'5'= 5 years
+									or more )</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumberOfYearWithoutAccident" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ASRX - Number of year without accident :
+									'0'=less than 1 year, '1'=1 year, '2'=2 years, ...,'5'= 5 years
+									or more )</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumberOfResponsibleAccidentLast5Years" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ASRX - Number of year without responsible accidents :
+									'0'=less than 1 year, '1'=1 year, '2'=2 years, ...,'5'= 5 years
+									or more )</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DrivingLicenseRevoked" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CDEC - The driver already had a revocation of
+									his driving licence during the last 3 years?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumOfClaimsInvolved" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NSNR - Number of disaster I was involved
+									[0..9] (table MBRNBSI)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumOfClaimsInvolvedAsLiable" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NSRE - Number of disaster I was in charge
+									[0..9] (table MBRNBSI)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumOfTheftCarAsVictim" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>NSVO - Number of theft car as victim [0..9]
+									(table MBRNBSI)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeclareNoHandicap" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CMAL - The driver declares that he has no
+									handicap</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeclareNoProblemWithPreviousCompany" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>CMSP - The driver declares to have no problem
+									with a previous insurance company or the police�
+								</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

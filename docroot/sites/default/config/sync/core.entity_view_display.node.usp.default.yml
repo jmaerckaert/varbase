@@ -1,0 +1,51 @@
+uuid: 1c75e80c-b4e6-4ea5-8dfe-310efd10f16e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.usp.body
+    - field.field.node.usp.field_media
+    - field.field.node.usp.field_meta_tags
+    - field.field.node.usp.field_yoast_seo
+    - node.type.usp
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: content
+id: node.usp.default
+targetEntityType: node
+bundle: usp
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_media: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

@@ -1,0 +1,18 @@
+uuid: 33f66ce5-c838-48e9-a598-8e5c824e6f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.metatag
+field_name: metatag
+entity_type: node
+bundle: cta
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

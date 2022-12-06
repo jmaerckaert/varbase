@@ -1,0 +1,20 @@
+uuid: aeaa78cc-1ab6-4a87-aa4a-23941bf44be3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: 0tpwsY23U-ONjLcZOilMI4iKNfPIm-YJRR0Jw3GaaS0
+id: node.varbase_heroslider_media.changed
+field_name: changed
+entity_type: node
+bundle: varbase_heroslider_media
+label: Gewijzigd
+description: 'Het tijdstip waarop de node voor het laatst werd bewerkt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

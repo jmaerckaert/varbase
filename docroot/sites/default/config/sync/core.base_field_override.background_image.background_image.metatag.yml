@@ -1,0 +1,18 @@
+uuid: 6e5276c9-83b7-448a-afc6-c16f5f379128
+langcode: nl
+status: true
+dependencies:
+  module:
+    - background_image
+id: background_image.background_image.metatag
+field_name: metatag
+entity_type: background_image
+bundle: background_image
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

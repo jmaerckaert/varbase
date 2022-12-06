@@ -1,0 +1,127 @@
+uuid: c8793d02-e23d-4369-a025-216a7917fb40
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.tool.body
+    - field.field.node.tool.field_link
+    - field.field.node.tool.field_link_to_tool
+    - field.field.node.tool.field_media
+    - field.field.node.tool.field_meta_tags
+    - field.field.node.tool.field_product_category
+    - field.field.node.tool.field_title_formatted
+    - field.field.node.tool.field_yoast_seo
+    - node.type.tool
+  module:
+    - ds
+    - field_group
+    - iframe
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: content
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_container
+        - body
+        - field_link_to_tool
+  field_group:
+    group_container:
+      children:
+        - body
+        - field_link_to_tool
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: hidden
+id: node.tool.default
+targetEntityType: node
+bundle: tool
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: ''
+            lbw-cl: tool-body
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_link_to_tool:
+    type: iframe_default
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      url: ''
+      title: ''
+      width: ''
+      height: ''
+      class: ''
+      expose_class: ''
+      frameborder: '0'
+      scrolling: auto
+      transparency: '0'
+      tokensupport: '0'
+    third_party_settings: {  }
+hidden:
+  field_link: true
+  field_media: true
+  field_meta_tags: true
+  field_product_category: true
+  field_title_formatted: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

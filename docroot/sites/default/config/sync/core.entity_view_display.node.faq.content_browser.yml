@@ -1,0 +1,31 @@
+uuid: 35d566a8-edfa-46c8-a4b8-378f4aaa57ef
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.faq.body
+    - field.field.node.faq.field_faq_category
+    - field.field.node.faq.field_faq_product_category
+    - node.type.faq
+  module:
+    - text
+    - user
+id: node.faq.content_browser
+targetEntityType: node
+bundle: faq
+mode: content_browser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faq_category: true
+  field_faq_product_category: true
+  langcode: true
+  links: true

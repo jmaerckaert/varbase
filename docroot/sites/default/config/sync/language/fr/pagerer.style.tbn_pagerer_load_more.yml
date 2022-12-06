@@ -1,0 +1,5 @@
+default_config:
+  tags:
+    pages:
+      pageset_empty: 'Aucune page à afficher.'
+      more_button_text: 'Charger plus'

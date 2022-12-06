@@ -1,0 +1,25 @@
+uuid: 5d98f71b-a4d5-4e79-b426-e5451d9b1241
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: quote_tool
+label: 'Quote tool'
+handler: multiple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tool: tool
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false

@@ -1,0 +1,19 @@
+uuid: f3f93c63-38f5-4ae3-ab21-4b072157950f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_compare_tool
+field_name: field_compare_tool
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

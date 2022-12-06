@@ -1,0 +1,5 @@
+default_language_to_assign: en
+prevent_user_override: true
+_core:
+  default_config_hash: Ir73Ap5R12vU3J0EYOYeNAYHOZ8mCp1q6nN2lLvqLNs
+langcode: nl

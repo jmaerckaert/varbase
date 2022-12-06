@@ -1,0 +1,7 @@
+name: "Athora heroslider media"
+description: "Provides extra heroslider functionality."
+type: module
+package: Athora
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'athora_heroslider_media'

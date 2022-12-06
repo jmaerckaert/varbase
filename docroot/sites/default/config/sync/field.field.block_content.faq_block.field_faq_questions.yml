@@ -1,0 +1,28 @@
+uuid: 62a19f04-cf7c-493a-9ca3-8cac213798d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq_block
+    - field.storage.block_content.field_faq_questions
+    - node.type.faq
+id: block_content.faq_block.field_faq_questions
+field_name: field_faq_questions
+entity_type: block_content
+bundle: faq_block
+label: Questions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq: faq
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

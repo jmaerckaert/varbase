@@ -1,0 +1,23 @@
+uuid: 5a1925bd-6205-491f-8acc-68279f70c33f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_width
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+  module:
+    - options
+_core:
+  default_config_hash: MysjWwmCLFY6yp3u3FioD9HR6tZIqVA5mfRyNPPabM0
+id: paragraph.bp_columns_two_uneven.bp_width
+field_name: bp_width
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: Width
+description: ''
+required: true
+translatable: false
+default_value: paragraph--width--full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

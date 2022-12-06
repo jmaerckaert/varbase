@@ -1,0 +1,12 @@
+uuid: c050a5e3-c249-4da9-bda6-82522ca39e4f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: O7GWc2s0Namm9zyPmlRHlZIGZVU2B97mEQlQbOjmUOU
+id: media.s11_square
+label: 'Size 11 square 1:1'
+targetEntityType: media
+cache: true

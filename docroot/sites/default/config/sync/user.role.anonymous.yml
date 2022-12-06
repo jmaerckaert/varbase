@@ -1,0 +1,25 @@
+uuid: 25fd92bb-23ca-4f3a-a02c-a069d5a28802
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: o946uJlkxATOINv23-nWPvp8plQ52XpSv3tUZVv007g
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access sitemap'
+  - 'display eu cookie compliance popup'
+  - 'download media'
+  - 'search content'
+  - 'view background image'
+  - 'view media'
+  - 'view terms in broker_types'
+  - 'view terms in document_category'
+  - 'view terms in employee_functions'
+  - 'view terms in faq_category'
+  - 'view terms in localities'
+  - 'view terms in product_category'
+  - 'view terms in tags'

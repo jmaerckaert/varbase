@@ -1,0 +1,28 @@
+uuid: a6bfd8f5-6850-41ab-86c5-789ce6ad2541
+langcode: en
+status: true
+dependencies:
+  module:
+    - athora_broker
+    - webform
+  theme:
+    - athora
+id: brokerinfosummaryblock
+theme: athora
+region: content
+weight: -11
+provider: null
+plugin: athora_broker_broker_info_summary_block
+settings:
+  id: athora_broker_broker_info_summary_block
+  label: 'Your selected broker'
+  provider: athora_broker
+  label_display: visible
+visibility:
+  webform:
+    id: webform
+    webforms:
+      contact_broker: contact_broker
+    negate: false
+    context_mapping:
+      webform: '@webform.webform_route_context:webform'

@@ -1,0 +1,4 @@
+elements: "name:\n  '#title': Voornaam\n  '#placeholder': Voornaam\nsurname:\n  '#title': Achternaam\n  '#placeholder': Achternaam\nphone_number:\n  '#title': Telefoonnummer\n  '#placeholder': Telefoonnummer\nplease_contact_me_by:\n  '#title': 'Ik wens gecontacteerd te worden via:'\n  '#options':\n    phone: Telefoon\navailability:\n  '#title': Beschikbaarheid\n  '#element':\n    availibility_date:\n      '#title': 'Wanneer bent u beschikbaar'\n    availability_hour_start:\n      '#title': Beginuur\n    availability_hour_stop:\n      '#title': Einduur\nyour_question_or_remark:\n  '#title': 'Uw verdere vragen/opmerkingen'\n  '#placeholder': 'Schrijf uw boodschap hier...'\ncontact_info_acceptance:\n  '#title': '<b>Ik accepteer dat</b> mijn contactinformatie verzonden zal worden naar de Athora makelaars'\nactions:\n  '#submit__label': Verzenden\n"
+settings:
+  confirmation_message: 'Uw aanvraag werd verzonden naar de makelaar'
+title: Contact

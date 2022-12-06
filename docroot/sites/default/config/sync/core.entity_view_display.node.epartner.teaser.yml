@@ -1,0 +1,40 @@
+uuid: 3f54e820-c76e-46df-852f-8b093a5b814c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.epartner.body
+    - node.type.epartner
+  module:
+    - text
+    - user
+id: node.epartner.teaser
+targetEntityType: node
+bundle: epartner
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_broker_id: true
+  field_email: true
+  field_entreprise_number: true
+  field_facebook: true
+  field_linkedin: true
+  field_slogan: true
+  field_telephone: true
+  field_website: true
+  langcode: true

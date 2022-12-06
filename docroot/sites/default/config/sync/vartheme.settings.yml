@@ -1,0 +1,23 @@
+cdn_provider: ''
+modal_enabled: 0
+forms_smart_descriptions: 0
+_core:
+  default_config_hash: 5r493JbGpmZmqdlsjP1HGm8wUVuslpZSScZF2o0G4zE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://www.athora.com.docker/themes/contrib/bootstrap/favicon.ico'
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true
+schemas:
+  bootstrap: 8000
+  vartheme: 8000
+langcode: nl

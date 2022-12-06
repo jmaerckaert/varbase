@@ -1,0 +1,153 @@
+uuid: 8bcf82a3-6be3-4b4a-932d-146867231a9f
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - athora_broker
+id: epartner_excel
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: epartner
+label: 'ePartner excel'
+source:
+  plugin: spreadsheet
+  file: 'private://epartner/Brokers.xlsx'
+  worksheet: data
+  origin: A2
+  columns:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    - I
+    - J
+    - K
+    - L
+    - M
+    - 'N'
+    - O
+  row_index_column: 'Row no.'
+  keys:
+    A:
+      type: integer
+      size: big
+    J:
+      type: string
+  constants:
+    broker_user_name: A
+    broker_user_type: BRO
+  broker_detail_fields:
+    - brokeraddress
+    - phoneNumber1
+    - email
+    - websiteURL
+    - entrepriseNumber
+process:
+  title: O
+  langcode: J
+  body/0/value: F
+  body/0/format:
+    plugin: default_value
+    default_value: full_html
+  field_slogan/0/value: E
+  field_slogan/0/format:
+    plugin: default_value
+    default_value: full_html
+  field_broker_id: A
+  field_facebook:
+    plugin: skip_on_invalid_url
+    method: process
+    message: 'Facebook url (@value) is invalid'
+    absolute: true
+    skip_empty_url_valid_check: true
+    source: B
+  field_linkedin:
+    plugin: skip_on_invalid_url
+    method: process
+    message: 'LinkedIn url (@value) is invalid'
+    absolute: true
+    skip_empty_url_valid_check: true
+    source: C
+  field_telephone: phoneNumber1
+  field_email: email
+  field_entreprise_number: entrepriseNumber
+  field_website:
+    plugin: skip_on_invalid_url
+    method: process
+    message: 'Website url (@value) is invalid'
+    absolute: true
+    skip_empty_url_valid_check: true
+    source: websiteURL
+  address: brokeraddress
+  field_address_street:
+    -
+      plugin: get
+      source: '@address'
+    -
+      plugin: property_accessor
+      property_path: address
+  field_address_number:
+    -
+      plugin: get
+      source: '@address'
+    -
+      plugin: property_accessor
+      property_path: streetNumber
+  field_address_postal_code:
+    -
+      plugin: get
+      source: '@address'
+    -
+      plugin: property_accessor
+      property_path: locality.zipcode
+  field_address_box:
+    -
+      plugin: get
+      source: '@address'
+    -
+      plugin: property_accessor
+      property_path: postBox
+  field_address_city:
+    -
+      plugin: get
+      source: '@address'
+    -
+      plugin: property_accessor
+      property_path: locality.name
+  field_address_country:
+    plugin: default_value
+    default_value: BE
+  field_street:
+    -
+      plugin: concat
+      source:
+        - '@field_address_street'
+        - '@field_address_number'
+        - '@field_address_box'
+      delimiter: ' '
+    -
+      plugin: callback
+      callable: trim
+  field_address:
+    -
+      plugin: callback
+      callable: athora_broker_prepare_address_value
+      source:
+        - '@field_street'
+        - '@field_address_postal_code'
+        - '@field_address_city'
+        - '@field_address_country'
+    -
+      plugin: addressfield
+destination:
+  plugin: 'entity:node'
+  default_bundle: epartner
+  translations: true
+migration_dependencies: null

@@ -1,0 +1,29 @@
+uuid: b19cf165-febc-42d9-a9ad-73813e42389d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_tool
+    - node.type.tool
+  module:
+    - iframe
+id: node.tool.field_link_to_tool
+field_name: field_link_to_tool
+entity_type: node
+bundle: tool
+label: 'Link to the tool'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  class: ''
+  frameborder: '0'
+  scrolling: auto
+  transparency: '0'
+  tokensupport: '0'
+  title: ''
+  height: ''
+  width: ''
+field_type: iframe

@@ -1,0 +1,4 @@
+label: Gutter
+settings:
+  on_label: 'With gutter'
+  off_label: 'Without gutter'

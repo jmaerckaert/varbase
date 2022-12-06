@@ -1,0 +1,36 @@
+uuid: 46785e3f-6bc6-4a4d-88b4-53321f639dac
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.usp.body
+    - field.field.node.usp.field_media
+    - node.type.usp
+  module:
+    - text
+    - user
+id: node.usp.full
+targetEntityType: node
+bundle: usp
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  langcode: true
+  links: true

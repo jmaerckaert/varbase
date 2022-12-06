@@ -1,0 +1,64 @@
+uuid: 31fe768c-8895-455e-9e9d-12c5ac1d83be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.faq_category.field_exclude_global_faq
+    - taxonomy.vocabulary.faq_category
+  module:
+    - path
+    - text
+id: taxonomy_term.faq_category.default
+targetEntityType: taxonomy_term
+bundle: faq_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_exclude_global_faq:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

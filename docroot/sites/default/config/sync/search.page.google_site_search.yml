@@ -1,0 +1,22 @@
+uuid: 862c32b2-449c-454b-9f2a-634d429c4e79
+langcode: en
+status: true
+dependencies:
+  module:
+    - gss
+id: google_site_search
+label: 'Google Site Search'
+path: gss
+weight: 0
+plugin: gss_search
+configuration:
+  search_engine_id_en: ''
+  search_engine_id_nl: ''
+  search_engine_id_fr: ''
+  api_key: gss_api_key
+  base_url: ''
+  page_size: '10'
+  pager_size: '1'
+  images: 0
+  add_referer_header: 1
+  referer_header: 'https://www.athora.com'

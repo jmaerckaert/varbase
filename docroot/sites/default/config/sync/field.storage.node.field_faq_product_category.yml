@@ -1,0 +1,20 @@
+uuid: f1ce8933-34c5-4ca8-a334-06065dae8d9b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_faq_product_category
+field_name: field_faq_product_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

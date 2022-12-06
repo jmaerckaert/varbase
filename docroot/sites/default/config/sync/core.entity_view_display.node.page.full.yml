@@ -1,0 +1,93 @@
+uuid: 2c5da51d-0537-4b58-9aba-643756d8fcc5
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_tags
+    - field.field.node.page.field_yoast_seo
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+  content:
+    - 'block_content:basic:a75deaf0-52d2-4327-827f-cd3027abb7ca'
+  module:
+    - block_content
+    - entity_block
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f9bb2602-4ffe-4bcd-a265-5c8eb99ec9b9:
+            uuid: f9bb2602-4ffe-4bcd-a265-5c8eb99ec9b9
+            region: main
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:body'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          2f5c8e1b-4d9d-4779-9411-8afb21fb6166:
+            uuid: 2f5c8e1b-4d9d-4779-9411-8afb21fb6166
+            region: content
+            configuration:
+              id: 'entity_block:node'
+              label: Content
+              provider: entity_block
+              label_display: ''
+              entity: '10'
+              view_mode: block
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          50ae0a8e-e15d-4fcb-8d4f-3bd9616237a1:
+            uuid: 50ae0a8e-e15d-4fcb-8d4f-3bd9616237a1
+            region: content
+            configuration:
+              id: 'block_content:a75deaf0-52d2-4327-827f-cd3027abb7ca'
+              label: 'Are you looking to invest?'
+              provider: block_content
+              label_display: visible
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+    allow_custom: false
+    enabled: true
+_core:
+  default_config_hash: U3J05zyFQNcF3bxeVwkYb85Tfgo_2xrauXwoe0k2dx0
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content:
+  body:
+    type: text_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+hidden:
+  field_meta_tags: true
+  field_tags: true
+  field_yoast_seo: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

@@ -1,0 +1,24 @@
+uuid: 3238d526-0aa3-4255-81a2-bd8bbaa27691
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: tpKIltT_h6cbLhge4wQB-Hr5r4m3XyR2IAB7dMMiyck
+id: node.varbase_heroslider_media.promote
+field_name: promote
+entity_type: node
+bundle: varbase_heroslider_media
+label: 'Aangeraden op de voorpagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

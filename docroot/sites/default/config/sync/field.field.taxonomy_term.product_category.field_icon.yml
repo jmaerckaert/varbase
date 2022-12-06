@@ -1,0 +1,28 @@
+uuid: 2b0e6f1d-49df-4ab7-873e-c864e61ab29c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - media.type.image
+    - taxonomy.vocabulary.product_category
+id: taxonomy_term.product_category.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: product_category
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

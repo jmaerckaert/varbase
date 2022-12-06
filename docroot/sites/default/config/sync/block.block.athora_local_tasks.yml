@@ -1,0 +1,22 @@
+uuid: bbf68a87-be81-4377-9460-2a0a45d72f72
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - athora
+_core:
+  default_config_hash: ARhtdcZzXGDPAQxkl-yY-xV4cIh545lb2OvC2t5K_o8
+id: athora_local_tasks
+theme: athora
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

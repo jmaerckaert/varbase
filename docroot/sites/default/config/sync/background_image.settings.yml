@@ -1,0 +1,246 @@
+defaults:
+  blur:
+    type: 2
+    radius: 50
+    speed: 1
+  dark: false
+  full_viewport: false
+  preload:
+    background_color: '#ffffff'
+  text:
+    format: full_html
+    value: ''
+entities:
+  node:
+    article:
+      enable: true
+      embed: true
+      require: false
+      group: advanced
+    page:
+      enable: true
+      embed: true
+      require: true
+      group: advanced
+    campaign:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    faq:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    landing_page:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    product:
+      enable: true
+      embed: true
+      group: advanced
+      require: true
+    testimonial:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    tool:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    usp:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    feature:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    cta:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    error_page:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    varbase_heroslider_media:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    employee:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    epartner:
+      enable: true
+      embed: true
+      group: advanced
+      require: true
+    news:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    report:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+  user:
+    user:
+      enable: false
+      embed: false
+      require: false
+      group: advanced
+  view:
+    view:
+      enable: true
+      embed: true
+      require: false
+      group: advanced
+  media:
+    audio:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    file:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    image:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    remote_video:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    video:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+  taxonomy_term:
+    document_category:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    faq_category:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    product_category:
+      enable: true
+      embed: true
+      group: advanced
+      require: true
+    tags:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    cta_colors:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    employee_functions:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+  webform:
+    webform:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+  webform_submission:
+    contact:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_contact:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_employee_evaluation:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_feedback:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_issue:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_job_application:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_job_seeker_profile:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_registration:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_session_evaluation:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_subscribe:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+    template_user_profile:
+      enable: false
+      embed: false
+      group: ''
+      require: false
+css:
+  base_class: background-image
+  retina_rules:
+    - 'only screen and (-webkit-min-device-pixel-ratio:2)'
+    - 'only screen and (min--moz-device-pixel-ratio:2)'
+    - 'only screen and (-o-min-device-pixel-ratio:2/1)'
+    - 'only screen and (min-device-pixel-ratio:2)'
+    - 'only screen and (min-resolution: 192dpi)'
+    - 'only screen and (min-resolution: 2dppx)'
+image_style:
+  preload: background_image_preload
+  fallback: background_image_lg
+  responsive: background_image
+_core:
+  default_config_hash: o0H_H_IKvNSYaq2WpMD0oy9dmF6nEpGAUCTt5T6FSjo
+langcode: nl

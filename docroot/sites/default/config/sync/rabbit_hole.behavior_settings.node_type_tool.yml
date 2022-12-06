@@ -1,0 +1,11 @@
+uuid: c85c853a-0a59-4a0b-b0b5-9cd52f5ccb29
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.tool
+id: node_type_tool
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

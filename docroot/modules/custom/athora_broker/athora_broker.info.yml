@@ -1,0 +1,20 @@
+name: "Athora Broker"
+description: "Provides extra Broker functionality."
+type: module
+package: Athora
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'athora_broker'
+dependencies:
+  - migrate_spreadsheet:migrate_spreadsheet
+  - migrate_plus:migrate_plus
+  - migrate_file:migrate_file
+  - migrate_tools:migrate_tools
+  - remote_stream_wrapper:remote_stream_wrapper
+  - address:address
+  - readonly_field_widget:readonly_field_widget
+  - generali_webservice:generali_webservice
+  - tbn_migrate:tbn_migrate
+  - leaflet:leaflet
+  - tbn_mail_edit:tbn_mail_edit
+  - swiftmailer:swiftmailer

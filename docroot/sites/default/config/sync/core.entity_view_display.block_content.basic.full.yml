@@ -1,0 +1,68 @@
+uuid: be24fc65-0343-4a2c-8e5b-cbdeaa5fed73
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.basic.body
+  module:
+    - ds
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - block_description
+        - body
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: block-title
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+_core:
+  default_config_hash: _VyiexuDy_YL9RnMQR_YR6OyswFdbEONtKF7xmRK3j4
+id: block_content.basic.full
+targetEntityType: block_content
+bundle: basic
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  langcode: true

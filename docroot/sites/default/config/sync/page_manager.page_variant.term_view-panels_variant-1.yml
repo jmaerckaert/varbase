@@ -1,0 +1,99 @@
+uuid: 84dcee01-06a2-46ac-96bd-72818572668b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+    - system.menu.footer
+  content:
+    - 'block_content:basic:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
+  module:
+    - block_content
+    - ctools
+    - panels
+    - system
+id: term_view-panels_variant-1
+label: Car
+variant: panels_variant
+variant_settings:
+  blocks:
+    628ab7bd-7ace-4805-93f0-9dc728174a7b:
+      id: 'system_menu_block:footer'
+      label: Footer
+      provider: system
+      label_display: visible
+      level: 1
+      depth: 0
+      region: main
+      weight: 1
+      context_mapping: {  }
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: 628ab7bd-7ace-4805-93f0-9dc728174a7b
+    6d0e9c7e-a864-44fb-8787-151a99fbb21b:
+      id: 'block_content:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
+      label: Copyright
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: main
+      weight: 0
+      uuid: 6d0e9c7e-a864-44fb-8787-151a99fbb21b
+      context_mapping: {  }
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+  id: panels_variant
+  uuid: 5c101c3d-fb19-46f6-a7a4-2ddc4b7f186e
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: Car
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-1
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: -10
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: car
+  -
+    id: request_path
+    pages: /taxonomy/term/3
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  car:
+    label: Car
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 99a2d991-0c9d-4a33-b600-9d47fb66b0be

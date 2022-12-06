@@ -1,0 +1,7 @@
+cookie-redirect:
+  version: VERSION
+  js:
+    assets/js/tbn_language_selection.cookie_redirect.js: {}
+  dependencies:
+    - core/jquery
+    - core/js-cookie

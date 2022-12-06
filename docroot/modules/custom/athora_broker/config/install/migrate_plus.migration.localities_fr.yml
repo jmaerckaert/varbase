@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - athora_broker
+id: localities_fr
+label: Localities French
+migration_group: broker
+source:
+  plugin: url
+  data_fetcher_plugin: https
+  data_parser_plugin: websales_common_soap
+  item_selector: null
+  urls: null
+  function: GetListLocalities
+  parameters:
+    OrderBy: CPOS
+  response_type: null
+  response_property: Locality
+  fields:
+    -
+      name: ZipCode
+      selector: ZipCode
+    -
+      name: LocalityName_N
+      selector: LocalityName_N
+    -
+      name: LocalityName_F
+      selector: LocalityName_F
+    -
+      name: Longitude
+      selector: LocalityXY.X
+    -
+      name: Latitude
+      selector: LocalityXY.Y
+    -
+      name: CountryCode
+      selector: CountryCode
+  ids:
+    ZipCode:
+      type: integer
+    LocalityName_N:
+      type: string
+process:
+  tid:
+    plugin: migration_lookup
+    source_ids:
+      localities:
+        - ZipCode
+        - LocalityName_N
+    migration: localities
+    no_stub: true
+  langcode:
+    plugin: default_value
+    default_value: fr
+  zipcode: ZipCode
+  name_temp: LocalityName_F
+  name:
+    plugin: concat
+    source:
+      - '@zipcode'
+      - '@name_temp'
+    delimiter: ' '
+    language: fr
+  field_longitude: Longitude
+  field_latitude: Latitude
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: localities
+  translations: true
+migration_dependencies:
+  required:
+    - localities

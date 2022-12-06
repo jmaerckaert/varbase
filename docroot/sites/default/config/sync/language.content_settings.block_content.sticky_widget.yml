@@ -1,0 +1,18 @@
+uuid: 2ccde38c-f54e-47ef-9c40-ca80b15c9d9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sticky_widget
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.sticky_widget
+target_entity_type_id: block_content
+target_bundle: sticky_widget
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,104 @@
+type: theme
+base theme: vartheme
+core_version_requirement: ^8 || ^9
+
+name: 'athora'
+description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
+package: 'Varbase'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer_top: 'Footer top'
+  footer_middle: 'Footer middle'
+  footer_bottom: 'Footer bottom'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sticky_widget: 'Sticky widget'
+
+libraries:
+# Bootstrap styles and scripts libraries.
+  - athora/bootstrap-styles
+  - athora/bootstrap-scripts
+
+# athora custom Vartheme styles and scripts libraries.
+  - athora/vartheme-styles
+
+# athora global styles and scripts libraries.
+  - athora/global-styles
+  - athora/global-scripts
+
+# athora Varbase Bootstrap Paragraphs colors theme.
+  - athora/vbp-colors
+
+# athora Better Login theme.
+#  - athora/betterlogin
+
+# OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
+# Javascript files.
+libraries-override:
+# Comment lines to keep using libraries from vartheme.
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme/bootstrap-styles: false
+  vartheme/bootstrap-scripts: false
+  vartheme/global-styles: false
+  vartheme/global-scripts: false
+
+# athora Varbase Bootstrap Paragraphs colors theme.
+  varbase_bootstrap_paragraphs/vbp-colors: athora/vbp-colors
+  vartheme/vbp-colors: athora/vbp-colors
+#  vartheme/betterlogin: athora/betterlogin
+
+# Uncomment lines to replace, exclude css and js files from vartheme.
+# You will need to copy less/css files from Vartheme to use theme for the
+# overriden library.
+# ------------------------------------------------------------------------------
+#  vartheme/bs-callouts: athora/bs-callouts
+#  vartheme/card: athora/card
+#  vartheme/outside-in: athora/outside-in
+#  vartheme/edge2edge: athora/edge2edge
+#  vartheme/equal-height: athora/equal-height
+#  vartheme/navbar-admin: athora/navbar-admin
+# ------------------------------------------------------------------------------
+#  vartheme/ajax: athora/ajax
+#  vartheme/alert: athora/alert
+#  vartheme/field: athora/field
+#  vartheme/file: athora/file
+#  vartheme/filter: athora/filter
+#  vartheme/form: athora/form
+#  vartheme/icon: athora/icon
+#  vartheme/navbar: athora/navbar
+#  vartheme/node: athora/node
+#  vartheme/panel: athora/panel
+#  vartheme/progress-bar: athora/progress-bar
+#  vartheme/table-drag: athora/table-drag
+#  vartheme/tabs: athora/tabs
+#  vartheme/toolbar: athora/toolbar
+#  vartheme/autocomplete: athora/autocomplete
+
+#  Uncomment the following if you want to keep bootstrap/framework
+#    and you want to extend it.
+#libraries-extend:
+#  bootstrap/framework:
+#    - vartheme/framework
+#    - athora/framework
+
+ckeditor_stylesheets:
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/base/athora.base.css
+  - css/theme/content.theme.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
+  - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css

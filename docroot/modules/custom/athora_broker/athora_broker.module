@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * Contains all hook implementations for this module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function athora_broker_theme($existing, $type, $theme, $path) {
+  return [
+    'athora-broker-info-summary' => [
+      'variables' => [
+        'broker_name' => NULL,
+        'broker_address' => NULL,
+        'broker_street_number' => NULL,
+        'broker_locality_zip' => NULL,
+        'broker_locality_name' => NULL,
+        'broker_phone' => NULL,
+        'broker_fax' => NULL,
+        'broker_website' => NULL,
+        'broker_contact' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Callback function for the migrate callback process plugin.
+ *
+ * Gets the entity UUID (Universally Unique Identifier).
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *
+ * @return string|null
+ */
+function athora_broker_get_uuid(EntityInterface $entity) {
+  return $entity->uuid();
+}
+
+/**
+ * Callback function for the migrate callback process plugin.
+ *
+ * Prepare the address value. This to make sure the addressfield process plugin
+ * can handle the value.
+ *
+ * @param array $values
+ *
+ * @return array|false
+ */
+function athora_broker_prepare_address_value(array $values) {
+  $keys = ['thoroughfare', 'postal_code', 'locality', 'country'];
+
+  return array_combine($keys, $values);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function athora_broker_form_webform_submission_contact_broker_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  \Drupal::service('athora_broker.webform_submission_contact_broker_add_form_alter')->alterForm($form, $form_state, $form_id);
+}
+
+/**
+ * Alters the map definitions defined by hook_leaflet_map_info().
+ *
+ * The settings array maps to the settings available to the leaflet map object,
+ * http://leafletjs.com/reference.html#map-properties.
+ *
+ * @param array $map_info
+ *   Map info array.
+ */
+function athora_broker_leaflet_map_info_alter(array &$map_info) {
+  // Set a custom iconUrl for the default map type.
+  $icon_path = \Drupal\Core\Site\Settings::get('base_url') . '/' . \Drupal::service('extension.list.module')->getPath('leaflet') . '/js/leaflet/dist/images/marker-icon.png';
+  $map_info['OSM Mapnik']['icon']['iconUrl'] = $icon_path;
+
+  $map_info['OSM Mapnik']['settings']['scrollWheelZoom'] = FALSE;
+}
+
+/**
+ * Implements hook_mail().
+ */
+function athora_broker_mail($key, &$message, $params) {
+  $message['from'] = \Drupal::config('system.site')->get('mail');
+
+  switch ($key) {
+    case 'athora_broker_epartner_daily_report':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_mail_edit_templates().
+ */
+function athora_broker_mail_edit_templates() {
+  return [
+    'athora_broker.emails' => [
+      'epartner_daily_report' => t('ePartner daily report'),
+    ],
+  ];
+}

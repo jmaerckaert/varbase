@@ -1,0 +1,12 @@
+uuid: fc1cd817-f720-4c12-a048-fc6bfeca9165
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dHI_ib8wRMEtDPRyUulJpRf0musrXKI__NpPqaYTN6A
+id: node.horizontal_media_teaser_medium
+label: 'Horizontal media teaser - medium'
+targetEntityType: node
+cache: true

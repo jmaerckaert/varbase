@@ -1,0 +1,20 @@
+label: 'Welcome to Varbase'
+tips:
+  tour-switch:
+    label: 'Tour Switch'
+    body: 'Remember! You can always switch on or off the tour from this button. Tours will give you valuable tips and information while navigating through your site.'
+  editing-your-homepage:
+    label: 'Editing Your Homepage'
+    body: "You can edit your homepage and customize what to appear in it from the tray at the bottom of the page.\r\n<hr />\r\n<b>Change Layout  |  Manage Content  |  Edit</b>"
+  start-configuring-your-site-structure:
+    label: 'Start Configuring Your Site Structure'
+    body: 'Define your content types, fields, taxonomy, views, and other structural building blocks from here.'
+  define-your-site-settings:
+    label: 'Define Your Site Settings'
+    body: 'Other configuration for your site such as registration, search settings, web services, multilingual settings and content authoring can be managed from here.'
+  sites-content:
+    label: 'Site''s Content'
+    body: 'All your site''s content, media, and files can be found here.'
+  your-dashboard:
+    label: 'Your Dashboard'
+    body: 'Your dashboard includes quick links for creating content, viewing content stats, and a Google Analytics overview of your site''s traffic once you go live.'

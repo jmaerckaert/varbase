@@ -1,0 +1,20 @@
+uuid: f65ce130-9e5f-4dbc-bcb8-0f403de6a229
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_broker_id
+field_name: field_broker_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

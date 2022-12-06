@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function athora_tool_entity_insert(EntityInterface $entity) {
+  // Set the link value default to the node itself.
+  // This for the wrapper link on the teaser view mode.
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'tool' && $entity->hasField('field_link') && $entity->get('field_link')->isEmpty()) {
+    $uri = $entity->toUrl('canonical', ['absolute' => TRUE])->getInternalPath();
+    $entity->set('field_link', ['uri' => 'internal:/' . $uri]);
+    $entity->save();
+  }
+}

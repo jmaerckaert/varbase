@@ -1,0 +1,11 @@
+param: language
+time: 31536000
+path: /
+domain: ''
+set_on_every_pageload: false
+blacklisted_paths: {  }
+language_type: language_interface
+_core:
+  default_config_hash: FIFQcXUjxjJ4AFnWFiZi2zWxAgM-LUo2puXckz2P4Qc
+langcode: nl
+js_cookie_redirect: 1

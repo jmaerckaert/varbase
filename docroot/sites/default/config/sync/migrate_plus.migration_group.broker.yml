@@ -1,0 +1,10 @@
+uuid: 937c8c78-29bf-4ce4-b322-771cbdcaac74
+langcode: nl
+status: true
+dependencies: {  }
+id: broker
+label: Broker
+description: ''
+source_type: Soap
+module: null
+shared_configuration: null

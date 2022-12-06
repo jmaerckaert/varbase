@@ -1,0 +1,190 @@
+uuid: 2badcc98-6721-4c11-9b47-8b901e333bfa
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carousel
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_media
+    - field.field.node.campaign.field_product_category
+    - node.type.campaign
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_div:
+      children:
+        - group_container
+      parent_name: group_heroslider
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: hero-slide-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero slide content'
+      region: hidden
+    group_container:
+      children:
+        - group_row
+      parent_name: group_div
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: container
+      region: hidden
+    group_row:
+      children:
+        - group_col
+      parent_name: group_container
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+      region: hidden
+    group_col:
+      children:
+        - node_title
+        - body
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: col
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-md-12 no-padding heroslider-content'
+      label: col
+      region: hidden
+    group_heroslider:
+      children:
+        - field_media
+        - group_div
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: heroslider-item
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: heroslider
+      region: hidden
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_heroslider
+        - field_media
+        - group_container
+        - group_row
+        - group_div
+        - group_col
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 21
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: heroslider-title
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.campaign.carousel
+targetEntityType: node
+bundle: campaign
+mode: carousel
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 22
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: ds_content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: original
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_product_category: true
+  langcode: true
+  links: true

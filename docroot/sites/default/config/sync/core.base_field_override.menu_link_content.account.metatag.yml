@@ -1,0 +1,18 @@
+uuid: 658969a4-aac4-4906-a8b4-5a790c942fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+id: menu_link_content.account.metatag
+field_name: metatag
+entity_type: menu_link_content
+bundle: account
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

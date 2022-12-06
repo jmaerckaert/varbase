@@ -1,0 +1,25 @@
+uuid: 57289cd2-14d0-431e-9bcf-5cf40ca14727
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.image
+_core:
+  default_config_hash: ad3qTpl75AUb7n9ofEIKrAgJ422kA232D17LDn5wHL4
+id: media.image.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: image
+label: 'Save to Library'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

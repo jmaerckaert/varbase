@@ -1,0 +1,48 @@
+uuid: efb8bc1c-f903-4865-99f6-787f0c1104a1
+langcode: nl
+status: true
+dependencies:
+  module:
+    - ctools
+    - http_client_error_status
+    - system
+    - tbn_background_image
+  theme:
+    - athora
+_core:
+  default_config_hash: cxt94YNSJr4klnzK3bxNBnEAJte3KwgkvgX76h88Sew
+id: athora_page_title
+theme: athora
+region: header
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      product: product
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  background_image_text:
+    id: background_image_text
+    negate: true
+    context_mapping: {  }
+  http_client_error_status:
+    id: http_client_error_status
+    request_401: 1
+    request_403: 1
+    request_404: 1
+    negate: true
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /node/229
+    negate: true
+    context_mapping: {  }

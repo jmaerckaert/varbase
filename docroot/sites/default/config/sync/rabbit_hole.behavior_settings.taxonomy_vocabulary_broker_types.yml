@@ -1,0 +1,11 @@
+uuid: dbdc29cf-fa8e-41c1-baf3-6b5f6a3af7ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.broker_types
+id: taxonomy_vocabulary_broker_types
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

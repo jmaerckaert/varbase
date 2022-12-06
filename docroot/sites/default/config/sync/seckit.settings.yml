@@ -1,0 +1,57 @@
+seckit_xss:
+  csp:
+    checkbox: true
+    report-only: false
+    default-src: '''self'''
+    script-src: '''self'' ''unsafe-inline'' *.tobania.be *.hotjar.com *.google-analytics.com *.jsdelivr.net *.cloudflare.com *.googletagmanager.com *.cookielaw.org *.jquery.com tobania.atlassian.net'
+    object-src: ''
+    img-src: '''self'' data: *.google-analytics.com *.doubleclick.net *.openstreetmap.org cdn.jsdelivr.net *.cookielaw.org *.googletagmanager.com'
+    media-src: ''
+    frame-src: '''self'' *.hotjar.com *.youtube.com *.athora.site *.google.com'
+    child-src: ''
+    font-src: '''self'' *.googleusercontent.com *.bootstrapcdn.com  *.gstatic.com'
+    connect-src: '''self'' *.hotjar.com *.hotjar.io wss://*.hotjar.com *.google-analytics.com  *.doubleclick.net *.cookielaw.org'
+    report-uri: report-csp-violation
+    policy-uri: ''
+    style-src: '''self'' ''unsafe-inline'' *.bootstrapcdn.com *.cloudflare.com cdn.jsdelivr.net *.cookielaw.org'
+    vendor-prefix:
+      x: false
+      webkit: false
+    upgrade-req: false
+    frame-ancestors: ''
+  x_xss:
+    seckit_x_xss_option_disable: Disabled
+    seckit_x_xss_option_0: '0'
+    seckit_x_xss_option_1: 1;
+    seckit_x_xss_option_1_block: '1; mode=block'
+    select: 2
+  x_content_type:
+    checkbox: true
+seckit_csrf:
+  origin: false
+  origin_whitelist: ''
+seckit_clickjacking:
+  js_css_noscript: false
+  noscript_message: 'Sorry, you need to enable JavaScript to visit this website.'
+  x_frame: '1'
+  x_frame_allow_from: ''
+seckit_ssl:
+  hsts: true
+  hsts_subdomains: false
+  hsts_max_age: 15552000
+  hsts_preload: false
+seckit_various:
+  from_origin: false
+  from_origin_destination: same
+  disable_autocomplete: true
+  referrer_policy: true
+  referrer_policy_policy: no-referrer
+langcode: nl
+seckit_ct:
+  expect_ct: true
+  max_age: 7776000
+  report_uri: ''
+  enforce: false
+seckit_fp:
+  feature_policy: false
+  feature_policy_policy: ''

@@ -1,0 +1,22 @@
+uuid: 51791abc-4250-4aa0-bad2-fce2af6d24ce
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: AJOv-nvnpe0opzDD_K9r2axconCE3N4TvaW2RUHf1ac
+id: node.varbase_heroslider_media.menu_link
+field_name: menu_link
+entity_type: node
+bundle: varbase_heroslider_media
+label: Menulink
+description: 'Berekende menulink van de node (alleen beschikbaar tijdens het opslaan).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

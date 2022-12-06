@@ -1,0 +1,33 @@
+uuid: 4f8ccfe4-c788-45c9-a2e6-03a40b5abc74
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: paths_for_epartner_pages
+label: 'Paths for ePartner pages'
+type: 'canonical_entities:node'
+pattern: 'verzekering/[node:field_address:locality]/[node:title]'
+selection_criteria:
+  b7fe07ed-1b4b-4076-b51d-cf45dae97f4d:
+    id: node_type
+    bundles:
+      epartner: epartner
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b7fe07ed-1b4b-4076-b51d-cf45dae97f4d
+  9fba7dd6-33d4-48fd-8c1b-7b9c169e53a8:
+    id: language
+    langcodes:
+      nl: nl
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 9fba7dd6-33d4-48fd-8c1b-7b9c169e53a8
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

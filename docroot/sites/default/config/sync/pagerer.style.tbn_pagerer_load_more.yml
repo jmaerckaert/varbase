@@ -1,0 +1,22 @@
+langcode: nl
+dependencies:
+  module:
+    - tbn_pagerer
+  enforced:
+    module:
+      - tbn_pagerer
+default_config:
+  display: pages
+  display_restriction: 2
+  prefix_display: false
+  suffix_display: false
+  first_link: never
+  previous_link: never
+  next_link: never
+  last_link: never
+  tags:
+    pages:
+      pageset_empty: 'No pages to display.'
+      more_button_text: 'Meer laden'
+_core:
+  default_config_hash: 7XiS-M0IlezAIhXtu8anhmJiKkplbn01WHfGe6Q028k

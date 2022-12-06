@@ -1,0 +1,10 @@
+name: "TBN Migrate"
+description: "Provides extra migrate functionality."
+type: module
+package: TBNLabs
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'tbn_migrate'
+dependencies:
+  - drupal:migrate
+  - migrate_process_url:migrate_process_url

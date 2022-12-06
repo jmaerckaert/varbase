@@ -1,0 +1,9 @@
+name: "TBN Language Cookie"
+description: "Provides extra language cookie functionality."
+type: module
+package: TBNLabs
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'tbn_language_cookie'
+dependencies:
+  - language_cookie:language_cookie

@@ -1,0 +1,29 @@
+uuid: c29727bf-e9e5-4baf-94a1-d10cbd53fa75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_category
+    - node.type.testimonial
+    - taxonomy.vocabulary.product_category
+id: node.testimonial.field_product_category
+field_name: field_product_category
+entity_type: node
+bundle: testimonial
+label: 'Product category'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_category: product_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

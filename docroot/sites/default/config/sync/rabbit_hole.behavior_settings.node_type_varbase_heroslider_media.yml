@@ -1,0 +1,13 @@
+uuid: 9abe45d9-82b8-403c-bfc7-fed5a091f14e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: wBQ1_ruYiOkpaCc2wGJ2NN-dsNdeY8P859nIbOuwRUo
+id: node_type_varbase_heroslider_media
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301

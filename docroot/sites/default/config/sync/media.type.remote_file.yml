@@ -1,0 +1,18 @@
+uuid: 7cf1238a-0e80-48d0-80a0-9ca5242124a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
+id: remote_file
+label: 'Remote file'
+description: 'A remotely hosted file.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file_1
+field_map: {  }

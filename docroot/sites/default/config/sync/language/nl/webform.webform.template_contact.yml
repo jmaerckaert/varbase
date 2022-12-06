@@ -1,0 +1,11 @@
+settings:
+  confirmation_message: 'Uw bericht is verzonden.'
+handlers:
+  email_confirmation:
+    label: E-mailbevestiging
+    settings:
+      body: '[webform_submission:values:message:value]'
+  email_notification:
+    label: E-mailmelding
+    settings:
+      body: '[webform_submission:values:message:value]'

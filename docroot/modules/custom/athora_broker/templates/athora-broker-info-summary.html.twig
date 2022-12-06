@@ -1,0 +1,29 @@
+<div class="broker-info-summary container">
+    <div class="row">
+        <div class="col-md-4 broker-name">
+            {% if broker_website is not empty %}<a href="{{ broker_website }}" target="_blank"> {% endif %}
+                <h3>{{ broker_name }}</h3>
+             {% if broker_website is not empty %}</a>{% endif %}
+        </div>
+        <div class="col-md-4 broker-address">
+            <span class="street">{{ broker_address }} {{ broker_street_number }}</span>
+            <span class="locality">{{ broker_locality_zip }} {{ broker_locality_name }}</span>
+        </div>
+        <div class="col-md-2 broker-numbers">
+            {% if broker_phone is not empty %}
+                <div>T: <a class="phone" href="tel:{{ broker_phone }}">{{ broker_phone }}</a></div>
+            {% endif %}
+            {% if broker_fax is not empty %}
+                <div><span class="fax">F: {{ broker_fax }}</span></div>
+            {% endif %}
+        </div>
+        <div class="col-md-2 broker-contact">
+            {% if broker_website is not empty %}
+                <a href="{{ broker_website }}" class="website" target="_blank"><span class="icon-global"></span></a>
+            {% endif %}
+            {% if broker_contact is not empty %}
+                <a href="{{ broker_contact }}" class="mail" title="{{ "Contact @broker"|t({'@broker': broker_name}) }}"><span class="icon-mail"></span></a>
+            {% endif %}
+        </div>
+    </div>
+</div>

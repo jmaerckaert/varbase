@@ -1,0 +1,33 @@
+uuid: 54e01d8d-c544-4f09-bea4-323ffd5fa03a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_function
+    - field.field.node.testimonial.field_media
+    - field.field.node.testimonial.field_product_category
+    - node.type.testimonial
+  module:
+    - text
+    - user
+id: node.testimonial.teaser
+targetEntityType: node
+bundle: testimonial
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_function: true
+  field_media: true
+  field_product_category: true
+  langcode: true
+  links: true

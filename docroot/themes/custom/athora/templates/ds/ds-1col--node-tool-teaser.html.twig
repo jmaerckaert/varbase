@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+{% set attributes = attributes.addClass('ds-1col', 'clearfix') %}
+<{{ ds_content_wrapper }}{{ attributes|without('onclick') }}>
+  {{ title_suffix.contextual_links }}
+  <div class="card-tool" onclick='{{ attributes.onclick|raw }}'>
+      {{ ds_content }}
+  </div>
+
+
+</{{ ds_content_wrapper }}>

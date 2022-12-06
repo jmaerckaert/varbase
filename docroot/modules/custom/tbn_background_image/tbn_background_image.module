@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @file
+ * Hook callbacks for the tbn_background_image module.
+ */

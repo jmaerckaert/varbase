@@ -1,0 +1,20 @@
+uuid: 3b21023b-fe1d-486c-8b7d-9c4639b51c4c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.page
+_core:
+  default_config_hash: a0jm_FND-KGVcXqbXqjNe69csH530P6ubswJe-0RCZY
+id: node.page.changed
+field_name: changed
+entity_type: node
+bundle: page
+label: Gewijzigd
+description: 'Het tijdstip waarop de node voor het laatst werd bewerkt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

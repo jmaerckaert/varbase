@@ -1,0 +1,22 @@
+uuid: f316b2de-4605-4517-825e-879f5994d493
+langcode: nl
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_accordion_section
+id: paragraph.bp_accordion_section.status
+field_name: status
+entity_type: paragraph
+bundle: bp_accordion_section
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

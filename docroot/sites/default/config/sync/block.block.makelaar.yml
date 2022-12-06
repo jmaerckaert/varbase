@@ -1,0 +1,39 @@
+uuid: e2ccb71e-5af0-4d9f-af7a-31a91c462263
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sticky_widget:a2b04159-b588-42c3-8ea4-6828292c7f0d'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - athora
+id: makelaar
+theme: athora
+region: sticky_widget
+weight: -10
+provider: null
+plugin: 'block_content:a2b04159-b588-42c3-8ea4-6828292c7f0d'
+settings:
+  id: 'block_content:a2b04159-b588-42c3-8ea4-6828292c7f0d'
+  label: makelaar
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      epartner: epartner
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/over-ons\r\n/over-ons/*\r\n/a-propos-de-nous\r\n/a-propos-de-nous/*\r\n/actualite\r\n/actualite/*\r\n/nieuws\r\n/nieuws/*\r\n/jobs\r\n/jobs/*"
+    negate: true
+    context_mapping: {  }

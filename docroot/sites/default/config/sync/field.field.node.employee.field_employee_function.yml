@@ -1,0 +1,29 @@
+uuid: 3f70c390-a60e-450f-8be6-0813c93e8073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employee_function
+    - node.type.employee
+    - taxonomy.vocabulary.employee_functions
+id: node.employee.field_employee_function
+field_name: field_employee_function
+entity_type: node
+bundle: employee
+label: Function
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      employee_functions: employee_functions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 5a93ad7b-c3a4-4f01-8bab-65e53a9112cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.epartner
+id: node.epartner.uid
+field_name: uid
+entity_type: node
+bundle: epartner
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

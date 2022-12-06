@@ -1,0 +1,217 @@
+uuid: 3c86921d-36ad-4de3-9f4d-eb8a9ddcdc6b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carousel
+    - field.field.node.tool.body
+    - field.field.node.tool.field_link_to_tool
+    - field.field.node.tool.field_media
+    - field.field.node.tool.field_product_category
+    - field.field.node.tool.field_title_formatted
+    - node.type.tool
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_heroslider
+        - field_media
+        - group_div
+        - group_row
+        - group_col
+        - node_title
+        - body
+        - group_container
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 10
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: heroslider-title
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_div:
+      children:
+        - group_container
+      parent_name: group_heroslider
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: hero-slide-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero slide content'
+      region: hidden
+    group_container:
+      children:
+        - group_row
+      parent_name: group_div
+      weight: 16
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: container
+      region: hidden
+    group_row:
+      children:
+        - group_col
+      parent_name: group_container
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+      region: hidden
+    group_col:
+      children:
+        - node_title
+        - body
+      parent_name: group_row
+      weight: 9
+      format_type: html_element
+      format_settings:
+        label: col
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-md-12 no-padding hero-slider-content-wrapper heroslider-content'
+      label: col
+      region: hidden
+    group_heroslider:
+      children:
+        - field_media
+        - group_div
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: heroslider-item
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: heroslider
+      region: hidden
+id: node.tool.carousel
+targetEntityType: node
+bundle: tool
+mode: carousel
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: ''
+            lbw-cl: tool-body
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: se2e
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_link: true
+  field_link_to_tool: true
+  field_product_category: true
+  field_title_formatted: true
+  langcode: true
+  links: true

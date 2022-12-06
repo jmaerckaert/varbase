@@ -1,0 +1,17 @@
+uuid: 7228ca4a-2efb-4bc3-ac00-d22b7e6e0450
+langcode: nl
+status: true
+dependencies:
+  module:
+    - persistent_login
+title: 'Default cron handler'
+id: persistent_login_cron
+weight: 0
+module: persistent_login
+callback: persistent_login_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

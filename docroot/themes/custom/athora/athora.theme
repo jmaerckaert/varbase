@@ -1,0 +1,11 @@
+<?php
+
+use Drupal\bootstrap\Bootstrap;
+use Drupal\background_image\BackgroundImageInterface;
+
+/**
+ * {@inheritdoc}
+ */
+function athora_background_image_css_template_alter(array &$variables, &$template_filename, BackgroundImageInterface $background_image) {
+  Bootstrap::alter(__FUNCTION__, $variables, $template_filename, $background_image);
+}

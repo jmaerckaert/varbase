@@ -1,0 +1,10 @@
+uuid: c9c363f4-b376-47d8-8796-317a558356b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.cta_left
+label: 'CTA - left'
+targetEntityType: node
+cache: true

@@ -1,0 +1,116 @@
+label: Media
+display:
+  default:
+    display_title: Hoofd
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: Items
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+      fields:
+        thumbnail__target_id:
+          label: Miniatuur
+          separator: ', '
+        field_media_cover_image:
+          label: Omslagafbeelding
+          separator: ', '
+        name:
+          label: Medianaam
+          separator: ', '
+        field_media_image:
+          separator: ', '
+        bundle:
+          label: Provider
+          separator: ', '
+        uid:
+          label: Auteur
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: Gepubliceerd
+            format_custom_false: 'Niet gepubliceerd'
+          separator: ', '
+        changed:
+          label: Bijgewerkt
+          separator: ', '
+        operations:
+          label: Bewerkingen
+      filters:
+        status:
+          expose:
+            label: Waar
+          group_info:
+            label: Publicatiestatus
+            group_items:
+              1:
+                title: Gepubliceerd
+              2:
+                title: 'Niet gepubliceerd'
+        bundle:
+          expose:
+            label: Provider
+        name:
+          expose:
+            label: Medianaam
+        langcode:
+          expose:
+            label: Taal
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'Geen inhoud beschikbaar.'
+  entity_browser_1:
+    display_title: Browser
+    display_options:
+      fields:
+        thumbnail__target_id:
+          separator: ', '
+      filters:
+        status:
+          expose:
+            label: Waar
+          group_info:
+            label: Publicatiestatus
+            group_items:
+              1:
+                title: Gepubliceerd
+              2:
+                title: 'Niet gepubliceerd'
+        name:
+          expose:
+            label: Trefwoorden
+        bundle:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+          views_infinite_scroll:
+            button_text: 'Meer laden'
+      arguments:
+        bundle:
+          exception:
+            title: Alle
+  media_page_list:
+    display_title: Media

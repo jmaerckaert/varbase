@@ -1,0 +1,237 @@
+uuid: dca34c20-7ac3-49b9-9940-526afc46da26
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.varbase_heroslider_media.field_brief
+    - field.field.node.varbase_heroslider_media.field_link
+    - field.field.node.varbase_heroslider_media.field_pg_media_single
+    - field.field.node.varbase_heroslider_media.field_title
+    - node.type.varbase_heroslider_media
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - link
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_single
+        - field_pg_media_single
+        - group_div
+        - group_row
+        - group_col
+        - field_title
+        - field_brief
+        - field_link
+        - group_container
+  field_group:
+    group_div:
+      children:
+        - group_container
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: 'style="z-index: 0;"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: hero-slide-content
+      label: 'Hero slide content'
+      region: hidden
+    group_container:
+      children:
+        - group_row
+      parent_name: group_div
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: container
+      region: hidden
+    group_row:
+      children:
+        - group_col
+      parent_name: group_container
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+      region: hidden
+    group_col:
+      children:
+        - field_title
+        - field_brief
+        - field_link
+      parent_name: group_row
+      weight: 8
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-md-12 no-padding hero-slider-content-wrapper'
+      label: col
+      region: hidden
+_core:
+  default_config_hash: qgexuHQeY7WKuJDoFMk_fUaCFro6oUgjBpAXESiJyE4
+id: node.varbase_heroslider_media.default
+targetEntityType: node
+bundle: varbase_heroslider_media
+mode: default
+content:
+  field_brief:
+    weight: 11
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+      summary_handler: full
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: heroslide-text
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: smart_trim
+    region: ds_content
+  field_link:
+    type: link
+    weight: 12
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_pg_media_single:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+  field_title:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: field
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h1
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

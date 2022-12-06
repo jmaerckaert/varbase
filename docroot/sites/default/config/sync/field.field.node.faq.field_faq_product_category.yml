@@ -1,0 +1,29 @@
+uuid: 4609b770-c1eb-487d-89bf-4c2c4e2d8344
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_product_category
+    - node.type.faq
+    - taxonomy.vocabulary.product_category
+id: node.faq.field_faq_product_category
+field_name: field_faq_product_category
+entity_type: node
+bundle: faq
+label: 'Product category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_category: product_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

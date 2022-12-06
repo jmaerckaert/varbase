@@ -1,0 +1,78 @@
+uuid: 29959537-8bae-4b64-ad8f-57caee3d2584
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.cta_center
+    - field.field.node.cta.field_link
+    - node.type.cta
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_cta_center_
+        - field_link
+  field_group:
+    group_cta_center_:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'cta center '
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: cta-center
+      label: 'cta center '
+      region: hidden
+id: node.cta.cta_center
+targetEntityType: node
+bundle: cta
+mode: cta_center
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

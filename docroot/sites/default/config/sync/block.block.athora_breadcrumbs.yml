@@ -1,0 +1,35 @@
+uuid: eb6dc884-f6f9-4381-89fd-c8e084700cd2
+langcode: nl
+status: true
+dependencies:
+  module:
+    - http_client_error_status
+    - system
+  theme:
+    - athora
+_core:
+  default_config_hash: joDqAactPopW2PY3qircs1bSeDRq1aGvIZvYuebWpj8
+id: athora_breadcrumbs
+theme: athora
+region: header
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/node/229"
+    negate: true
+    context_mapping: {  }
+  http_client_error_status:
+    id: http_client_error_status
+    request_401: 1
+    request_403: 1
+    request_404: 1
+    negate: true
+    context_mapping: {  }

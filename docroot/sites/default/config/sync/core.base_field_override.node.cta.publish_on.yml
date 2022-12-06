@@ -1,0 +1,18 @@
+uuid: 3bc92aa7-f592-4219-8c0b-bb2f54feb2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.publish_on
+field_name: publish_on
+entity_type: node
+bundle: cta
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

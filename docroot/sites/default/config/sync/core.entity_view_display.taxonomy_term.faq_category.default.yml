@@ -1,0 +1,24 @@
+uuid: 6f73fc35-518f-45ea-8227-659ce1895e40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.faq_category.field_exclude_global_faq
+    - taxonomy.vocabulary.faq_category
+  module:
+    - text
+id: taxonomy_term.faq_category.default
+targetEntityType: taxonomy_term
+bundle: faq_category
+mode: default
+content:
+  description:
+    label: above
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_exclude_global_faq: true
+  langcode: true

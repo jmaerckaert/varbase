@@ -1,0 +1,20 @@
+uuid: 392483a1-2773-44dc-b100-0c49d2e75419
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: _Wvi5qMPWKjgktkmCxKU4K6czVA_IGiq2y97vFnuJSw
+id: node.varbase_heroslider_media.created
+field_name: created
+entity_type: node
+bundle: varbase_heroslider_media
+label: 'Aangemaakt op'
+description: 'Het tijdstip waarop de node is aangemaakt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

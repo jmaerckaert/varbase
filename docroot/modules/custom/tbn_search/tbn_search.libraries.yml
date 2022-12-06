@@ -1,0 +1,4 @@
+tbn-search:
+  version: 1.x
+  js:
+    assets/js/tbn_search.min.js: { minified: true }

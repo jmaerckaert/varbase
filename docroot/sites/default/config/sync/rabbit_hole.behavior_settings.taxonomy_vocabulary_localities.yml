@@ -1,0 +1,11 @@
+uuid: 2bed4628-599a-49fc-8c09-a954fd4a6945
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localities
+id: taxonomy_vocabulary_localities
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

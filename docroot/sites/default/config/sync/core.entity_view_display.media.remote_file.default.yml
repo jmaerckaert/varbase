@@ -1,0 +1,80 @@
+uuid: eb2e8115-752c-43bf-ae62-64601d5fc27a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_file.field_media_description
+    - field.field.media.remote_file.field_media_document_category
+    - field.field.media.remote_file.field_media_file_1
+    - media.type.remote_file
+  module:
+    - ds
+    - field_group
+    - file
+    - layout_builder
+    - text
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_media_file_1
+        - field_media_description
+        - field_media_document_category
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: container
+      label: Container
+      region: content
+  layout_builder:
+    sections: {  }
+id: media.remote_file.default
+targetEntityType: media
+bundle: remote_file
+mode: default
+content:
+  field_media_description:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_document_category:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_media_file_1:
+    weight: 4
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_default
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

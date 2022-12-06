@@ -1,0 +1,32 @@
+uuid: 942551f4-c1f2-4067-8ea2-e6a21e5fe95f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide_media.field_slide_media_mobile
+    - field.field.paragraph.slide_media.field_slide_media_web
+    - paragraphs.paragraphs_type.slide_media
+id: paragraph.slide_media.default
+targetEntityType: paragraph
+bundle: slide_media
+mode: default
+content:
+  field_slide_media_mobile:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_slide_media_web:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

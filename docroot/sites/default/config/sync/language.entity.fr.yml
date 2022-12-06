@@ -1,0 +1,9 @@
+uuid: c399e333-9ed9-4094-b0df-1e5937871f4d
+langcode: nl
+status: true
+dependencies: {  }
+id: fr
+label: Frans
+direction: ltr
+weight: 2
+locked: false

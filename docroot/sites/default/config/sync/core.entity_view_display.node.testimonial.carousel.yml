@@ -1,0 +1,157 @@
+uuid: ac3cceba-7123-4f4c-86c5-a7e7c91cb764
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carousel
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_function
+    - field.field.node.testimonial.field_media
+    - field.field.node.testimonial.field_product_category
+    - node.type.testimonial
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections: {  }
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_div:
+      children:
+        - node_title
+        - field_function
+        - body
+      parent_name: group_column_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: hero-slide-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero slide content'
+      region: hidden
+    group_column:
+      children:
+        - field_media
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 '
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column
+      region: hidden
+    group_column_content:
+      children:
+        - group_div
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column-content
+      region: hidden
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_column
+        - group_column_content
+        - field_media
+        - group_div
+        - node_title
+        - field_function
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 10
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.testimonial.carousel
+targetEntityType: node
+bundle: testimonial
+mode: carousel
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_function:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: s03_square
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_product_category: true
+  langcode: true
+  links: true

@@ -1,0 +1,129 @@
+uuid: 4b9486d7-cfc5-4f65-bf18-f6e610b307de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cta.field_link
+    - field.field.node.cta.field_meta_tags
+    - field.field.node.cta.field_yoast_seo
+    - node.type.cta
+  module:
+    - link_attributes
+    - metatag
+    - path
+    - scheduler
+    - yoast_seo
+id: node.cta.default
+targetEntityType: node
+bundle: cta
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_meta_tags:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_yoast_seo:
+    weight: 31
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,56 @@
+uuid: 9a39ac92-d0d1-4f8e-bf50-5f57ca63b860
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.broker_types
+  module:
+    - path
+    - text
+id: taxonomy_term.broker_types.default
+targetEntityType: taxonomy_term
+bundle: broker_types
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

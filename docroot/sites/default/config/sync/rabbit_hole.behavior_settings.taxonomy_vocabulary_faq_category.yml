@@ -1,0 +1,11 @@
+uuid: 831f6542-b69c-4cbb-afca-18a37fdbd5cc
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+id: taxonomy_vocabulary_faq_category
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

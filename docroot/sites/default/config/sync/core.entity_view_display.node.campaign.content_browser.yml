@@ -1,0 +1,31 @@
+uuid: a80093d0-cb83-4c14-9c60-02510f1e23d7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_media
+    - field.field.node.campaign.field_product_category
+    - node.type.campaign
+  module:
+    - text
+    - user
+id: node.campaign.content_browser
+targetEntityType: node
+bundle: campaign
+mode: content_browser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_media: true
+  field_product_category: true
+  langcode: true
+  links: true

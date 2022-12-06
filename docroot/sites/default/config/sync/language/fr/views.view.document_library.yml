@@ -1,0 +1,10 @@
+label: Documents
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>Aucun document trouvé.</p>\r\n"
+            format: full_html
+      title: Documents

@@ -1,0 +1,144 @@
+// athora layout-builder styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // athora variables.
+@import "../mixins.less";                       // athora mixins.
+// -----------------------------------------------------------------------------
+
+.layout-builder__section {
+  .layout-builder__link--configure,
+  .layout-builder__link--remove {
+    display: inline-block;
+    margin: 10px 10px;
+  }
+  .layout-builder__link--configure {
+    width: 50%;
+    text-align: right;
+    float: left;
+  }
+  .layout-builder__link--remove {
+    font-size: inherit;
+  }
+  .layout-builder__add-block {
+    width: 100%;
+  }
+}
+
+span.icon.glyphicon {
+  font-family: "glyphicons-halflings-regular" !important; //override drupal-off-canvas
+}
+
+.layout-builder-update-block {
+  .filter-wrapper {
+    height: 110px;
+    margin-bottom: 15px;
+    .form-type-select {
+      display: block;
+    }
+    .select-wrapper {
+      width: 100% !important;
+    }
+    .filter-help {
+      width: 100%;
+      text-align: left;
+      span {
+        padding-right: 10px !important; //override drupal-off-canvas
+      }
+    }
+  }
+}
+
+.layout-builder-revert-overrides,
+.layout-builder-discard-changes,
+#edit-layout-builder-layout-wrapper ~ .form-type-vertical-tabs,
+.layout-builder__message,
+.node-layout-builder-form #edit-actions {
+  .container();
+}
+
+.layout-builder-revert-overrides,
+.layout-builder-discard-changes {
+  #edit-actions {
+    padding: 15px 0;
+  }
+}
+
+.layout-section .new-block {
+  background-color: #eff6fc;
+  padding: 1.5em 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#drupal-off-canvas:not(.drupal-off-canvas-reset),
+#drupal-off-canvas-wrapper {
+  .ui-autocomplete li a {
+    color: #ffffff !important; //override drupal-off-canvas
+  }
+  button.field-add-more-submit {
+    margin-top: 15px;
+  }
+  td.field-multiple-drag {
+    width: 70px;
+  }
+  .alert {
+    width: 100%;
+  }
+  .glyphicon-refresh {
+    padding-left: 5px;
+  }
+  .cke_top,
+  .cke_top * {
+    background-color: #f0f0f0 !important; //override drupal-off-canvas
+    color: #000000;
+  }
+  .cke_button {
+    cursor: pointer;
+    padding-left: 3px;
+    padding-right: 3px;
+    &:hover {
+      background-color: darken(#f0f0f0, 30%) !important; //override drupal-off-canvas
+    }
+  }
+  .form-item-layout-settings-main-classes,
+  .form-item-layout-settings-layout-classes {
+    .form-select.form-control {
+      padding: 0;
+    }
+  }
+}
+
+.content-browser-form {
+  .is-entity-browser-submit {
+    margin-top: 15px;
+  }
+  .views-exposed-form .form-actions {
+    margin: 0;
+  }
+  .view-content {
+    height: 100% !important;
+  }
+  .pagination > .active > a {
+    z-index: 1;
+  }
+  .views-row {
+    position: relative !important;// overwrite inline styling
+    left: auto !important;// overwrite inline styling
+    top: auto !important;// overwrite inline styling
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 20px 35px;
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+  .views-field-content-browser-preview {
+    .content {
+      display: none;
+    }
+  }
+}

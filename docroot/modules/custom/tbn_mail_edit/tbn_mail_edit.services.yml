@@ -1,0 +1,4 @@
+services:
+  tbn_mail_edit.mail_edit_template_alter_form:
+    class: Drupal\tbn_mail_edit\Form\MailEditTemplateAlterForm
+    arguments: ['@config.factory']

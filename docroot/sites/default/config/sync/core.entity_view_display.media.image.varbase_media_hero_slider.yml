@@ -1,0 +1,24 @@
+uuid: fbe6c951-b277-44e6-8717-99a4c3cf70da
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.varbase_media_hero_slider
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - media.type.image
+_core:
+  default_config_hash: HDKcc_Xw1y47DpXdXw33_ed_2wVhdvcDaQbU-4WWfXg
+id: media.image.varbase_media_hero_slider
+targetEntityType: media
+bundle: image
+mode: varbase_media_hero_slider
+content: {  }
+hidden:
+  created: true
+  field_media_image: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

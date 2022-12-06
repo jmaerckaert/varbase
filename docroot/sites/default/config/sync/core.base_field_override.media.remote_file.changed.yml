@@ -1,0 +1,18 @@
+uuid: f158cd41-f0b5-4fc8-99fd-5fa630f7bcb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_file
+id: media.remote_file.changed
+field_name: changed
+entity_type: media
+bundle: remote_file
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

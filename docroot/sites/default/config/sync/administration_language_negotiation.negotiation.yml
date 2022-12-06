@@ -1,0 +1,14 @@
+paths:
+  - /admin
+  - '/admin/*'
+  - '/admin*'
+  - '/node/add/*'
+  - '/node/*/edit'
+  - '/node/*/delete'
+  - '/node/*/translations'
+  - /node
+admin_routes: true
+_core:
+  default_config_hash: QjC45xw1NlPzm2-BNGnqsDLSN-7O1_PT6xVZ863JRVE
+langcode: nl
+panel_routes: 0

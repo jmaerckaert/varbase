@@ -1,0 +1,21 @@
+uuid: bce4aab1-2405-4e95-a2a5-2a2c174afd65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_formatted
+    - node.type.tool
+  module:
+    - text
+id: node.tool.field_title_formatted
+field_name: field_title_formatted
+entity_type: node
+bundle: tool
+label: 'Title formatted'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

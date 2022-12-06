@@ -1,0 +1,33 @@
+uuid: d9b404d3-1f68-46f3-9668-be7678cc5328
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: hierarchical_paths_for_news_pages_fr
+label: 'Hierarchical paths for news pages'
+type: 'canonical_entities:node'
+pattern: '/actualite/[node:title]'
+selection_criteria:
+  0fbc810a-60e4-4ba8-bfc9-463806bc3af7:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0fbc810a-60e4-4ba8-bfc9-463806bc3af7
+  9829d58b-6162-4609-bb57-0593339edea0:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 9829d58b-6162-4609-bb57-0593339edea0
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

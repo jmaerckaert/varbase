@@ -1,0 +1,19 @@
+uuid: d2344292-4254-4ad8-8a83-713e6a7f633d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents_title
+    - node.type.product
+id: node.product.field_documents_title
+field_name: field_documents_title
+entity_type: node
+bundle: product
+label: 'Documents title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

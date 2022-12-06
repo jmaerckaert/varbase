@@ -1,0 +1,20 @@
+uuid: 20978c32-0ef3-4f0e-8cf1-5787d4b47120
+langcode: nl
+status: true
+dependencies:
+  module:
+    - background_image
+id: background_image.background_image.label
+field_name: label
+entity_type: background_image
+bundle: background_image
+label: Label
+description: 'An administrative description to help identify this specific background image.'
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

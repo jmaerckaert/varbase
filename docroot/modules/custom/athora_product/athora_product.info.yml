@@ -1,0 +1,11 @@
+name: "Athora product"
+description: "Provides extensions for the product content type."
+type: module
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'athora_product'
+packages: Athora
+dependencies:
+  - ds:ds
+  - views:views
+  - extra_field:extra_field

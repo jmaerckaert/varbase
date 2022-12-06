@@ -1,0 +1,124 @@
+uuid: de39621b-772b-4756-a52f-d41f89050adf
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - content_browser
+    - ctools
+    - entity_block
+    - panels
+    - system
+id: term_view-panels_variant-5
+label: 'Self employed'
+variant: panels_variant
+variant_settings:
+  blocks:
+    6ff0a515-c731-4d03-ac7c-3153d2a3cac0:
+      id: content_embed
+      label: 'Are you looking to invest?'
+      provider: content_browser
+      label_display: visible
+      description:
+        value: "<p>te<em>s<strong>t fffcccccc</strong></em></p>\r\n"
+        format: full_html
+      view_mode: teaser
+      nids:
+        - 12
+        - 13
+        - 14
+      uuids: {  }
+      context_mapping: {  }
+      region: main
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: 6ff0a515-c731-4d03-ac7c-3153d2a3cac0
+      weight: 1
+    77b0e691-13e4-46e3-be0d-cb0cdb53d33b:
+      id: content_embed
+      label: 'Are you looking to save?'
+      provider: content_browser
+      label_display: visible
+      description:
+        value: "<p>de</p>\r\n"
+        format: full_html
+      view_mode: teaser
+      nids:
+        - 4
+        - 15
+      uuids: {  }
+      context_mapping: {  }
+      region: main
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: 77b0e691-13e4-46e3-be0d-cb0cdb53d33b
+      weight: 2
+    15f5d437-2635-478e-aabf-8aa3c4b5a639:
+      id: 'entity_block:node'
+      label: Content
+      provider: entity_block
+      label_display: ''
+      entity: '10'
+      view_mode: block
+      context_mapping: {  }
+      region: main
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: 15f5d437-2635-478e-aabf-8aa3c4b5a639
+      weight: 3
+  id: panels_variant
+  uuid: 94c0d15c-6a38-4317-9a42-692f0a3c9786
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'Self employed'
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-5
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: self_employed
+  -
+    id: request_path
+    pages: /taxonomy/term/13
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  self_employed:
+    label: 'Self employed'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: ce421855-9598-4588-92a2-19ea2eb79034

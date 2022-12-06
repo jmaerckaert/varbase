@@ -1,0 +1,23 @@
+uuid: a4b3943e-e162-4a4a-ace7-f3abb14a071b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook
+    - node.type.epartner
+  module:
+    - link
+id: node.epartner.field_facebook
+field_name: field_facebook
+entity_type: node
+bundle: epartner
+label: Facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

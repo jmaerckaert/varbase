@@ -1,0 +1,32 @@
+uuid: bc5ab165-5427-4acb-af3f-7ce19a74db78
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.varbase_heroslider_media
+  module:
+    - system
+    - views
+  theme:
+    - vartheme
+_core:
+  default_config_hash: ukRV1YuCnEZyZffEcPG22XbVAYpKJ9m0weXY6qz_Py0
+id: vartheme_views_block__varbase_heroslider_media_varbase_heroslider_media
+theme: vartheme
+region: hero_slider
+weight: 0
+provider: null
+plugin: 'views_block:varbase_heroslider_media-varbase_heroslider_media'
+settings:
+  id: 'views_block:varbase_heroslider_media-varbase_heroslider_media'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

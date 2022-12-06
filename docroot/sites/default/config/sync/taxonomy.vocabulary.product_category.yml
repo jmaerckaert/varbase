@@ -1,0 +1,8 @@
+uuid: ac943dbb-24f5-4887-9e33-426d2f3769fd
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Product category'
+vid: product_category
+description: ''
+weight: 0

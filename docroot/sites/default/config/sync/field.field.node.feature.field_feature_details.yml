@@ -1,0 +1,21 @@
+uuid: 64fd9635-7f76-47ee-b4df-ff946133521e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_details
+    - node.type.feature
+  module:
+    - text
+id: node.feature.field_feature_details
+field_name: field_feature_details
+entity_type: node
+bundle: feature
+label: 'Feature Details'
+description: 'Here you can set the text for the feature detail page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

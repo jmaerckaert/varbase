@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains tbn_pagerer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tbn_pagerer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tbn_pagerer module.
+    case 'help.page.tbn_pagerer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Configurable pager styles.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tbn_pagerer_theme() {
+  $theme = [
+    'tbn_pagerer_load_more' => [
+      'variables' => [
+        'attributes' => ['class' => ['pagerer-load-more'], 'rel' => 'next'],
+        'text' => NULL,
+      ],
+    ],
+  ];
+
+  return $theme;
+}

@@ -1,0 +1,29 @@
+uuid: 92a4bbc0-3f35-4022-b494-e1d74c810d62
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Unique Selling Point'
+type: usp
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

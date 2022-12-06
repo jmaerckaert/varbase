@@ -1,0 +1,18 @@
+uuid: 4028ca14-53af-4546-85a7-49823ad98417
+langcode: nl
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_carousel
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.bp_carousel
+target_entity_type_id: paragraph
+target_bundle: bp_carousel
+default_langcode: site_default
+language_alterable: false

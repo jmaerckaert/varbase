@@ -1,0 +1,86 @@
+uuid: 9790ce27-86c3-4c3f-afca-c32326774c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.body
+    - field.field.node.employee.field_employee_function
+    - field.field.node.employee.field_media
+    - node.type.employee
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_media
+        - body
+        - field_employee_function
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: content
+  layout_builder:
+    sections: {  }
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_employee_function:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_label
+    region: content
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: s02_square
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

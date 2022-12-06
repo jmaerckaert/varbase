@@ -1,0 +1,23 @@
+uuid: 1b70fbd1-8f39-4e1d-8817-3adc891ca2f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+  module:
+    - entity_embed
+    - node
+label: 'cta browser'
+id: cta_browser
+type_id: entity
+type_settings:
+  entity_type: node
+  bundles:
+    - cta
+  display_plugins:
+    - 'view_mode:node.cta_center'
+    - 'view_mode:node.cta_left'
+  entity_browser: cta_browser
+  entity_browser_settings:
+    display_review: true
+icon_uuid: null

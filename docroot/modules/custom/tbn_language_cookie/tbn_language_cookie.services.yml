@@ -1,0 +1,4 @@
+services:
+  tbn_language_cookie.language_cookie_admin_alter_form:
+    class: Drupal\tbn_language_cookie\Form\LanguageCookieAdminAlterForm
+    arguments: ['@config.factory']

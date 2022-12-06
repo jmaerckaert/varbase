@@ -1,0 +1,46 @@
+uuid: 3b7d4241-c468-41fd-abf3-9b28da9698c5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.file
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: 0
+_core:
+  default_config_hash: LIpRLg2zzlvAksG-WJ5HqK5IQ_UHbDBgImX0AyUzvPs
+id: media.file.thumbnail
+field_name: thumbnail
+entity_type: media
+bundle: file
+label: Thumbnail
+description: 'The thumbnail of the media item.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: default
+  handler_settings: {  }
+field_type: image

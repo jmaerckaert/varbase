@@ -1,0 +1,68 @@
+uuid: cd1a2f42-2139-4ba4-a670-105d63ab3883
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.remote_video.field_media_cover_image
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_provider
+    - media.type.remote_video
+  module:
+    - media
+_core:
+  default_config_hash: h_WzZIOwmsvCfCecjeNXkrGyFcpdWU7jU1fWIpHEQ7o
+id: media.remote_video.media_library
+targetEntityType: media
+bundle: remote_video
+mode: media_library
+content:
+  field_media_in_library:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_media_oembed_video:
+    type: oembed_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  preview:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_cover_image: true
+  field_provider: true
+  path: true
+  uid: true

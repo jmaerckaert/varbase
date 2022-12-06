@@ -1,0 +1,20 @@
+uuid: 56906060-d59e-4421-a79a-01ca27f71433
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.name
+field_name: name
+entity_type: media
+bundle: audio
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

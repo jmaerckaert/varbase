@@ -1,0 +1,14 @@
+title: 'Language selection'
+path: /language_selection_page
+type: block
+blacklisted_paths:
+  - /admin
+  - /user
+  - '/admin/*'
+  - '/admin*'
+  - '/node/add/*'
+  - '/node/*/edit'
+ignore_neutral: false
+_core:
+  default_config_hash: MB_3lZvDBxP3cF4ZkBMK8beAg6HAfzsSC0Aw1WTnBMg
+langcode: nl

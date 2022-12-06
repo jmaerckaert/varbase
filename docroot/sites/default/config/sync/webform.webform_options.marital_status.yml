@@ -1,0 +1,14 @@
+uuid: e1ae9ad8-d693-4e85-bb8e-5585f9a3fa57
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: cjVDbAE5BlopGrY-tfxsxMoyEibwBBNgdQwDdxOSkow
+id: marital_status
+label: 'Huwelijkse staat'
+category: Demografisch
+likert: false
+options: "Single: Single\nMarried: Married\nDivorced: Divorced\nWidowed: Widowed\n"

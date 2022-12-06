@@ -1,0 +1,58 @@
+uuid: 24e5d296-56ba-43f2-9466-18ec8556d4a4
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_in_library
+    - media.type.audio
+  module:
+    - file
+_core:
+  default_config_hash: sTb5YHJJ53BSyUBU75SJuNwvduNN_TX9ku3-33SrFpA
+id: media.audio.media_library
+targetEntityType: media
+bundle: audio
+mode: media_library
+content:
+  field_media_audio_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_media_in_library:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  uid: true

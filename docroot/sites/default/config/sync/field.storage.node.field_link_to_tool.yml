@@ -1,0 +1,19 @@
+uuid: ba1f984f-35e5-4451-af00-884f71a90e22
+langcode: nl
+status: true
+dependencies:
+  module:
+    - iframe
+    - node
+id: node.field_link_to_tool
+field_name: field_link_to_tool
+entity_type: node
+type: iframe
+settings: {  }
+module: iframe
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

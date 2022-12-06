@@ -1,0 +1,8 @@
+uuid: 4343676e-6865-40db-9733-3da79ae68517
+langcode: en
+status: true
+dependencies: {  }
+id: sticky_widget
+label: 'Sticky widget'
+revision: 1
+description: ''

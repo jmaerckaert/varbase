@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Contains all hook implementations for this module.
+ */
+
+/**
+ * Implements hook_migration_TYPE_info_alter().
+ */
+function tbn_migrate_migrate_process_info_alter(array &$definitions) {
+  if (isset($definitions['skip_on_invalid_url'])) {
+    $definitions['skip_on_invalid_url']['class'] = Drupal\tbn_migrate\Plugin\migrate\process\SkipOnInvalidUrl::class;
+  }
+}

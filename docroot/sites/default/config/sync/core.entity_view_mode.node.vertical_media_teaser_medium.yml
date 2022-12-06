@@ -1,0 +1,12 @@
+uuid: c35771ac-6c16-45c0-9f77-c260bd1b58e8
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 3rv3HZeukcLf8UU8LSDWM5wojfestbBhi4Xv9KoQJSM
+id: node.vertical_media_teaser_medium
+label: 'Vertical media teaser - medium'
+targetEntityType: node
+cache: true

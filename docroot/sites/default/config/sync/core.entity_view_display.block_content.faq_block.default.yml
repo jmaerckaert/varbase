@@ -1,0 +1,64 @@
+uuid: 39aa0903-80dd-4516-acb1-2e30813b7c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq_block
+    - field.field.block_content.faq_block.field_faq_questions
+    - field.field.block_content.faq_block.field_product_category
+  module:
+    - ds
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_product_category
+        - faq_questions_field
+    fields:
+      faq_questions_field:
+        plugin_id: faq_questions_field
+        weight: 1
+        label: hidden
+        formatter: default
+id: block_content.faq_block.default
+targetEntityType: block_content
+bundle: faq_block
+mode: default
+content:
+  field_product_category:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: faq
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  field_faq_questions: true
+  langcode: true

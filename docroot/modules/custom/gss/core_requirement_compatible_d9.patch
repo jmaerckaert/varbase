@@ -1,0 +1,13 @@
+diff --git a/gss.info.yml b/gss.info.yml
+index a3bc4a2..4c7a207 100644
+--- a/gss.info.yml
++++ b/gss.info.yml
+@@ -1,7 +1,7 @@
+ name: Google Site Search
+ type: module
+ description: Provides integration with Google Site Search.
+-core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Search
+ dependencies:
+   - search

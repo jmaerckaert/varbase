@@ -1,0 +1,76 @@
+uuid: 1b995054-8f43-405b-99f5-e6bb7710ea81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_media_single
+    - node.type.varbase_heroslider_media
+    - paragraphs.paragraphs_type.slide_media
+  module:
+    - entity_reference_revisions
+id: node.varbase_heroslider_media.field_pg_media_single
+field_name: field_pg_media_single
+entity_type: node
+bundle: varbase_heroslider_media
+label: 'Slide media (image/video)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slide_media: slide_media
+    target_bundles_drag_drop:
+      slide_media:
+        enabled: true
+        weight: 17
+      bp_accordion:
+        weight: 18
+        enabled: false
+      bp_accordion_section:
+        weight: 19
+        enabled: false
+      bp_block:
+        weight: 20
+        enabled: false
+      bp_carousel:
+        weight: 21
+        enabled: false
+      bp_column_wrapper:
+        weight: 22
+        enabled: false
+      bp_columns:
+        weight: 23
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 24
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 25
+        enabled: false
+      bp_image:
+        weight: 26
+        enabled: false
+      bp_modal:
+        weight: 27
+        enabled: false
+      bp_simple:
+        weight: 28
+        enabled: false
+      bp_tab_section:
+        weight: 29
+        enabled: false
+      bp_tabs:
+        weight: 30
+        enabled: false
+      bp_view:
+        weight: 31
+        enabled: false
+      bp_webform:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

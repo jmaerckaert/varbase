@@ -1,0 +1,29 @@
+uuid: 69a28be8-a85b-4801-a605-5a3dc75d060a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.header
+  module:
+    - menu_block
+  theme:
+    - athora
+id: header
+theme: athora
+region: navigation_collapsible
+weight: -12
+provider: null
+plugin: 'menu_block:header'
+settings:
+  id: 'menu_block:header'
+  label: Header
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'header:'
+  suggestion: header
+visibility: {  }

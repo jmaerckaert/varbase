@@ -1,0 +1,16 @@
+uuid: 24eddf17-259c-4eef-b1c7-1c2aff5ff982
+langcode: en
+status: true
+dependencies: {  }
+id: load_more
+label: 'Load more'
+panes:
+  left:
+    style: none
+    config: {  }
+  center:
+    style: tbn_pagerer_load_more
+    config: {  }
+  right:
+    style: none
+    config: {  }

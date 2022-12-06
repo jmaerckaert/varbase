@@ -1,0 +1,28 @@
+uuid: ab1ce73e-db47-4926-b82f-f856778629c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta
+    - node.type.cta
+    - node.type.product
+id: node.product.field_cta
+field_name: field_cta
+entity_type: node
+bundle: product
+label: 'Call to action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      cta: cta
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,55 @@
+uuid: 1b6851a5-683a-49b6-a76e-7f5ef740d12e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.file.field_media_description
+    - field.field.media.file.field_media_document_category
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_media_in_library
+    - image.style.medium
+    - media.type.file
+  module:
+    - ds
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    sections: {  }
+_core:
+  default_config_hash: rUYPxynkDVhXVWGEZWuHGF2IYArvKHIQPOSZegxXJaU
+id: media.file.media_library
+targetEntityType: media
+bundle: file
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  created: true
+  field_media_description: true
+  field_media_document_category: true
+  field_media_file: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  uid: true

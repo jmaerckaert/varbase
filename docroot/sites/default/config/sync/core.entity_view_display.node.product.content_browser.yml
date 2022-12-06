@@ -1,0 +1,63 @@
+uuid: 45b01f5c-e842-4b88-a682-dfbbff877697
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.product.body
+    - field.field.node.product.field_additional_information
+    - field.field.node.product.field_compare_tool
+    - field.field.node.product.field_cta
+    - field.field.node.product.field_documents
+    - field.field.node.product.field_documents_description
+    - field.field.node.product.field_documents_title
+    - field.field.node.product.field_features
+    - field.field.node.product.field_features_title
+    - field.field.node.product.field_meta_tags
+    - field.field.node.product.field_product_category
+    - field.field.node.product.field_usp
+    - field.field.node.product.field_what_is_title
+    - field.field.node.product.field_why_take_title
+    - field.field.node.product.field_yoast_seo
+    - field.field.node.product.layout_builder__layout
+    - node.type.product
+  module:
+    - text
+    - user
+id: node.product.content_browser
+targetEntityType: node
+bundle: product
+mode: content_browser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  extra_field_document_library_quick_link_field: true
+  field_additional_information: true
+  field_compare_tool: true
+  field_cta: true
+  field_documents: true
+  field_documents_description: true
+  field_documents_title: true
+  field_features: true
+  field_features_title: true
+  field_meta_tags: true
+  field_product_category: true
+  field_social_image: true
+  field_usp: true
+  field_what_is_title: true
+  field_why_take_title: true
+  field_yoast_seo: true
+  langcode: true
+  layout_builder__layout: true

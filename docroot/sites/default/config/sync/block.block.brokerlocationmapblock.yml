@@ -1,0 +1,28 @@
+uuid: 8b17a67b-16f7-454d-813e-57d8790dc56f
+langcode: en
+status: true
+dependencies:
+  module:
+    - athora_broker
+    - webform
+  theme:
+    - athora
+id: brokerlocationmapblock
+theme: athora
+region: content
+weight: 0
+provider: null
+plugin: athora_broker_broker_location_map_block
+settings:
+  id: athora_broker_broker_location_map_block
+  label: 'Broker Location Map Block'
+  provider: athora_broker
+  label_display: '0'
+visibility:
+  webform:
+    id: webform
+    webforms:
+      contact_broker: contact_broker
+    negate: false
+    context_mapping:
+      webform: '@webform.webform_route_context:webform'

@@ -1,0 +1,20 @@
+uuid: d70b2bb6-5149-4e9c-b5d6-a910baeaf267
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_product_category
+field_name: field_product_category
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

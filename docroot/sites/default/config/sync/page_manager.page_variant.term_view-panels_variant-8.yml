@@ -1,0 +1,64 @@
+uuid: 25aa0dc1-ca6d-4234-92d2-c1a71a4cf48b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - ctools
+    - panels
+    - system
+id: term_view-panels_variant-8
+label: 'Old Car'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: b197ea40-0dc3-4d69-abce-0ebf8aefb3f1
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'Old Car'
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-8
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: old_car
+  -
+    id: request_path
+    pages: /taxonomy/term/8
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  old_car:
+    label: 'Old Car'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: b6a17b64-63f3-4746-bdd9-b3c97d6dab81

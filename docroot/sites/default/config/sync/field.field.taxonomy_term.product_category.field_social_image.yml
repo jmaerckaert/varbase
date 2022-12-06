@@ -1,0 +1,28 @@
+uuid: c5bc53df-cb08-4b91-a88b-06455f48327f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_social_image
+    - media.type.image
+    - taxonomy.vocabulary.product_category
+id: taxonomy_term.product_category.field_social_image
+field_name: field_social_image
+entity_type: taxonomy_term
+bundle: product_category
+label: 'Social image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

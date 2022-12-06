@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\tbn_search\Plugin\Search\Search;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tbn_search_form_search_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  Drupal::service('tbn_search.search_page_alter_form')->alterForm($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_plugin_alter().
+ */
+function tbn_search_search_plugin_alter(array &$definitions) {
+  if (isset($definitions['gss_search'])) {
+    $definitions['gss_search']['class'] = Search::class;
+  }
+}

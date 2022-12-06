@@ -1,0 +1,22 @@
+uuid: 33b0edb6-8a59-43e9-b896-d82387bc6605
+langcode: nl
+status: true
+dependencies:
+  config:
+    - media.type.image
+_core:
+  default_config_hash: v8RaFgxKcikEi6lKuyhh-3EoC1RryUVwD1o4HalD6UE
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: Naam
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

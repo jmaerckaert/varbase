@@ -1,0 +1,26 @@
+uuid: 78c4111a-d124-449c-b99b-c7f627bddda1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.d03_traditional
+    - image.style.d08_traditional
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: NmZTEHX7V2ZM274yGh_414s7wqo_aZLhQlQY79Dg_n4
+id: d03_traditional
+label: 'Display 03 responsive traditional 4:3'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d08_traditional
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d03_traditional
+breakpoint_group: bootstrap
+fallback_image_style: d03_traditional

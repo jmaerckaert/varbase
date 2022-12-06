@@ -1,0 +1,121 @@
+label: Média
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      fields:
+        thumbnail__target_id:
+          label: Vignette
+          separator: ', '
+        field_media_cover_image:
+          label: 'Image de couverture'
+          separator: ', '
+        field_media_image:
+          label: Image
+          separator: ', '
+        name:
+          label: 'Nom du média'
+          separator: ', '
+        bundle:
+          label: Type
+          separator: ', '
+        uid:
+          label: Auteur
+          separator: ', '
+        status:
+          label: État
+          settings:
+            format_custom_true: Publié
+            format_custom_false: 'Non publié'
+          separator: ', '
+        changed:
+          label: 'Mis à jour'
+          separator: ', '
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: Vrai
+          group_info:
+            label: Publié
+            group_items:
+              1:
+                title: Publié
+              2:
+                title: 'Non publié'
+        name:
+          expose:
+            label: 'Nom du média'
+        bundle:
+          expose:
+            label: 'Type de média'
+        langcode:
+          expose:
+            label: Langue
+      sorts:
+        created:
+          expose:
+            label: 'Les plus récents d''abord'
+      title: Média
+      empty:
+        area_text_custom:
+          content: 'Aucun média disponible.'
+  entity_browser_1:
+    display_title: Navigateur
+    display_options:
+      fields:
+        thumbnail__target_id:
+          separator: ', '
+      filters:
+        status:
+          expose:
+            label: Vrai
+          group_info:
+            label: 'Statut de publication'
+            group_items:
+              1:
+                title: Publié
+              2:
+                title: 'Non publié'
+        name:
+          expose:
+            label: Mots-clés
+        bundle:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+          views_infinite_scroll:
+            button_text: 'Afficher plus'
+      arguments:
+        bundle:
+          exception:
+            title: Tout
+  media_page_list:
+    display_title: Média

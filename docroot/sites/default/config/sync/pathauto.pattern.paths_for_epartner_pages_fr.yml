@@ -1,0 +1,33 @@
+uuid: 99509ba0-be1d-426c-99ed-5aec0333e368
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: paths_for_epartner_pages_fr
+label: 'Paths for ePartner pages'
+type: 'canonical_entities:node'
+pattern: 'assurance/[node:field_address:locality]/[node:title]'
+selection_criteria:
+  360a659f-7832-493d-9338-66a43de5a949:
+    id: node_type
+    bundles:
+      epartner: epartner
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 360a659f-7832-493d-9338-66a43de5a949
+  b8cc124a-ad39-4923-a8fd-01ce6fd78e1f:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: b8cc124a-ad39-4923-a8fd-01ce6fd78e1f
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

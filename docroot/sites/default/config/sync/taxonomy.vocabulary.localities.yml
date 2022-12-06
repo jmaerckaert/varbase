@@ -1,0 +1,8 @@
+uuid: 2a9ced1f-4645-4d14-8850-9d532e695a9b
+langcode: nl
+status: true
+dependencies: {  }
+name: Localities
+vid: localities
+description: ''
+weight: 0

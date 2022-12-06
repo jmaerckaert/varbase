@@ -1,0 +1,10 @@
+uuid: c39e95a8-c2cf-4593-b1f4-dc88cd50143a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.icon
+label: Icon
+targetEntityType: menu_link_content
+cache: true

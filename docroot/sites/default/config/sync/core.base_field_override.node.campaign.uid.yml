@@ -1,0 +1,20 @@
+uuid: d64564e1-91a8-4606-bc23-910d9da1db2c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+id: node.campaign.uid
+field_name: uid
+entity_type: node
+bundle: campaign
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

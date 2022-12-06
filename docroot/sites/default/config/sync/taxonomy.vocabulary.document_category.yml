@@ -1,0 +1,8 @@
+uuid: c03c559a-1200-4384-b990-de701e655123
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Document category'
+vid: document_category
+description: ''
+weight: 0

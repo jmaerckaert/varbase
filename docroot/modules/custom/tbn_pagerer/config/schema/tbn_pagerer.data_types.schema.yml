@@ -1,0 +1,22 @@
+# Data types for TbnLabs pagerer module.
+
+pagerer.tags_display_config.tbn_pagerer_load_more:
+  type: mapping
+  mapping:
+    pageset_empty:
+      type: text
+      label: 'Empty pager'
+    more_button_text:
+      type: text
+      label: 'Load more - Button text'
+
+pagerer.style_config.tbn_pagerer_load_more:
+  type: pagerer.style_config_base
+  label: 'Load more pager style'
+  mapping:
+    tags:
+      type: mapping
+      mapping:
+        pages:
+          type: pagerer.tags_display_config.tbn_pagerer_load_more
+          label: 'Text strings for pages'

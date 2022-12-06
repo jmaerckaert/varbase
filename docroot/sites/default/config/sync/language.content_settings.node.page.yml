@@ -1,0 +1,20 @@
+uuid: 2c58d2dc-fd0f-4281-b03e-e17299736815
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: Ujf9zdW8189vhHJbNKOm-3ZyZA35LL8it_NqFS7soPs
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: site_default
+language_alterable: true

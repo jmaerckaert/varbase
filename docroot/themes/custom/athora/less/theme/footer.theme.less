@@ -1,0 +1,173 @@
+// athora footer styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // athora variables.
+@import "../mixins.less";                       // athora mixins.
+// -----------------------------------------------------------------------------
+
+// Insert your athora footer custom LESS styling.
+
+.footer-wrapper {
+  background-color: @footer-wrapper-bg;
+  position: relative;
+  .footer {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    section[id$="-copyright"] {
+      float: left;
+      padding: 17px 0 17px 0;
+      font-size: 12px;
+
+      > div {
+        padding: 14px 0 10px 0;
+        }
+      }
+    a {
+      color: #ffffff;
+      &:focus,
+      &:hover {
+        background-color: transparent;
+        color: @brand-primary;
+      }
+    }
+    ul.nav {
+      float: right;
+      padding: 17px 0 17px 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        }
+      }
+  }
+}
+
+#block-athoralogo {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  height: 35px;
+  img {
+    height: 35px;
+  }
+}
+
+#block-footer,
+#block-copyright {
+  p, a {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .menu--footer,
+  >div {
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+}
+
+.region-footer-middle {
+  position: relative;
+  line-height: 0;
+  border-top: solid 3px @brand-primary;
+  border-bottom: solid 3px @brand-primary;
+}
+
+#block-mainnavigation {
+  display: inline-block;
+  .menu--main {
+    float: none;
+    padding: 0;
+    padding-right: 62px;
+    margin-left: -15px;
+    margin-right: -15px;
+    .menu--main {
+      display: none;
+    }
+  }
+}
+
+.block-social-media-links {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-media-links--platforms.horizontal {
+  margin: 0;
+  >li {
+    padding: 0;
+  }
+}
+
+#block-footer {
+  display: inline-block;
+  clear: both;
+  float: left;
+  li {
+    position: relative;
+    font-size: 14px;
+  }
+  li:not(.last):after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    background-color: #ffffff;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.menu--footer.nav {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  li:last-child {
+    padding: 15px 0;
+  }
+}
+
+#block-copyright {
+  padding: 0;
+  display: inline-block;
+  float: right;
+  color: #ffffff;
+}
+
+//responsive
+@media @mobile {
+  #block-mainnavigation {
+    .menu--main {
+      float: none;
+      padding: 0;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  .social-media-links--platforms {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media @tablet {
+  #block-copyright {
+    float: none;
+  }
+  #block-footer .menu--footer.nav {
+    padding-bottom: 0;
+  }
+  #block-mainnavigation .menu--main {
+    .first a {
+      padding-left: 15px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+uuid: f2bd5760-ffec-46d6-a741-fb38b628457e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.title
+field_name: title
+entity_type: node
+bundle: employee
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

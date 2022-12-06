@@ -1,0 +1,53 @@
+uuid: bfc3c117-1ab8-48bf-94cb-3fdd4e54108b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.body
+    - field.field.node.faq.field_faq_category
+    - field.field.node.faq.field_faq_product_category
+    - field.field.node.faq.field_meta_tags
+    - field.field.node.faq.field_yoast_seo
+    - node.type.faq
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container container-wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+      region: content
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faq_category: true
+  field_faq_product_category: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

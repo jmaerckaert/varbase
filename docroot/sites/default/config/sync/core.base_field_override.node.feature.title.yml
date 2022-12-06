@@ -1,0 +1,18 @@
+uuid: 9380a11b-6ec6-45d9-bdbc-3fc3911b77da
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.feature
+id: node.feature.title
+field_name: title
+entity_type: node
+bundle: feature
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

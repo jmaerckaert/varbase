@@ -1,0 +1,22 @@
+uuid: 6296fdba-7972-4927-b554-29e45cb77a23
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cta
+id: node.cta.sticky
+field_name: sticky
+entity_type: node
+bundle: cta
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

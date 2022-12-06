@@ -1,0 +1,193 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Afficher plus'
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        name:
+          expose:
+            label: 'Nom du média'
+      sorts:
+        created:
+          expose:
+            label: Créé
+        name:
+          expose:
+            label: Nom
+    display_title: Maître
+  editor_media_browser:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+      filters:
+        name:
+          expose:
+            label: 'Mots-clés de recherche'
+        bundle:
+          expose:
+            label: Type
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+            sort:
+              advanced:
+                collapsible_label: 'Options de tri'
+  general_media_browser:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: 'Mots-clés de recherche'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+            sort:
+              advanced:
+                collapsible_label: 'Options de tri'
+  image_browser:
+    display_title: 'Explorateur d''image'
+    display_options:
+      filters:
+        name:
+          expose:
+            label: 'Mots-clés de recherche'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+            sort:
+              advanced:
+                collapsible_label: 'Options de tri'
+  media_browser:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: 'Mots-clés de recherche'
+        bundle_1:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+            sort:
+              advanced:
+                collapsible_label: 'Options de tri'
+  video_browser:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: 'Mots-clés de recherche'
+        bundle:
+          expose:
+            label: Type
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: Éléments
+            items_per_page_options_all_label: '- Tout -'
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+            sort:
+              advanced:
+                collapsible_label: 'Options de tri'

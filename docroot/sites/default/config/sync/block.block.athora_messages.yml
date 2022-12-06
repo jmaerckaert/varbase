@@ -1,0 +1,22 @@
+uuid: aa12f24d-4049-4a24-b1eb-fd7a51934fd5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - athora
+_core:
+  default_config_hash: 9Yg9OBaxeN-fEdj_gmHRor2zga4WjepkkE5KWBa1_wI
+id: athora_messages
+theme: athora
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: 4ba8f2e6-a6dd-4a9c-ae27-c7ffb0fc89df
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node_type_faq
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

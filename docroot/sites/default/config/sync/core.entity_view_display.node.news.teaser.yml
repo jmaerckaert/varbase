@@ -1,0 +1,33 @@
+uuid: 59894424-28d1-42d8-b0db-959c221459ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - node.type.news
+  module:
+    - text
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true

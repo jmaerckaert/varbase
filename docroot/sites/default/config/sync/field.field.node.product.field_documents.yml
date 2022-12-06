@@ -1,0 +1,30 @@
+uuid: 71268292-082d-4dcb-a98b-2195f6de321e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents
+    - media.type.file
+    - media.type.remote_file
+    - node.type.product
+id: node.product.field_documents
+field_name: field_documents
+entity_type: node
+bundle: product
+label: Documents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+      remote_file: remote_file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: file
+field_type: entity_reference

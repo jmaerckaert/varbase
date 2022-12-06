@@ -1,0 +1,20 @@
+uuid: e4e158b0-41c5-4d21-8f41-f644e4c02291
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.usp
+id: node.usp.uid
+field_name: uid
+entity_type: node
+bundle: usp
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

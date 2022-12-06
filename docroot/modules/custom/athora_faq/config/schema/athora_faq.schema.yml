@@ -1,0 +1,13 @@
+field.formatter.settings.media_thumbnail_custom_link:
+  type: mapping
+  label: 'Image field display format settings'
+  mapping:
+    image_link:
+      type: string
+      label: 'Link image to'
+    image_style:
+      type: string
+      label: 'Image style'
+    image_link_url:
+      type: string
+      label: 'Custom URL'

@@ -1,0 +1,6 @@
+athora_broker.leaflet:
+  version: VERSION
+  js:
+    assets/js/athora_broker.leaflet.js: {}
+  dependencies:
+    - leaflet/leaflet-drupal

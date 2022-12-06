@@ -1,0 +1,27 @@
+uuid: 8180dce5-0363-4983-ba77-b2d0d841c0e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file_1
+    - media.type.remote_file
+  module:
+    - file
+id: media.remote_file.field_media_file_1
+field_name: field_media_file_1
+entity_type: media
+bundle: remote_file
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf doc docx odt xls xlsx ods ppt pptx odp zip'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

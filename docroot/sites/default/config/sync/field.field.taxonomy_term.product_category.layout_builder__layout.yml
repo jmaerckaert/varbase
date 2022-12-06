@@ -1,0 +1,21 @@
+uuid: bc4f1eb3-a873-4215-8b9d-e3cea4e55d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.layout_builder__layout
+    - taxonomy.vocabulary.product_category
+  module:
+    - layout_builder
+id: taxonomy_term.product_category.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: taxonomy_term
+bundle: product_category
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

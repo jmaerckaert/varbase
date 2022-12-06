@@ -1,0 +1,26 @@
+services:
+  athora_broker.epartner_excel_migration.prepare_row_event:
+    class: Drupal\athora_broker\EventSubscriber\EPartnerExcelMigrationPrePareRowEvent
+    arguments: ['@generali_webservice.web_sales_common_soap_client_factory']
+    tags:
+      - { name: event_subscriber }
+
+  athora_broker.broker_website_url_parser:
+    class: Drupal\athora_broker\Helper\BrokerWebsiteUrlParser
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
+
+  athora_broker.webform_submission_contact_broker_add_form_alter:
+    class: Drupal\athora_broker\Form\WebformSubmissionContactBrokerAddFormAlter
+
+  athora_broker.epartner_language_access:
+    class: Drupal\athora_broker\EventSubscriber\EPartnerLanguageAccessSubscriber
+    arguments: ['@language_manager']
+    tags:
+      - { name: event_subscriber }
+
+  athora_broker.daily_report_epartner_migrate_subscriber:
+    class: Drupal\athora_broker\EventSubscriber\DailyReportEPartnerMigrateSubscriber
+    arguments: ['@plugin.manager.mail', '@current_user', '@logger.factory', '@config.factory', '@date.formatter', '@file_system']
+    tags:
+      - { name: event_subscriber }

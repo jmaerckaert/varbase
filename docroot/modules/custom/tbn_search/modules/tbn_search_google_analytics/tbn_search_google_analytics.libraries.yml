@@ -1,0 +1,4 @@
+tbn-search-google-analytics:
+  version: 1.x
+  js:
+    assets/js/tbn_search_google_analytics.js: { minified: false }

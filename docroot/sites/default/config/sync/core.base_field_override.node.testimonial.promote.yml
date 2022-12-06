@@ -1,0 +1,22 @@
+uuid: 1827693a-9258-4a90-ad85-d007b1015d26
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.testimonial
+id: node.testimonial.promote
+field_name: promote
+entity_type: node
+bundle: testimonial
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

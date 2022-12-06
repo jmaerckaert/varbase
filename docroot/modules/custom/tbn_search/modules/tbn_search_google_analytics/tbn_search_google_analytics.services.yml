@@ -1,0 +1,10 @@
+services:
+  tbn_search_google_analytics.search_page_alter_form:
+    class: Drupal\tbn_search_google_analytics\Form\SearchPageAlterForm
+    arguments:
+      - '@config.factory'
+      - '@request_stack'
+  tbn_search_google_analytics.search_modal_block_alter_form:
+    class: Drupal\tbn_search_google_analytics\Form\SearchModalBlockAlterForm
+    arguments:
+      - '@config.factory'

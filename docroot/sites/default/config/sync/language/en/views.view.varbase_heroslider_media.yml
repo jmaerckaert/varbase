@@ -1,0 +1,31 @@
+label: 'Media Hero Slider'
+description: 'Shows a list of media hero sliders, which are connected to the Media Hero Slider entity queue'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        title:
+          separator: ', '
+        field_brief:
+          alter:
+            text: '<div class="slick__text">{{ field_brief }} </div>'
+          separator: ', '
+        field_link:
+          separator: ', '
+      title: 'Media Hero Slider'
+      empty:
+        area:
+          content:
+            value: "<p> Media Hero Slider </p>\n<p> There are no slides right now! </p>\n<a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider_media/\"> Add One Now </a>"
+  varbase_heroslider_media:
+    display_title: 'Media Hero Slider'
+    display_options:
+      display_description: 'Shows a list of media hero sliders, which are connected to the Media Hero Slider entity queue'

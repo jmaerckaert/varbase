@@ -1,0 +1,6 @@
+# Ignore paths that contain user-generated content.
+!src/WebsalesCommon/Metadata
+!src/WebsalesCommon/Php
+src/WebsalesCommon/Metadata/*
+src/WebsalesCommon/Php/*
+config/WebsalesCommon/CommonExternalWS01.wsdl

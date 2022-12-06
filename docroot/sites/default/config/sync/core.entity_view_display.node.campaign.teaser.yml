@@ -1,0 +1,31 @@
+uuid: 8efb608a-5a8a-4a57-aa93-7698e2b137e7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_media
+    - field.field.node.campaign.field_product_category
+    - node.type.campaign
+  module:
+    - text
+    - user
+id: node.campaign.teaser
+targetEntityType: node
+bundle: campaign
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_media: true
+  field_product_category: true
+  langcode: true
+  links: true

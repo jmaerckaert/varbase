@@ -1,0 +1,583 @@
+uuid: a31055fe-ad4b-4df3-af8d-a914c8417c22
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.product.body
+    - field.field.node.product.field_additional_information
+    - field.field.node.product.field_compare_tool
+    - field.field.node.product.field_cta
+    - field.field.node.product.field_documents
+    - field.field.node.product.field_documents_description
+    - field.field.node.product.field_documents_title
+    - field.field.node.product.field_features
+    - field.field.node.product.field_features_title
+    - field.field.node.product.field_meta_tags
+    - field.field.node.product.field_product_category
+    - field.field.node.product.field_social_image
+    - field.field.node.product.field_usp
+    - field.field.node.product.field_what_is_title
+    - field.field.node.product.field_why_take_title
+    - field.field.node.product.field_yoast_seo
+    - field.field.node.product.layout_builder__layout
+    - node.type.product
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_what_is
+        - group_container_what_is
+        - group_why
+        - group_wrapper_
+        - group_container_why
+        - group_wrapper_information
+        - group_documents
+        - group_container_features
+        - field_features_title
+        - group_container
+        - field_features
+        - field_documents_title
+        - field_documents_description
+        - extra_field_document_library_quick_link_field
+        - field_why_take_title
+        - field_usp
+        - field_cta
+        - group_container_information
+        - field_additional_information
+        - field_what_is_title
+        - body
+  field_group:
+    group_what_is:
+      children:
+        - group_container_what_is
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Wrapper what is'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container-wrapper container-wrapper-what-is'
+      label: 'Wrapper what is'
+      region: hidden
+    group_why:
+      children:
+        - group_container_why
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Wrapper why'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container-wrapper container-wrapper-why'
+      label: 'Wrapper why'
+      region: hidden
+    group_documents:
+      children:
+        - group_container
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: 'Wrapper documents'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container-wrapper container-wrapper-documents'
+      label: 'Wrapper documents'
+      region: hidden
+    group_container_what_is:
+      children:
+        - field_what_is_title
+        - body
+      parent_name: group_what_is
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Container what is'
+      region: hidden
+    group_container_why:
+      children:
+        - field_why_take_title
+        - field_usp
+        - field_cta
+      parent_name: group_why
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Container why'
+      region: hidden
+    group_wrapper_:
+      children:
+        - group_container_features
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'container-wrapper container-wrapper-features'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Wrapper features'
+      region: hidden
+    group_container:
+      children:
+        - field_documents_title
+        - field_documents_description
+        - extra_field_document_library_quick_link_field
+      parent_name: group_documents
+      weight: 9
+      format_type: html_element
+      format_settings:
+        label: 'Container documents'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container container-documents'
+      label: 'Container documents'
+      region: hidden
+    group_container_features:
+      children:
+        - field_features_title
+        - field_features
+      parent_name: group_wrapper_
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Container features'
+      region: hidden
+    group_wrapper_information:
+      children:
+        - group_container_information
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Wrapper Information'
+      region: hidden
+    group_container_information:
+      children:
+        - field_additional_information
+      parent_name: group_wrapper_information
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'container information'
+      region: hidden
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 24
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: ds_content
+  extra_field_document_library_quick_link_field:
+    weight: 12
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  field_additional_information:
+    weight: 21
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_cta:
+    weight: 16
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: cta-center
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: ds_content
+  field_documents_description:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: document-description
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: text_default
+    region: ds_content
+  field_documents_title:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+  field_features:
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: block
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: container
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: 'row feature-list'
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: 'col-md-12 feature-item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: ds_content
+  field_features_title:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+  field_usp:
+    weight: 15
+    label: hidden
+    settings:
+      view_mode: block
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: flex-container
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: ds_content
+  field_what_is_title:
+    weight: 23
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+  field_why_take_title:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+hidden:
+  field_compare_tool: true
+  field_documents: true
+  field_meta_tags: true
+  field_product_category: true
+  field_social_image: true
+  field_the_options: true
+  field_yoast_seo: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

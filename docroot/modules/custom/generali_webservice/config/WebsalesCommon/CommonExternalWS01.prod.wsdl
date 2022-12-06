@@ -1,0 +1,1042 @@
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (http://www.altova.com) by Olivier Laloux (GENERALI) -->
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.generali.be/ExternalWebservice01" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ft="http://www.generali.be/FrontNameTypes" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" targetNamespace="http://www.generali.be/ExternalWebservice01">
+	<types>
+		<s:schema targetNamespace="http://www.generali.be/ExternalWebservice01" elementFormDefault="qualified" xmlns:ft="http://www.generali.be/FrontNameTypes" >
+			<s:import namespace="http://www.generali.be/FrontNameTypes" schemaLocation="./GeneraliTypes.xsd"/>
+			<s:element name="FindBroker2Request">
+				<s:annotation>
+					<s:documentation>Request a list of brokers and some high level information on them based on search criteria</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="BrokerSearchType" type="s:string">
+							<s:annotation>
+								<s:documentation>Type of search to execute...</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="CustomerYN" type="s:boolean">
+							<s:annotation>
+								<s:documentation>Is the user already a Customer or not at Generali</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="MaxNumberOfBrokers">
+							<s:annotation>
+								<s:documentation>Max number of brokers to be returned in the result...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:int">
+									<s:totalDigits value="3"/>
+									<s:fractionDigits value="0"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="MinNumberOfBrokers">
+							<s:annotation>
+								<s:documentation>Min number of brokers to be returned in the result...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:int">
+									<s:totalDigits value="3"/>
+									<s:fractionDigits value="0"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:choice>
+							<s:annotation>
+								<s:documentation>One of these...</s:documentation>
+							</s:annotation>
+							<s:element name="SearchAroundLocality">
+								<s:complexType>
+									<s:sequence>
+										<s:element name="SpotZipCode">
+											<s:annotation>
+												<s:documentation>Zip code of the spot to search for...</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="6"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="SpotLocality">
+											<s:annotation>
+												<s:documentation>Locality of the spot to search for...</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="30"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+							<s:element name="SearchAroundXY" type="ft:GeographicalCoordinates"/>
+							<s:element name="SearchAroundAddress" type="ft:Address_Type">
+								<s:annotation>
+									<s:documentation>Search around a specific address...</s:documentation>
+								</s:annotation>
+							</s:element>
+						</s:choice>
+						<s:element name="RadiusOfSearch" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Circle area to search in... (radius in kms from spot or specified Broker)</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:int">
+									<s:totalDigits value="3"/>
+									<s:fractionDigits value="0"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="SortResponseBy" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Sort the response by...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="30"/>
+									<s:enumeration value="ZIPCODE"/>
+									<s:enumeration value="NOAG"/>
+									<s:enumeration value="BrokerName"/>
+									<s:enumeration value="DistanceFromSpot"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="WorkingLanguage" type="ft:Language_Type" minOccurs="0"/>
+						<s:element name="BrokerDetails" type="s:boolean">
+							<s:annotation>
+								<s:documentation>Indicates if the response returns all data of the Brokers or a summary of the data </s:documentation>
+							</s:annotation>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="FindBroker2Response">
+				<s:annotation>
+					<s:documentation>Return a list of brokers and some high level information on them based on search criteria</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If OK...</s:documentation>
+							</s:annotation>
+							<s:element name="NumberOfBrokers" type="s:int">
+								<s:annotation>
+									<s:documentation>Number of brokers returned in the result</s:documentation>
+								</s:annotation>
+							</s:element>
+							<s:element name="BrokerData" type="ft:Broker_Data_Type" minOccurs="0" maxOccurs="unbounded"/>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="FindBrokerRequest">
+				<s:annotation>
+					<s:documentation>Request a list of brokers and some high level information on them based on search criteria</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="BrokerSearchType">
+							<s:annotation>
+								<s:documentation>Type of search to execute...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="40"/>
+									<s:enumeration value="WEBSALESAUTO"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="CustomerYN" type="s:boolean">
+							<s:annotation>
+								<s:documentation>Is the user already a Customer or not at Generali</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="MaxNumberOfBrokers">
+							<s:annotation>
+								<s:documentation>Max number of brokers to be returned in the result...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:int">
+									<s:totalDigits value="3"/>
+									<s:fractionDigits value="0"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:choice>
+							<s:annotation>
+								<s:documentation>One of these...</s:documentation>
+							</s:annotation>
+							<s:element name="SearchAroundLocality">
+								<s:complexType>
+									<s:sequence>
+										<s:element name="SpotZipCode">
+											<s:annotation>
+												<s:documentation>Zip code of the spot to search for...</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="6"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="SpotLocality">
+											<s:annotation>
+												<s:documentation>Locality of the spot to search for...</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="30"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+							<s:element name="SearchAroundXY" type="ft:GeographicalCoordinates"/>
+						</s:choice>
+						<s:element name="RadiusOfSearch" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Circle area to search in... (radius in kms from spot or specified Broker)</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:int">
+									<s:totalDigits value="3"/>
+									<s:fractionDigits value="0"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="SortResponseBy" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Sort the response by...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="30"/>
+									<s:enumeration value="ZIPCODE"/>
+									<s:enumeration value="NOAG"/>
+									<s:enumeration value="BrokerName"/>
+									<s:enumeration value="DistanceFromSpot"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="WorkingLanguage" type="ft:Language_Type"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="FindBrokerResponse">
+				<s:annotation>
+					<s:documentation>Return a list of brokers and some high level information on them based on search criteria</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If OK...</s:documentation>
+							</s:annotation>
+							<s:element name="NumberOfBrokers" type="s:int">
+								<s:annotation>
+									<s:documentation>Number of brokers returned in the result</s:documentation>
+								</s:annotation>
+							</s:element>
+							<s:element name="BrokerInfo" minOccurs="0" maxOccurs="unbounded">
+								<s:complexType>
+									<s:sequence>
+										<s:element name="Broker" type="ft:UserKey_Type"/>
+										<s:element name="BrokerName" type="s:string">
+											<s:annotation>
+												<s:documentation>NOM1 - name of the Broker</s:documentation>
+											</s:annotation>
+										</s:element>
+										<s:element name="BrokerAddress">
+											<s:annotation>
+												<s:documentation>Address of the broker...</s:documentation>
+											</s:annotation>
+											<s:complexType>
+												<s:sequence>
+													<s:element name="StreetName">
+														<s:annotation>
+															<s:documentation>ADR2 - street name</s:documentation>
+														</s:annotation>
+														<s:simpleType>
+															<s:restriction base="s:string">
+																<s:maxLength value="30"/>
+															</s:restriction>
+														</s:simpleType>
+													</s:element>
+													<s:element name="StreetNumber" type="s:string">
+														<s:annotation>
+															<s:documentation>NO5 - number in the street</s:documentation>
+														</s:annotation>
+													</s:element>
+													<s:element name="PostBox" type="s:string" minOccurs="0">
+														<s:annotation>
+															<s:documentation>BPOS - postal box</s:documentation>
+														</s:annotation>
+													</s:element>
+													<s:element name="Locality" type="ft:Locality_Type"/>
+													<s:element name="CountryCode">
+														<s:annotation>
+															<s:documentation>COPA - international licence plate country code in most cases- e.g. B for Belgium, L for Luxemburg, NL for the Netherlands, etc...</s:documentation>
+														</s:annotation>
+														<s:simpleType>
+															<s:restriction base="s:string">
+																<s:maxLength value="3"/>
+															</s:restriction>
+														</s:simpleType>
+													</s:element>
+												</s:sequence>
+											</s:complexType>
+										</s:element>
+										<s:element name="BrokerAddressXY" type="ft:GeographicalCoordinates"/>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetListLocalitiesRequest">
+				<s:annotation>
+					<s:documentation>Request the list of all BE localities order by ...  or not ordered</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="OrderBy" minOccurs="0">
+							<s:simpleType>
+								<s:restriction base="xs:string">
+									<s:maxLength value="10"/>
+									<s:enumeration value="CPOS"/>
+									<s:enumeration value="NAME_F"/>
+									<s:enumeration value="NAME_N"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetListLocalitiesResponse">
+				<s:annotation>
+					<s:documentation>Return the List of all BE localities ordered or not, depending the request</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If OK...</s:documentation>
+							</s:annotation>
+							<s:element name="Locality" minOccurs="0" maxOccurs="unbounded">
+								<s:complexType>
+									<s:sequence>
+										<s:element name="ZipCode">
+											<s:annotation>
+												<s:documentation>CPOS  ZipCode of the locality</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="6"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="LocalityName_F">
+											<s:annotation>
+												<s:documentation>NAME_F  Name FR of the locality</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="30"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="LocalityName_N">
+											<s:annotation>
+												<s:documentation>NAME_N  Name NL of the locality</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="30"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="LocalityXY" type="ft:GeographicalCoordinates">
+											<s:annotation>
+												<s:documentation>Geographical coordinates of the locality</s:documentation>
+											</s:annotation>
+										</s:element>
+										<s:element name="CountryCode">
+											<s:annotation>
+												<s:documentation>COPA - B for Belgium</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="3"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetOnlineServiceStatusRequest">
+				<s:annotation>
+					<s:documentation>Request the current status of a service</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ServiceName">
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="30"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="Language" type="ft:Language_Type"/>
+						<s:element name="OnlineDateTime" type="s:dateTime">
+							<s:annotation>
+								<s:documentation>Date Time in which we wish to know if the service is opened or not</s:documentation>
+							</s:annotation>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetOnlineServiceStatusResponse">
+				<s:annotation>
+					<s:documentation>Return the current status of a service</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If result is OK</s:documentation>
+							</s:annotation>
+							<s:element name="Status">
+								<s:simpleType>
+									<s:restriction base="s:string">
+										<s:maxLength value="10"/>
+										<s:enumeration value="Open"/>
+										<s:enumeration value="Closed"/>
+									</s:restriction>
+								</s:simpleType>
+							</s:element>
+							<s:sequence minOccurs="0">
+								<s:annotation>
+									<s:documentation>If the Status is "closed"</s:documentation>
+								</s:annotation>
+								<s:element name="ReasonCode">
+									<s:simpleType>
+										<s:restriction base="s:string">
+											<s:maxLength value="50"/>
+										</s:restriction>
+									</s:simpleType>
+								</s:element>
+								<s:element name="ClosedUntil" type="s:dateTime" minOccurs="0">
+									<s:annotation>
+										<s:documentation>Present if the end time of the unavailability period is known</s:documentation>
+									</s:annotation>
+								</s:element>
+								<s:element name="UserMessage" type="s:string">
+									<s:annotation>
+										<s:documentation>The message to be shown to the end user</s:documentation>
+									</s:annotation>
+								</s:element>
+							</s:sequence>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetParametersRequest">
+				<s:annotation>
+					<s:documentation>Request the value for a specific group of parameter</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ParameterGroup" maxOccurs="unbounded">
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="50"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetParametersResponse">
+				<s:annotation>
+					<s:documentation>Return the value for a requested group of parameter</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If result is OK</s:documentation>
+							</s:annotation>
+							<s:element name="RetrievedParameters" maxOccurs="unbounded">
+								<s:annotation>
+									<s:documentation>One entry by requested parameter group in input</s:documentation>
+								</s:annotation>
+								<s:complexType>
+									<s:sequence>
+										<s:element name="ParameterGroup">
+											<s:annotation>
+												<s:documentation>required parameter group name</s:documentation>
+											</s:annotation>
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="50"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="ParametersDetails" maxOccurs="unbounded">
+											<s:complexType>
+												<s:sequence>
+													<s:element name="Name">
+														<s:annotation>
+															<s:documentation>Identifiant of the parameter</s:documentation>
+														</s:annotation>
+														<s:simpleType>
+															<s:restriction base="s:string">
+																<s:maxLength value="50"/>
+															</s:restriction>
+														</s:simpleType>
+													</s:element>
+													<s:element name="Value">
+														<s:annotation>
+															<s:documentation>Value for this parameter</s:documentation>
+														</s:annotation>
+														<s:simpleType>
+															<s:restriction base="s:string">
+																<s:maxLength value="255"/>
+															</s:restriction>
+														</s:simpleType>
+													</s:element>
+													<s:element name="Type">
+														<s:annotation>
+															<s:documentation>describe the type for the contents of Value, this type respect the xml standard type (so String,Int,Decimal...)</s:documentation>
+														</s:annotation>
+														<s:simpleType>
+															<s:restriction base="s:string">
+																<s:maxLength value="20"/>
+															</s:restriction>
+														</s:simpleType>
+													</s:element>
+												</s:sequence>
+											</s:complexType>
+										</s:element>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetParamTableRequest">
+				<s:annotation>
+					<s:documentation>Request the list of items of a specific param table </s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ParamTableName">
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="50"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetParamTableResponse">
+				<s:annotation>
+					<s:documentation>Return the list of items of a specific param table</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If result is OK</s:documentation>
+							</s:annotation>
+							<s:element name="Item" minOccurs="0" maxOccurs="unbounded">
+								<s:complexType>
+									<s:sequence>
+										<s:element name="ID">
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="50"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="Lib_Short_fr" minOccurs="0">
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="250"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="Lib_Short_nl" minOccurs="0">
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="250"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="Lib_Long_fr">
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="250"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+										<s:element name="Lib_Long_nl">
+											<s:simpleType>
+												<s:restriction base="s:string">
+													<s:maxLength value="250"/>
+												</s:restriction>
+											</s:simpleType>
+										</s:element>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+							<s:element name="ExpiresInHours" type="s:int">
+								<s:annotation>
+									<s:documentation>Indicates the number of hours that the data is 'valid'. After this time, they must be reloaded</s:documentation>
+								</s:annotation>
+							</s:element>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RetrieveBrokerDetailsRequest">
+				<s:annotation>
+					<s:documentation>Request all details of a given broker</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="Broker" type="ft:UserKey_Type"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RetrieveBrokerDetailsResponse">
+				<s:annotation>
+					<s:documentation>Return all details of a given broker</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If OK...</s:documentation>
+							</s:annotation>
+							<s:element name="BrokerData" type="ft:Broker_Data_Type"/>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="FindQuittancesRequest">
+				<s:annotation>
+					<s:documentation>Request all details of a given broker</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="User" type="ft:UserKey_Type" />
+						<s:element name="PolicyId"
+							type="ft:PolicyId_Type" minOccurs="1" maxOccurs="unbounded">
+						</s:element>
+						<s:element name="AuditInfo" type="ft:AuditInfo_Type"></s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="FindQuittancesResponse">
+				<s:annotation>
+					<s:documentation>Return all details of a given broker</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>If OK...</s:documentation>
+							</s:annotation>
+							<s:element name="QuittancesOnPolicy" maxOccurs="unbounded" >
+								<s:complexType>
+									<s:sequence>
+										<s:element name="PolicyId" type="ft:PolicyId_Type"></s:element>
+										<s:element name="Quittance" minOccurs="0" maxOccurs="unbounded" type="ft:ReceiptInfo_Type"/>
+									</s:sequence>
+								</s:complexType>
+							</s:element>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:simpleType name="FinancialAmount">
+			    <s:restriction base="xs:decimal">
+			    	<xs:totalDigits value="9" />
+			        <s:fractionDigits value="2" />
+			    </s:restriction>
+			</s:simpleType>
+
+			<s:element name="RetrieveInspectorDetailsRequest">
+				<s:annotation>
+					<s:documentation>Request all details for a given inspector</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="Inspector" type="ft:UserKey_Type"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RetrieveInspectorDetailsResponse">
+				<s:annotation>
+					<s:documentation>Return all details of a given inspector</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+						<s:sequence minOccurs="0">
+							<s:annotation>
+								<s:documentation>IF OK ...</s:documentation>
+							</s:annotation>
+							<s:element name="InspectorData" type="ft:Inspector_Data_Type"/>
+						</s:sequence>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="XferLeadRequest">
+				<s:annotation>
+					<s:documentation>Transfer by email a contact lead to a broker. The Contact will be also saved into the Contact DB</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="SimulationID" type="ft:SimulationID_Type" minOccurs="0"/>
+						<s:element name="LeadType" type="ft:LeadType_Type">
+							<s:annotation>
+								<s:documentation>'512'=Contact lead, '511' = HotLead</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="Product" type="ft:Product_Type" minOccurs="0"/>
+						<s:element name="ContactTitle" type="ft:Title_Type">
+							<s:annotation>
+								<s:documentation>Tilte of the contact : 11 = Mr, 12 = Mme, 13 = Melle  (Code of DO5.CTIT)</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="ContactName">
+							<s:annotation>
+								<s:documentation>Name of the contact</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="30"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactFirstName">
+							<s:annotation>
+								<s:documentation>First name of the contact</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="17"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactGSMTEL" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Phone number or GSM number of the contact</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="10"/>
+									<s:pattern value="\d*"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactEmail">
+							<s:annotation>
+								<s:documentation>Email of the contact</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="70"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactPeriod_From" minOccurs="0">
+							<s:annotation>
+								<s:documentation>The contact can be contacted from ...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="20"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactPeriod_To" minOccurs="0">
+							<s:annotation>
+								<s:documentation>The contact can be contacted until ....</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="20"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactNote">
+							<s:annotation>
+								<s:documentation>Note/Comment drafted by the contact. Free text...</s:documentation>
+							</s:annotation>
+							<s:simpleType>
+								<s:restriction base="s:string">
+									<s:maxLength value="500"/>
+								</s:restriction>
+							</s:simpleType>
+						</s:element>
+						<s:element name="ContactOptin" type="s:boolean" default="0">
+							<s:annotation>
+								<s:documentation>Whether the contact accepts to receive marketing messages</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="CustomerYN" type="s:boolean"/>
+						<s:element name="Language" type="ft:Language_Type">
+							<s:annotation>
+								<s:documentation>Langage of the contact 'fr' or 'nl', based on the current web page language</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="Broker" type="ft:UserKey_Type">
+							<s:annotation>
+								<s:documentation>Selected broker to which the contact request must be send by email</s:documentation>
+							</s:annotation>
+						</s:element>
+						<s:element name="AgentID" type="ft:AgentID_Type" minOccurs="0">
+							<s:annotation>
+								<s:documentation>Identifies the person who created the lead </s:documentation>
+							</s:annotation>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="XferLeadResponse">
+				<s:annotation>
+					<s:documentation>Confirm the transfer by email of the contact lead to the broker</s:documentation>
+				</s:annotation>
+				<s:complexType>
+					<s:sequence>
+						<s:element name="ResponseResult" type="ft:ResponseResult_Type"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:schema>
+	</types>
+	<message name="FindBrokerSoapIn">
+		<part name="parameters" element="s0:FindBrokerRequest"/>
+	</message>
+	<message name="FindBrokerSoapOut">
+		<part name="parameters" element="s0:FindBrokerResponse"/>
+	</message>
+	<message name="GetListLocalitiesSoapIn">
+		<part name="parameters" element="s0:GetListLocalitiesRequest"/>
+	</message>
+	<message name="GetListLocalitiesSoapOut">
+		<part name="parameters" element="s0:GetListLocalitiesResponse"/>
+	</message>
+	<message name="XferLeadSoapIn">
+		<part name="parameters" element="s0:XferLeadRequest"/>
+	</message>
+	<message name="XferLeadSoapOut">
+		<part name="parameters" element="s0:XferLeadResponse"/>
+	</message>
+	<message name="RetrieveBrokerDetailsSoapIn">
+		<part name="parameters" element="s0:RetrieveBrokerDetailsRequest"/>
+	</message>
+	<message name="RetrieveBrokerDetailsSoapOut">
+		<part name="parameters" element="s0:RetrieveBrokerDetailsResponse"/>
+	</message>
+	<message name="FindQuittancesSoapIn">
+		<part name="parameters" element="s0:FindQuittancesRequest"/>
+	</message>
+	<message name="FindQuittancesSoapOut">
+		<part name="parameters" element="s0:FindQuittancesResponse"/>
+	</message>
+	<message name="GetOnlineServiceStatusSoapIn">
+		<part name="parameters" element="s0:GetOnlineServiceStatusRequest"/>
+	</message>
+	<message name="GetOnlineServiceStatusSoapOut">
+		<part name="parameters" element="s0:GetOnlineServiceStatusResponse"/>
+	</message>
+	<message name="GetParamTableSoapIn">
+		<part name="parameters" element="s0:GetParamTableRequest"/>
+	</message>
+	<message name="GetParamTableSoapOut">
+		<part name="parameters" element="s0:GetParamTableResponse"/>
+	</message>
+	<message name="FindBroker2SoapIn">
+		<part name="parameters" element="s0:FindBroker2Request"/>
+	</message>
+	<message name="FindBroker2SoapOut">
+		<part name="parameters" element="s0:FindBroker2Response"/>
+	</message>
+	<message name="RetrieveInspectorDetailsSoapIn">
+		<part name="parameters" element="s0:RetrieveInspectorDetailsRequest"/>
+	</message>
+	<message name="RetrieveInspectorDetailsSoapOut">
+		<part name="parameters" element="s0:RetrieveInspectorDetailsResponse"/>
+	</message>
+	<message name="GetParametersSoapIn">
+		<part name="parameters" element="s0:GetParametersRequest"/>
+	</message>
+	<message name="GetParametersSoapOut">
+		<part name="parameters" element="s0:GetParametersResponse"/>
+	</message>
+	<portType name="ICommonService">
+		<operation name="FindBroker">
+			<input message="s0:FindBrokerSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/FindBroker"/>
+			<output message="s0:FindBrokerSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="GetListLocalities">
+			<input message="s0:GetListLocalitiesSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/GetListLocalities"/>
+			<output message="s0:GetListLocalitiesSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="XferLead">
+			<input message="s0:XferLeadSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/XferLead"/>
+			<output message="s0:XferLeadSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="RetrieveBrokerDetails">
+			<input message="s0:RetrieveBrokerDetailsSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/RetrieveBrokerDetails"/>
+			<output message="s0:RetrieveBrokerDetailsSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="FindQuittances">
+			<input message="s0:FindQuittancesSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/FindQuittances"/>
+			<output message="s0:FindQuittancesSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="GetOnlineServiceStatus">
+			<input message="s0:GetOnlineServiceStatusSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/GetOnlineServiceStatus"/>
+			<output message="s0:GetOnlineServiceStatusSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="GetParamTable">
+			<input message="s0:GetParamTableSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/GetParamTable"/>
+			<output message="s0:GetParamTableSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="FindBroker2">
+			<input message="s0:FindBroker2SoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/FindBroker2"/>
+			<output message="s0:FindBroker2SoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="RetrieveInspectorDetails">
+			<input message="s0:RetrieveInspectorDetailsSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/RetrieveInspectorDetails"/>
+			<output message="s0:RetrieveInspectorDetailsSoapOut" wsaw:Action=""/>
+		</operation>
+		<operation name="GetParameters">
+			<input message="s0:GetParametersSoapIn" wsaw:Action="http://www.generali.be/ExternalWebservice01/GetParameters"/>
+			<output message="s0:GetParametersSoapOut" wsaw:Action=""/>
+		</operation>
+	</portType>
+	<binding name="CommonServiceSoap" type="s0:ICommonService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="FindBroker">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/FindBroker" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetListLocalities">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/GetListLocalities" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="XferLead">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/XferLead" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="RetrieveBrokerDetails">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/RetrieveBrokerDetails" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="FindQuittances">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/FindQuittances" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetOnlineServiceStatus">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/GetOnlineServiceStatus" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetParamTable">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/GetParamTable" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="FindBroker2">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/FindBroker2" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="RetrieveInspectorDetails">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/RetrieveInspectorDetails" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetParameters">
+			<soap:operation soapAction="http://www.generali.be/ExternalWebservice01/GetParameters" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="CommonExternalWS01">
+		<documentation>WSDL File for CommonExternalWS01</documentation>
+		<port binding="tns:CommonServiceSoap" name="CommonServiceSoap_Port">
+			<soap:address location="https://b2b.be.athora.com/websales_common/service.svc" />
+		</port>
+	</service>
+	<!--  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" -->
+</definitions>

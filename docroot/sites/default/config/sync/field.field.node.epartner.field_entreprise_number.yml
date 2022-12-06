@@ -1,0 +1,19 @@
+uuid: d1f3a29b-65e1-4b0b-b744-aa80a6011d4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entreprise_number
+    - node.type.epartner
+id: node.epartner.field_entreprise_number
+field_name: field_entreprise_number
+entity_type: node
+bundle: epartner
+label: 'Entreprise number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

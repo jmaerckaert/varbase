@@ -1,0 +1,22 @@
+uuid: 5a7d1bc7-7405-427a-9fda-8e7600ede29f
+langcode: en
+status: true
+dependencies:
+  module:
+    - tbn_search
+  theme:
+    - athora
+id: searchmodal
+theme: athora
+region: navigation
+weight: -11
+provider: null
+plugin: search_modal_block
+settings:
+  id: search_modal_block
+  label: 'Search Modal'
+  provider: tbn_search
+  label_display: '0'
+  show_speech_icon: 0
+  enable_speech: true
+visibility: {  }

@@ -1,0 +1,112 @@
+definitions:
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__3':
+    weight: -58
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__7':
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.3'
+    menu_name: main
+    weight: -64
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__8':
+    weight: -63
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.3'
+    enabled: true
+    expanded: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__5':
+    weight: -48
+    parent: 'menu_link_content:7cc28b37-f1ac-4693-8f11-d6e77cbfac52'
+    menu_name: main
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__11':
+    enabled: false
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.5'
+    expanded: true
+    weight: 0
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__4':
+    weight: -57
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__9':
+    weight: -63
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.4'
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__10':
+    weight: -62
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.4'
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__6':
+    weight: -54
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__12':
+    enabled: false
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.6'
+    weight: -64
+    expanded: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__13':
+    enabled: false
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.6'
+    weight: -63
+    expanded: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__14':
+    weight: -62
+    menu_name: main
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.product_category.6'
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2936':
+    weight: -55
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2960':
+    weight: -63
+    menu_name: main
+    parent: 'menu_link_content:35273244-f275-4cd3-b84b-760b0cfc2ccc'
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2958':
+    weight: -64
+    parent: 'menu_link_content:35273244-f275-4cd3-b84b-760b0cfc2ccc'
+    menu_name: main
+    enabled: true
+    expanded: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2961':
+    weight: -62
+    menu_name: main
+    parent: 'menu_link_content:35273244-f275-4cd3-b84b-760b0cfc2ccc'
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2962':
+    weight: -61
+    menu_name: main
+    parent: 'menu_link_content:35273244-f275-4cd3-b84b-760b0cfc2ccc'
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__product_category__2977':
+    weight: -43
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+langcode: nl

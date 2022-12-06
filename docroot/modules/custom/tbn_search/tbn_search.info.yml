@@ -1,0 +1,12 @@
+name: "TBN Search"
+description: "Provides extra search functionality."
+type: module
+package: TBNLabs
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+project: 'tbn_search'
+dependencies:
+  - drupal:search
+  - drupal:block
+  - gss
+  - tbn_pagerer

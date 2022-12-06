@@ -1,0 +1,55 @@
+display:
+  default:
+    display_title: Hoofd
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Eerste'
+            last: 'Laatste »'
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+      fields:
+        node_bulk_form:
+          action_title: Actie
+        title:
+          label: Titel
+          separator: ', '
+        uid:
+          label: Auteur
+          separator: ', '
+        created:
+          separator: ', '
+        changed:
+          label: Wijzigingsdatum
+          separator: ', '
+        status:
+          label: Gepubliceerd
+          separator: ', '
+        edit_node:
+          label: Bewerken
+          text: bewerken
+      filters:
+        status:
+          expose:
+            label: Gepubliceerd
+        uid:
+          expose:
+            label: 'Geschreven door'
+        combine:
+          expose:
+            label: Bevat
+        type:
+          expose:
+            label: Type

@@ -1,0 +1,14 @@
+uuid: 7ecddd2c-b4cd-4762-aa72-569a3aa73f72
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: mYH14Vi65Ixj10c_GFa7CipxU3D0Bt9wgo8zE8zjOfE
+id: languages
+label: Languages
+category: Taal
+likert: false
+options: ''

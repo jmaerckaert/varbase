@@ -1,0 +1,10 @@
+uuid: a011fbc9-1b66-474e-be46-865d5aa3fa0b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - media
+id: media.feature_image
+label: 'Feature image'
+targetEntityType: media
+cache: true

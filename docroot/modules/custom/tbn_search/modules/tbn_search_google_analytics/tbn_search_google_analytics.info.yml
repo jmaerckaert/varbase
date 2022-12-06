@@ -1,0 +1,10 @@
+name: "TBN search google analytics"
+description: "Track internal search keywords."
+type: module
+package: TBNLabs
+version: '8.x-1.0'
+core: '8.x'
+project: 'tbn_search_google_analytics'
+dependencies:
+  - tbn_search:tbn_search
+  - google_analytics:google_analytics

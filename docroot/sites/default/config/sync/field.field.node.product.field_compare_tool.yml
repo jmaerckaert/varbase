@@ -1,0 +1,28 @@
+uuid: d22ee896-8ec8-4ac8-9a60-1310df1d9332
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compare_tool
+    - node.type.product
+    - node.type.tool
+id: node.product.field_compare_tool
+field_name: field_compare_tool
+entity_type: node
+bundle: product
+label: 'Compare tool'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tool: tool
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

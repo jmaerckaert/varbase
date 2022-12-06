@@ -1,0 +1,23 @@
+uuid: 906b7237-a5d4-4ccb-bb6f-362dc1de9113
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sticky_widget
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.sticky_widget.field_link
+field_name: field_link
+entity_type: block_content
+bundle: sticky_widget
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

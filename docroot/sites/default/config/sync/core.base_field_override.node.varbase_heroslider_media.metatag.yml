@@ -1,0 +1,18 @@
+uuid: aefdd8d3-9bb0-429f-874f-c91f6603cd28
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.varbase_heroslider_media
+id: node.varbase_heroslider_media.metatag
+field_name: metatag
+entity_type: node
+bundle: varbase_heroslider_media
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

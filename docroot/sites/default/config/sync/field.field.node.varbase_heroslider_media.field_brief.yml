@@ -1,0 +1,21 @@
+uuid: 75d393d5-b6c8-4157-8a53-5793d4710b5c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brief
+    - node.type.varbase_heroslider_media
+_core:
+  default_config_hash: bYkeXE5EcD05x_UgWgnDXqycibYN1WQ7B4BmhdEjcxE
+id: node.varbase_heroslider_media.field_brief
+field_name: field_brief
+entity_type: node
+bundle: varbase_heroslider_media
+label: 'Slide text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

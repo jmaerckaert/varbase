@@ -1,0 +1,73 @@
+// athora custom mixins.
+@import "../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../bootstrap/less/buttons.less";     // Bootstrap mixins.
+@import "variables.less";
+
+// Drop shadows.
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.feature-even {
+  .center-items {
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-item {
+  flex: 1 0 25%;
+  max-width: 50%;
+  @media @tablet {
+    flex: 1 0 50%;
+    max-width: 100%;
+  }
+  @media @mobile {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border-top: solid 5px @brand-primary;
+}
+
+.container {
+  .container-fixed();
+
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+.cta-primary {
+  .btn();
+  .btn-primary();
+  border-radius: 0;
+  padding: 15px 35px;
+  margin-top: 15px;
+}
+
+.cta-secondary {
+  .btn();
+  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+  border-radius: 0;
+  padding: 15px 35px;
+  margin-top: 15px;
+}
+
+.sub-title {
+  color: @brand-primary;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: solid 3px @hr-border;
+}

@@ -1,0 +1,102 @@
+uuid: 67884d17-d280-4533-b802-58525b60f169
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - content_browser
+    - ctools
+    - entity_block
+    - panels
+    - system
+id: term_view-panels_variant-2
+label: 'Money & Pension'
+variant: panels_variant
+variant_settings:
+  blocks:
+    77474d35-3a06-4322-a71c-4b55ef9d56ae:
+      id: content_embed
+      label: 'Who are we?'
+      provider: content_browser
+      label_display: visible
+      description: ''
+      view_mode: block
+      nids:
+        - 5
+        - 6
+        - 7
+        - 11
+      uuids: {  }
+      region: main
+      weight: 2
+      context_mapping: {  }
+      css_classes:
+        - bg-white
+      html_id: ''
+      css_styles: ''
+      uuid: 77474d35-3a06-4322-a71c-4b55ef9d56ae
+    5278f611-3d06-48b7-9c2e-348525e1a1c5:
+      id: 'entity_block:node'
+      label: Content
+      provider: entity_block
+      label_display: ''
+      region: main
+      weight: 3
+      entity: '10'
+      view_mode: block
+      context_mapping: {  }
+      css_classes:
+        - ''
+      html_id: ''
+      css_styles: ''
+      uuid: 5278f611-3d06-48b7-9c2e-348525e1a1c5
+  id: panels_variant
+  uuid: c01eb1ab-8869-4940-9ee4-68c081cb232b
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-2
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: money_pension
+  -
+    id: request_path
+    pages: /taxonomy/term/6
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  money_pension:
+    label: 'Money & Pension'
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: ac23f5cd-5253-42f7-976e-074917aeb0c8

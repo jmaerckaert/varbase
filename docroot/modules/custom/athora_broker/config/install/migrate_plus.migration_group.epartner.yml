@@ -1,0 +1,9 @@
+id: epartner
+label: ePartner Imports
+description: ePartner-related imports.
+source_type: Excel
+shared_configuration: null
+dependencies:
+  enforced:
+    module:
+      - athora_broker

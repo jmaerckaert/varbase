@@ -1,0 +1,27 @@
+uuid: 083171fd-d8a8-49c2-8356-4d506c75e18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.feature
+  module:
+    - yoast_seo
+id: node.feature.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: feature
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: ''
+    status: ''
+    focus_keyword: ''
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

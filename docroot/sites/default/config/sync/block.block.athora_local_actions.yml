@@ -1,0 +1,20 @@
+uuid: 2f4ef8c3-045f-4126-9587-2d90444af638
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - athora
+_core:
+  default_config_hash: ccBj0AsRi504fiQIXajaMUqDiDJQITXlNKa811qB74c
+id: athora_local_actions
+theme: athora
+region: header
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

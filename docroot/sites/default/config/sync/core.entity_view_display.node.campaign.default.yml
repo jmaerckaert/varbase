@@ -1,0 +1,77 @@
+uuid: 5bf240ff-890c-4f5a-8e98-92e9d7fa7fb3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_media
+    - field.field.node.campaign.field_meta_tags
+    - field.field.node.campaign.field_product_category
+    - field.field.node.campaign.field_social_image
+    - field.field.node.campaign.field_yoast_seo
+    - node.type.campaign
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container container-wrapper'
+      label: Container
+      region: hidden
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_container
+        - body
+id: node.campaign.default
+targetEntityType: node
+bundle: campaign
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_media: true
+  field_meta_tags: true
+  field_product_category: true
+  field_social_image: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

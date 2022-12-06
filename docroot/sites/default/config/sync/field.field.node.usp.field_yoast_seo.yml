@@ -1,0 +1,27 @@
+uuid: 90695c71-dc4e-4e80-8c96-7a697e13ea4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.usp
+  module:
+    - yoast_seo
+id: node.usp.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: usp
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: ''
+    status: ''
+    focus_keyword: ''
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

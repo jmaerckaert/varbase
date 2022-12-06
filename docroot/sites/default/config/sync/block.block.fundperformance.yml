@@ -1,0 +1,39 @@
+uuid: 5ca19acf-5a6c-40ef-8bca-a4a31be9518e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sticky_widget:cacb0fe5-e011-4236-a36a-1380b8ab81b4'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - athora
+id: fundperformance
+theme: athora
+region: sticky_widget
+weight: -9
+provider: null
+plugin: 'block_content:cacb0fe5-e011-4236-a36a-1380b8ab81b4'
+settings:
+  id: 'block_content:cacb0fe5-e011-4236-a36a-1380b8ab81b4'
+  label: 'fund performance'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      epartner: epartner
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/over-ons\r\n/over-ons/*\r\n/a-propos-de-nous\r\n/a-propos-de-nous/*\r\n/actualite\r\n/actualite/*\r\n/nieuws\r\n/nieuws/*\r\n/jobs\r\n/jobs/*"
+    negate: true
+    context_mapping: {  }

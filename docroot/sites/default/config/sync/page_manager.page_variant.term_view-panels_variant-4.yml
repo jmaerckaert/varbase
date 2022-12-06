@@ -1,0 +1,64 @@
+uuid: ea0de1b4-a27a-4de9-aca3-11b093570466
+langcode: nl
+status: true
+dependencies:
+  config:
+    - page_manager.page.term_view
+  module:
+    - ctools
+    - panels
+    - system
+id: term_view-panels_variant-4
+label: Individual
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: 1eaf3a4b-b7a8-4de6-b6c9-499f28546068
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: Individual
+  storage_type: page_manager
+  storage_id: term_view-panels_variant-4
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+  builder: ipe
+page: term_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      product_category: product_category
+    negate: false
+    context_mapping:
+      taxonomy_term: individual
+  -
+    id: request_path
+    pages: /taxonomy/term/12
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context:
+  individual:
+    label: Individual
+    type: 'entity:taxonomy_term'
+    description: ''
+    value: 825589d5-4fba-4c91-a9eb-074b781a9142

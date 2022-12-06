@@ -1,0 +1,20 @@
+uuid: d35deadf-45b9-48ef-b3c5-d4b7138fb5d5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - athora
+id: languageswitchercontent
+theme: athora
+region: navigation_collapsible
+weight: -11
+provider: null
+plugin: 'language_block:language_content'
+settings:
+  id: 'language_block:language_content'
+  label: 'Language switcher (Content)'
+  provider: language
+  label_display: '0'
+visibility: {  }
