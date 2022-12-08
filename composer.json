@@ -1,34 +1,27 @@
 {
-  "name": "vardot/varbase-project",
-  "description": "Project template for Varbase distribution.",
-  "type": "project",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://github.com/vardot",
-      "role": "Maintainer"
-    }
-  ],
-  "support": {
-    "issues": "http://drupal.org/project/issues/varbase",
-    "source": "http://cgit.drupalcode.org/varbase"
-  },
+    "name": "vardot/varbase-project",
+    "description": "Project template for Varbase distribution.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://github.com/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/varbase",
+        "source": "http://cgit.drupalcode.org/varbase"
+    },
     "repositories": {
+        "tobania": {
+            "type": "vcs",
+            "url": "https://github.com/tobania/soap-client"
+        },
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "tobania": {
-            "type": "package",
-            "package": {
-                "name": "tobania/soap-client",
-                "version": "1.0.0",
-                "dist": {
-                    "url": "https://github.com/tobania/soap-client/archive/refs/tags/1.0.0.zip",
-                    "type": "zip"
-                }
-            }
         },
         "assets": {
             "type": "composer",
@@ -40,7 +33,8 @@
         },
         "tbnlabs": {
             "type": "composer",
-            "url": "https://token:5b2a986d42d2bba3c5a6caef5f415cf2bc5478ce5564ea4d74214fbd0a3e@repo.packagist.com/tobania/"
+            "url": "https://token:5b2a986d42d2bba3c5a6caef5f415cf2bc5478ce5564ea4d74214fbd0a3e@repo.packagist.com/tobania/",
+            "canonical": false
         },
         "jira-issue-collector": {
             "type": "package",
@@ -97,216 +91,260 @@
             "allow_ssl_downgrade": true
         }
     },
-  "require": {
-    "composer/installers": "~2.0",
-    "oomphinc/composer-installers-extender": "~2.0",
-    "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^9.4",
-    "drupal/core-project-message": "^9.4",
-    "webflo/drupal-finder": "~1.0",
-    "vardot/varbase": "~9.0",
-    "vardot/varbase-updater": "~2.0",
-    "drupal/address": "^1.11",
-    "drupal/admin_user_language": "^1.0",
-    "drupal/administration_language_negotiation": "^1.11",
-    "drupal/autocomplete_deluxe": "^2.0",
-    "drupal/background_image": "^2.0",
-    "drupal/block_content_permissions": "^1.10",
-    "drupal/block_permissions": "^1.2",
-    "drupal/ckeditor_iframe": "^2.1",
-    "drupal/content_browser": "^1.0",
-    "drupal/current_page_crumb": "^1.3",
-    "drupal/ds": "^3.15",
-    "drupal/easy_breadcrumb": "^2.0",
-    "drupal/entity_block": "^1.1",
-    "drupal/entity_browser": "^2.8",
-    "drupal/eu_cookie_compliance": "^1.24",
-    "drupal/extra_field": "^2.3",
-    "drupal/fakeobjects": "^1.1",
-    "drupal/hotjar": "^3.1",
-    "drupal/http_client_error_status": "^3.0",
-    "drupal/iframe": "^2.20",
-    "drupal/jira_issue_collector": "^1.2",
-    "drupal/key": "^1.16",
-    "drupal/language_cookie": "^2.0",
-    "drupal/language_selection_page": "^2.10",
-    "drupal/leaflet": "^10.0",
-    "drupal/linked_field": "^1.3",
-    "drupal/linkicon": "^1.7",
-    "drupal/media_entity_download": "^2.1",
-    "drupal/menu_breadcrumb": "^1.16",
-    "drupal/menu_item_extras": "^2.17",
-    "drupal/migrate_file": "^2.1",
-    "drupal/migrate_plus": "^6.0",
-    "drupal/migrate_spreadsheet": "^2.1",
-    "drupal/migrate_tools": "^6.0",
-    "drupal/noreferrer": "^1.15",
-    "drupal/pagerer": "^2.3",
-    "drupal/pathologic": "^1.0@alpha",
-    "drupal/purge": "^3.4",
-    "drupal/readonly_field_widget": "^1.5",
-    "drupal/remote_stream_wrapper": "^2.0",
-    "drupal/remote_stream_wrapper_widget": "^1.2",
-    "drupal/remove_http_headers": "^1.0",
-    "drupal/reroute_email": "^2.1",
-    "drupal/scheduler": "^1.4",
-    "drupal/search_api_solr": "^4.2",
-    "drupal/sitemap": "^2.0@beta",
-    "drupal/social_media_links": "^2.9",
-    "drupal/subpathauto": "^1.2",
-    "drupal/svg_image": "^1.16",
-    "drupal/taxonomy_machine_name": "^1.0@beta",
-    "drupal/taxonomy_menu": "^3.5",
-    "drupal/telephone_validation": "^2.3",
-    "drupal/token": "^1.11",
-    "drupal/varnish_purge": "^2.1",
-    "drupal/views_accordion": "^2.0",
-    "drupal/views_autocomplete_filters": "^1.3",
-    "drupal/views_contextual_filters_or": "^1.3",
-    "drupal/yoast_seo": "^1.7",
-    "drupal/smart_trim": "^2.0",
-    "drupal/cookiepro": "^2.0",
-    "drupal/bootstrap": "^3.25",
-    "drupal/vartheme": "^6.11",
-    "drupal/adminimal_theme": "^1.6",
-    "drupal/upgrade_status": "^3.18",
-    "drupal/adminimal_admin_toolbar": "^1.11",
-    "drupal/events_log_track": "^3.1",
-    "tobania/soap-client": "^1.0"
-  },
-  "require-dev": {
-    "drupal/core-dev": "~9.0",
-    "drush/drush": "^11.3"
-  },
-  "config": {
-    "bin-dir": "bin/",
-    "secure-http": false,
-    "optimize-autoloader": true,
-    "preferred-install": {
-      "drupal/core": "dist"
+    "require": {
+        "composer/installers": "~2.0",
+        "oomphinc/composer-installers-extender": "~2.0",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-project-message": "^9.4",
+        "webflo/drupal-finder": "~1.0",
+        "vardot/varbase": "~9.0",
+        "vardot/varbase-updater": "~2.0",
+        "drupal/address": "^1.11",
+        "drupal/admin_user_language": "^1.0",
+        "drupal/administration_language_negotiation": "^1.11",
+        "drupal/autocomplete_deluxe": "^2.0",
+        "drupal/background_image": "^2.0",
+        "drupal/block_content_permissions": "^1.10",
+        "drupal/block_permissions": "^1.2",
+        "drupal/ckeditor_iframe": "^2.1",
+        "drupal/content_browser": "^1.0",
+        "drupal/current_page_crumb": "^1.3",
+        "drupal/ds": "^3.15",
+        "drupal/easy_breadcrumb": "^2.0",
+        "drupal/entity_block": "^1.1",
+        "drupal/entity_browser": "^2.8",
+        "drupal/eu_cookie_compliance": "^1.24",
+        "drupal/extra_field": "^2.3",
+        "drupal/fakeobjects": "^1.1",
+        "drupal/hotjar": "^3.1",
+        "drupal/http_client_error_status": "^3.0",
+        "drupal/iframe": "^2.20",
+        "drupal/jira_issue_collector": "^1.2",
+        "drupal/key": "^1.16",
+        "drupal/language_cookie": "^2.0",
+        "drupal/language_selection_page": "^2.10",
+        "drupal/leaflet": "^10.0",
+        "drupal/linked_field": "^1.3",
+        "drupal/linkicon": "^1.7",
+        "drupal/media_entity_download": "^2.1",
+        "drupal/menu_breadcrumb": "^1.16",
+        "drupal/menu_item_extras": "^2.17",
+        "drupal/migrate_file": "^2.1",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_spreadsheet": "^2.1",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/noreferrer": "^1.15",
+        "drupal/pagerer": "^2.3",
+        "drupal/pathologic": "^1.0@alpha",
+        "drupal/purge": "^3.4",
+        "drupal/readonly_field_widget": "^1.5",
+        "drupal/remote_stream_wrapper": "^2.0",
+        "drupal/remote_stream_wrapper_widget": "^1.2",
+        "drupal/remove_http_headers": "^1.0",
+        "drupal/reroute_email": "^2.1",
+        "drupal/scheduler": "^1.4",
+        "drupal/search_api_solr": "^4.2",
+        "drupal/sitemap": "^2.0@beta",
+        "drupal/social_media_links": "^2.9",
+        "drupal/subpathauto": "^1.2",
+        "drupal/svg_image": "^1.16",
+        "drupal/taxonomy_machine_name": "^1.0@beta",
+        "drupal/taxonomy_menu": "^3.5",
+        "drupal/telephone_validation": "^2.3",
+        "drupal/token": "^1.11",
+        "drupal/varnish_purge": "^2.1",
+        "drupal/views_accordion": "^2.0",
+        "drupal/views_autocomplete_filters": "^1.3",
+        "drupal/views_contextual_filters_or": "^1.3",
+        "drupal/yoast_seo": "^1.7",
+        "drupal/smart_trim": "^2.0",
+        "drupal/cookiepro": "^2.0",
+        "drupal/bootstrap": "^3.25",
+        "drupal/vartheme": "^6.11",
+        "drupal/adminimal_theme": "^1.6",
+        "drupal/upgrade_status": "^3.18",
+        "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/events_log_track": "^3.1",
+        "goetas-webservices/soap-client": "dev-tbn-master",
+        "drupal/libraries": "^4.0",
+        "drupal/mail_edit": "2.0.x-dev",
+        "drupal/smtp": "^1.2",
+        "drupal/webform_analysis": "^1.0@beta",
+        "drupal/vartheme_admin": "^6.12",
+        "goetas-webservices/wsdl2php": "^0.5.2"
     },
-    "allow-plugins": {
-      "composer/installers": true,
-      "cweagans/composer-patches": true,
-      "oomphinc/composer-installers-extender": true,
-      "drupal/core-composer-scaffold": true,
-      "drupal/core-project-message": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "vardot/varbase-updater": true
-    }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-update-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "conflict": {
-    "drupal/drupal": "*"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-9.0.x": "9.0.x-dev"
+    "require-dev": {
+        "drupal/core-dev": "~9.0",
+        "drush/drush": "^11.3"
     },
-    "drupal-core-project-message": {
-        "include-keys": ["homepage", "support"],
-        "post-create-project-cmd-message": [
-            "<bg=blue;fg=white>                                                         </>",
-            "<bg=blue;fg=white>  Congratulations, you’ve installed the Varbase codebase </>",
-            "<bg=blue;fg=white>  from the vardot/varbase-project template!              </>",
-            "<bg=blue;fg=white>                                                         </>",
-            "",
-            "<bg=yellow;fg=black>Next steps</>:",
-
-            "  * Install the site: https://www.drupal.org/docs/installing-drupal",
-            "  * Read the user guide: https://docs.varbase.vardot.com",
-            "  * Get support: https://www.vardot.com/en/form/get-support-varbase",
-            "  * Join Our Slack Team for Feedback and Support:",
-            "      http://slack.varbase.vardot.com",
-            "  * Remove the plugin that prints this message:",
-            "      composer remove drupal/core-project-message"
-        ]
-    },
-    "drupal-scaffold": {
-      "allowed-packages": [
-        "drupal/core",
-        "vardot/varbase"
-      ],
-      "gitignore": true,
-      "locations": {
-        "web-root": "./docroot"
-      },
-      "file-mapping": {
-        "[web-root]/sites/default/default.services.yml": {
-          "mode": "replace",
-          "overwrite": false,
-          "path": "docroot/core/assets/scaffold/files/default.services.yml"
+    "config": {
+        "secure-http": false,
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "drupal/core": "dist"
         },
-        "[web-root]/sites/default/default.settings.php": {
-          "mode": "replace",
-          "overwrite": false,
-          "path": "docroot/core/assets/scaffold/files/default.settings.php"
-        },
-        "[web-root]/robots.txt": {
-          "append": "docroot/profiles/varbase/src/assets/varbase-robots-additions.txt"
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "vardot/varbase-updater": true
         }
-      }
     },
-    "installer-paths": {
-      "docroot/core": ["type:drupal-core"],
-      "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
-      "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
-      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
-      "docroot/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
+    "scripts": {
+        "post-install-cmd": [
+            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+            "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+        ],
+        "post-update-cmd": [
+            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+            "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+        ],
+        "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
     },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "dropzone","package": "npm-asset/dropzone"},
-        {"name": "blazy", "package": "npm-asset/blazy"},
-        {"name": "slick", "package": "npm-asset/slick-carousel"},
-        {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
-        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
-      ]
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "conflict": {
+        "drupal/drupal": "*"
     },
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": false,
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
-      "patches": {
-      }
-  }
+    "extra": {
+        "branch-alias": {
+            "dev-9.0.x": "9.0.x-dev"
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Varbase codebase </>",
+                "<bg=blue;fg=white>  from the vardot/varbase-project template!              </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+
+                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
+                "  * Read the user guide: https://docs.varbase.vardot.com",
+                "  * Get support: https://www.vardot.com/en/form/get-support-varbase",
+                "  * Join Our Slack Team for Feedback and Support:",
+                "      http://slack.varbase.vardot.com",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "drupal/core",
+                "vardot/varbase"
+            ],
+            "gitignore": true,
+            "locations": {
+                "web-root": "./docroot"
+            },
+            "file-mapping": {
+                "[web-root]/sites/default/default.services.yml": {
+                    "mode": "replace",
+                    "overwrite": false,
+                    "path": "docroot/core/assets/scaffold/files/default.services.yml"
+                },
+                "[web-root]/sites/default/default.settings.php": {
+                    "mode": "replace",
+                    "overwrite": false,
+                    "path": "docroot/core/assets/scaffold/files/default.settings.php"
+                },
+                "[web-root]/robots.txt": {
+                    "append": "docroot/profiles/varbase/src/assets/varbase-robots-additions.txt"
+                }
+            }
+        },
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/profiles/{$name}": ["type:drupal-profile"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+            "docroot/libraries/ace": ["npm-asset/ace-builds"],
+            "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
+            "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
+            "docroot/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "drupal-libraries": {
+            "library-directory": "docroot/libraries",
+            "libraries": [
+                {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
+                {"name": "chartjs", "package": "bower-asset/chartjs"},
+                {"name": "c3","package": "bower-asset/c3"},
+                {"name": "d3", "package": "bower-asset/d3"},
+                {"name": "dropzone","package": "npm-asset/dropzone"},
+                {"name": "blazy", "package": "npm-asset/blazy"},
+                {"name": "slick", "package": "npm-asset/slick-carousel"},
+                {"name": "ace", "package": "npm-asset/ace-builds"},
+                {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
+                {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
+                {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
+                {"name": "masonry", "package": "npm-asset/masonry-layout"},
+                {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
+                {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+            ]
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": false,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Issue #3296485: Deprecated function: preg_match(): Passing null to parameter" : "https://www.drupal.org/files/issues/2022-07-18/ASGS-4866-php8-compatibility_3.patch",
+                "Issue #2313309: Admin toolbar should always be rendered in the admin language (if set)": "https://www.drupal.org/files/issues/2018-04-12/2313309-44.patch",
+                "Issue #2706241: AccessAwareRouter does not respect HTTP method": "https://www.drupal.org/files/issues/2018-12-12/2706241-34.patch",
+                "Issue #3028821: Layout builder doesn't redirect properly to the translation": "https://www.drupal.org/files/issues/2019-01-27/layout_builder_redirect_language-3028821-2.patch",
+                "Issue #2842780: Add a token for the site logo": "https://www.drupal.org/files/issues/2019-05-14/token_for_site_logo-2842780-102.patch",
+                "Issue #2903336: Allow tokens for url of the Link field": "https://www.drupal.org/files/issues/2019-06-25/2903336-23.patch",
+                "Issue #2815221: Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2022-06-01/2815221-156-9.4.x.patch"
+            },
+            "drupal/ds": {
+                "Issue #2888366: fields customization not working": "https://www.drupal.org/files/issues/2020-09-14/2888366-30.patch"
+            },
+            "drupal/content_browser": {
+                "Issue #3039809: Add option to enter a description for a content embed block": "https://www.drupal.org/files/issues/2019-03-20/add_description-3039809-3.patch",
+                "Issue #3042028: Error when trying to place a new block: RuntimeException: The subform and parent form must contain the #parents property, which must be an array.": "https://www.drupal.org/files/issues/2019-03-21/runtime_exception_when_placing_block-3042028-2_0.patch"
+            },
+            "drupal/panels": {
+                "Issue #2849867: Custom attributes in panels blocks and variants": "https://www.drupal.org/files/issues/2022-11-17/panels_custom_attributes_in_panels_blocks-2849867-89.patch"
+            },
+            "drupal/background_image": {
+                "Issue #2976797: Allow to define no global background image": "https://www.drupal.org/files/issues/2019-03-12/background_image-support-no-global-2976797-8.patch",
+                "Issue #2990856: Tokens used in overlay text don't use the translated values": "https://www.drupal.org/files/issues/2018-08-06/background_image-token_values_arent_translated-2990856-3.patch",
+                "Issue #3175717: Included CSS is wrong for translated background images": "https://www.drupal.org/files/issues/2020-10-08/background_image-css_with_wrong_imagehash_served-3175717-3.patch"
+            },
+            "drupal/taxonomy_menu": {
+                "Issue #3182754: Apply overrides from config": "https://www.drupal.org/files/issues/2020-11-16/apply_overrides_from_config-3182754-2.patch"
+            },
+            "drupal/linkit": {
+                "Issue #3078075: Detect and strip base URL from pasted URLs to increase matching hits and support multilingual": "https://www.drupal.org/files/issues/2021-01-14/3078075-22.patch"
+            },
+            "drupal/pathologic": {
+                "Issue #2418369: Internal URL handling (Aliases, language prefixes, base://, ...)": "https://www.drupal.org/files/issues/2022-11-25/pathologic-2418369-46_0.patch"
+            },
+            "drupal/token": {
+                "issue #919760: Add a [current-page:object:?] dynamic token": "https://www.drupal.org/files/issues/2019-08-21/current_page_object_token-919760-79.patch"
+            },
+            "drupal/ctools": {
+                "Issue #2962166: Rendering entity view block on an entity with the same view mode causes recursion infinite loop": "https://www.drupal.org/files/issues/2020-08-19/ctools-Rendering_entity_view_block_on_an_entity_with_the_same_view_mode_causes_recursion_infinite_loop-2962166-5.patch"
+            }
+        }
+    }
 }

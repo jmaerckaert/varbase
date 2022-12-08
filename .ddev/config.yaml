@@ -1,4 +1,4 @@
-name: varbase
+name: varbase2
 type: drupal9
 docroot: docroot
 php_version: "8.1"
